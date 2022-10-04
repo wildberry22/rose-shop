@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $ttnorms-font;
+  font-weight: $font-regular;
+  font-size: $fz-6;
+  line-height: 138%;
+  color: $dark-blue-2-color;
+}
