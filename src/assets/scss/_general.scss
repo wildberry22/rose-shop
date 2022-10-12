@@ -13,3 +13,8 @@ body {
   line-height: 138%;
   color: $dark-blue-2-color;
 }
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
