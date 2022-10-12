@@ -566,3 +566,91 @@ body {
       white-space: nowrap; }
       .hover-menu__list-link::after {
         display: none; }
+
+.footer {
+  background: #F2F3F5; }
+
+.footer-top {
+  padding: 40px 0 30px;
+  border-bottom: 1px solid #E2E4EB;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px; }
+  .footer-top__col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; }
+  .footer-top__title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1;
+    color: #222A46;
+    margin-bottom: 10px; }
+  .footer-top__list {
+    list-style-type: none; }
+    .footer-top__list-link {
+      display: block;
+      padding: 5px 0;
+      line-height: 128%;
+      color: #353949;
+      text-decoration: none;
+      transition: .2s ease; }
+      .footer-top__list-link:hover {
+        color: #0093A2; }
+      .footer-top__list-link.ph-call {
+        font-weight: 700;
+        font-size: 1.125rem;
+        line-height: 144%;
+        color: #222A46;
+        transition: .2s ease; }
+        .footer-top__list-link.ph-call:hover {
+          color: #0093A2; }
+      .footer-top__list-link.e-mail {
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 144%;
+        color: #222A46;
+        transition: .2s ease; }
+        .footer-top__list-link.e-mail:hover {
+          color: #0093A2; }
+    .footer-top__list-text {
+      font-size: 0.875rem;
+      line-height: 143%;
+      color: #505567; }
+
+.footer-bottom {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .footer-bottom__copy, .footer-bottom__social-text {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 143%;
+    color: #505567; }
+  .footer-bottom__pay-list {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    align-items: center; }
+  .footer-bottom__pay-item {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .footer-bottom__pay-item img {
+      max-height: 20px;
+      object-fit: contain; }
+  .footer-bottom__social {
+    display: flex;
+    align-items: center;
+    gap: 20px; }
+    .footer-bottom__social-list {
+      list-style-type: none;
+      display: flex;
+      gap: 15px;
+      align-items: center; }
+    .footer-bottom__social-link {
+      display: flex;
+      justify-content: center;
+      align-items: center; }

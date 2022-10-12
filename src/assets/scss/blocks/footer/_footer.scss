@@ -1,0 +1,110 @@
+.footer {
+  background: $gray-light-3-color;
+}
+
+.footer-top {
+  padding: 40px 0 30px;
+  border-bottom: 1px solid $gray-light-2-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__title {
+    font-weight: $font-bold;
+    font-size: $fz-5;
+    line-height: 1;
+    color: $dark-blue-1-color;
+    margin-bottom: 10px;
+  }
+  &__list {
+    list-style-type: none;
+    &-link {
+      display: block;
+      padding: 5px 0;
+      line-height: 128%;
+      color: $dark-blue-2-color;
+      text-decoration: none;
+      transition: .2s ease;
+      &:hover {
+        color: $blue-color;
+      }
+      &.ph-call {
+        font-weight: $font-bold;
+        font-size: $fz-5;
+        line-height: 144%;
+        color: $dark-blue-1-color;
+        transition: .2s ease;
+        &:hover {
+          color: $blue-color;
+        }
+      }
+      &.e-mail {
+        font-weight: $font-medium;
+        font-size: $fz-7;
+        line-height: 144%;
+        color: $dark-blue-1-color;
+        transition: .2s ease;
+        &:hover {
+          color: $blue-color;
+        }
+      }
+    }
+    &-text {
+      font-size: $fz-7;
+      line-height: 143%;
+      color: $blue-gray-color;
+    }
+  }
+}
+
+.footer-bottom {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__copy,
+  &__social-text {
+    font-weight: $font-regular;
+    font-size: $fz-7;
+    line-height: 143%;
+    color: $blue-gray-color;
+  }
+  &__pay {
+    &-list {
+      list-style-type: none;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-height: 20px;
+        object-fit: contain;
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &-list {
+      list-style-type: none;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
