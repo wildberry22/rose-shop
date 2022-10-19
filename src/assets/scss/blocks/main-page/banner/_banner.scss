@@ -1,0 +1,137 @@
+.banner {
+  margin: 30px 0;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  &-inner {
+    flex: 1;
+    min-width: 0;
+  }
+  &-slider__slide {
+    position: relative;
+    border-radius: 10px;
+    &-bg {
+      max-width: 870px;
+      max-height: 440px;
+      width: 100%;
+      object-fit: contain;
+    }
+    &-text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 90px;
+    }
+    &-title {
+      max-width: 310px;
+      font-family: $yeseva-one-font;
+      font-weight: $font-regular;
+      font-size: 44px;
+      line-height: 56px;
+      color: $dark-blue-1-color;
+      margin-bottom: 20px;
+      user-select: none;
+    }
+    &-descr {
+      max-width: 400px;
+      font-family: $ttnorms-font;
+      font-weight: $font-regular;
+      font-size: 22px;
+      line-height: 139%;
+      color: $dark-blue-1-color;
+      user-select: none;
+    }
+    &-promotext {
+      display: block;
+      margin-bottom: 10px;
+      font-size: $fz-5;
+      line-height: 144%;
+      color: $dark-blue-1-color;
+      user-select: none;
+    }
+    &-promocode {
+      position: relative;
+      width: fit-content;
+      background: $white-color;
+      box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+      border-radius: 10px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      &::after {
+        content: 'Промокод скопійовано в буфер обміну!';
+        position: absolute;
+        width: 300px;
+        bottom: -20px;        
+        left: 0;
+        font-size: $fz-7;
+        line-height: 1;
+        opacity: 0;
+        transition: .1s ease-in;
+      }
+      &.text-copied {
+        &::after {
+          opacity: 1;
+        }
+      }
+      p {
+        padding: 14px 25px;
+        font-weight: $font-medium;
+        font-size: $fz-6;
+        line-height: 138%;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: $pink-color;
+        &::selection {
+          color: $white-color;
+          background-color: $pink-color;
+        }
+      }
+      button {
+        border: none;
+        display: flex;
+        background-color: rgba(#0093A2, .5);
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 12px;
+        transition: .2s ease;
+        border-radius: 0 10px 10px 0;
+        &:hover {
+          background-color: rgba(#0093A2, .7);
+        }
+      }
+    }
+  }
+  .banner-slider__pagination {
+    .swiper-pagination-bullet {
+      width: 40px;
+      height: 3px;
+      border-radius: 0px;
+      background: $white-color;
+      opacity: 0.6;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 30px;
+  }
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+  }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 20px;
+  }
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 20px;
+  }
+
+  &-proposition {
+    width: 270px;
+  }
+}

@@ -90,10 +90,106 @@
 /*!*******************************!*\
   !*** ./src/assets/js/main.js ***!
   \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_copyText_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/copyText.js */ "./src/assets/js/modules/copyText.js");
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Working with extra-block in header
+  const header = document.querySelector('.header--extra');
+
+  if (header) {
+    const headerExtra = header.querySelector('.header-extra');
+    window.addEventListener('click', e => {
+      if (e.target.classList.contains('.header-extra__close') || e.target.closest('.header-extra__close')) {
+        headerExtra.remove();
+        header.style.top = '-50px';
+        header.classList.remove('header--extra');
+      }
+    });
+  } // Banner slider section > button to copy promo
 
 
+  Object(_modules_copyText_js__WEBPACK_IMPORTED_MODULE_0__["default"])(); // Banner slider
+
+  const bannerSlider = new Swiper(".banner-slider", {
+    slidesPerView: 1,
+    loop: true,
+    centeredSlides: true,
+    effect: "fade",
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+    pagination: {
+      el: ".banner-slider__pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".banner-slider__btn-next",
+      prevEl: ".banner-slider__btn-prev"
+    }
+  }); // Card slider
+
+  const cardSlider = new Swiper(".card-img__slider", {
+    slidesPerView: 1,
+    loop: true,
+    centeredSlides: true,
+    effect: "fade",
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+    pagination: {
+      el: ".card-img__pagination",
+      clickable: false
+    },
+    allowTouchMove: false
+  });
+});
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/copyText.js":
+/*!*******************************************!*\
+  !*** ./src/assets/js/modules/copyText.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return copyText; });
+function copyText() {
+  window.addEventListener('click', e => {
+    if (e.target.getAttribute('data-copy') == 'btn' || e.target.closest('[data-copy="btn"]')) {
+      let textToCopy;
+
+      if (e.target.getAttribute('data-copy') == 'btn') {
+        textToCopy = e.target.parentNode.querySelector('[data-copy="text"]').innerText;
+      } else if (e.target.closest('[data-copy="btn"]')) {
+        textToCopy = e.target.closest('[data-copy="btn"]').parentNode.querySelector('[data-copy="text"]').innerText;
+      }
+
+      const textarea = document.createElement('textarea');
+      textarea.value = textToCopy;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      textarea.remove();
+      const wrapper = e.target.closest('[data-copy="wrapper"]');
+      wrapper.classList.add('text-copied');
+      setTimeout(() => {
+        wrapper.classList.remove('text-copied');
+      }, 2000);
+    }
+  });
+}
 
 /***/ })
 

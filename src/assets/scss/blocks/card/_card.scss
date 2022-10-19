@@ -1,0 +1,164 @@
+.card {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  transition: .2s ease;
+  height: 440px;
+  background: $white-color;
+  border: 1px solid $gray-light-2-color;
+  border-radius: 5px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 250px auto;
+  align-items: start;
+  &--slider {
+    height: 430px;
+  }
+  &--small {
+    height: 404px;
+  }
+  &::before {
+    content: 'text';
+    font-family: $ttnorms-font;
+    font-weight: $font-medium;
+    font-size: 12px;
+    line-height: 133%;
+    color: $white-color;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    background: $blue-color;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    z-index: 99;
+    display: none;
+  }
+  &:hover {
+    border: 1px solid $gray-light-3-color;
+    box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+  }
+  &[data-card="sale-15"] {
+    &::before {
+      content: '-15%';
+      display: block;
+    }
+  }
+  &[data-card="sale-20"] {
+    &::before {
+      content: '-20%';
+      display: block;
+    }
+  }
+  &[data-card="sale-25"] {
+    &::before {
+      content: '-25%';
+      display: block;
+    }
+  }
+  &[data-card="sale-35"] {
+    &::before {
+      content: '-35%';
+      display: block;
+    }
+  }
+  &[data-card="hot"] {
+    &::before {
+      content: 'HOT';
+      display: block;
+    }
+  }
+  &[data-card="new"] {
+    &::before {
+      content: 'NEW';
+      display: block;
+    }
+  }
+
+  &-img {
+    flex: 1;
+    min-width: 0;
+  }
+  &-btn--like {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    border: none;
+    background-color: $white-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    svg path {
+      transition: .2s;
+    }
+    &.active {
+      svg path {
+        fill: $pink-color;
+      }
+    }
+    &:hover {
+      svg path.path-line {
+        fill: $pink-color;
+      }
+    }
+  }
+  &-description {
+    padding: 20px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  &-bottom {
+    align-self: end;
+  }
+  &-title {
+    a {
+      display: block;
+      font-family: $ttnorms-font;
+      font-weight: $font-bold;
+      font-size: $fz-6;
+      line-height: 138%;
+      color: $dark-blue-1-color;
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: .2s linear;
+      &:hover {
+        color: $pink-color;
+      }
+    }
+  }
+  &-size {
+    font-size: $fz-7;
+    line-height: 138%;
+    color: $blue-gray-color;
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  &-price {
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: start;
+    font-weight: $font-bold;
+    font-size: $fz-6;
+    line-height: 138%;
+    color: $dark-blue-1-color;
+    &--old {
+      font-weight: $font-medium;
+      font-size: $fz-7;
+      line-height: 138%;
+      text-decoration-line: line-through;
+      color: $gray-2-color;
+    }
+  }
+}

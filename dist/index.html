@@ -25,11 +25,12 @@
 	<!-- ========== Title ========== -->
 	<title>Лавка роз - Главная</title>
 	<!-- ========== Links ========== -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<!-- ========== Header ========== -->
-	<header class="header">
+	<header class="header header--extra">
 		<div class="header-extra">
 			<div class="container">
 				<div class="header-extra__wrapper">
@@ -104,195 +105,417 @@
 			</div>
 		</div>
 
-		<div class="header-main">
-			<div class="container">
-				<div class="header-main__wrapper">
-					<div class="header-main__logo">
-						<div class="logo">
-							<a href="#"><img src="./img/logo.svg" alt="logo"></a>
-						</div>
-						<div class="header-main__logo-delivery">
-							Доставка цветов в Воронеже
-						</div>
-					</div>
-					<div class="header-main__search">
-						<form class="header-main__search-form">
-							<input class="header-main__search-input" type="text" placeholder="Поиск по сайту">
-							<button class="header-main__search-btn" type="submit">
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M1 7.14554C0.999557 4.21437 3.06975 1.69108 5.94452 1.11883C8.81929 0.546586 11.698 2.08477 12.82 4.79267C13.9421 7.50057 12.995 10.624 10.558 12.2528C8.12104 13.8815 4.87287 13.562 2.8 11.4895C1.64763 10.3376 1.00014 8.77495 1 7.14554Z" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									<path d="M11.4883 11.4905L14.9993 15.0015" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>								
-							</button>
-						</form>
-					</div>
-					<div class="header-main__contact">
-						<div class="header-main__contact-call">
-							<a class="header-main__contact-btn" href="tel:+79202114903">
-								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M2.11143 2.75015C3.24419 1.55893 3.64452 1.22482 4.12723 1.06933C4.46129 0.981944 4.81164 0.977092 5.148 1.05519C5.5908 1.1837 5.70794 1.28136 7.15993 2.72573C8.43557 3.99406 8.56301 4.13156 8.68529 4.37957C8.91912 4.8149 8.95565 5.32918 8.7857 5.7931C8.65698 6.14648 8.47419 6.38036 7.70057 7.15523L7.19597 7.66025C7.06346 7.79468 7.03232 7.99883 7.11874 8.16655C8.23983 10.0759 9.83037 11.6682 11.7399 12.7927C11.9597 12.9101 12.2303 12.8722 12.4092 12.6988L12.8945 12.2221C13.1945 11.9152 13.5121 11.626 13.8458 11.356C14.3699 11.0347 15.0229 11.0061 15.5732 11.2802C15.8423 11.4087 15.9311 11.4884 17.2466 12.7991C18.6034 14.1496 18.642 14.1921 18.7913 14.5017C19.0723 15.0144 19.0694 15.6353 18.7836 16.1453C18.6381 16.4331 18.5493 16.5372 17.786 17.316C17.3252 17.7863 16.8914 18.2155 16.8219 18.2784C16.1921 18.7989 15.3842 19.0543 14.5692 18.9904C13.078 18.8547 11.6347 18.3946 10.3407 17.6424C7.47418 16.1263 5.03395 13.9173 3.2429 11.2172C2.8528 10.6521 2.50598 10.0585 2.2054 9.4413C1.39906 8.06165 0.982659 6.4895 1.00055 4.89229C1.06211 4.05672 1.46351 3.28269 2.11143 2.75015Z" stroke="#505567" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>								
-							</a>
-						</div>
-						<div class="header-main__contact-info contact-info">
-							<div class="header-main__contact-phone hover-menu">
-								<div class="contact-info__title hover-menu__title">+7 (920) 211-49-03</div>
-								<div class="hover-menu__wrapper">
-									<ul class="contact-info__list hover-menu__list">
-										<li class="contact-info__list-top">
-											<ul>
-												<li><a class="phone" href="tel:+79202114903">+7 (920) 211-49-03</a></li>
-												<li><a class="address" href="#">ул. Революции 1905 года 80</a></li>
-												<li><a class="address" href="#">ул. Вл. Невского 17</a></li>
-												<li><a class="mail" href="mailto:info@lavkaroz.ru">info@lavkaroz.ru</a></li>
-											</ul>
-										</li>
-										<li class="contact-info__list-bottom">
-											<div class="contact-info__list-title">Напишите нам:</div>
-											<ul>
-												<li><a href="#"><img src="./img/icons/contact/whatsApp.svg" alt="WhatsApp"></a></li>
-												<li><a href="#"><img src="./img/icons/contact/telegram.svg" alt="Telegram"></a></li>
-												<li><a href="#"><img src="./img/icons/contact/vk.svg" alt="VK"></a></li>
-												<li><a href="#"><img src="./img/icons/contact/instagram.svg" alt="Instagram"></a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
+		<div class="header-scroll">
+			<div class="header-main">
+				<div class="container">
+					<div class="header-main__wrapper">
+						<div class="header-main__logo">
+							<div class="logo">
+								<a href="#"><img src="./img/logo.svg" alt="logo"></a>
 							</div>
-							<a class="header-main__contact-order" href="#">Заказать звонок</a>
+							<div class="header-main__logo-delivery">
+								Доставка цветов в Воронеже
+							</div>
 						</div>
-					</div>
-					<div class="header-main__baskets">
-						<div class="header-main__baskets-liked">
-							<button class="header-main__liked">
-								<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path class="bg" d="M9.99998 3.58704C5.6516 -1.66734 1.06041 2.06612 1 6.09071C1 12.0822 8.2793 17 9.99998 17C11.7207 17 19 12.0822 19 6.09071C18.9396 2.06612 14.3484 -1.66734 9.99998 3.58704Z" fill="#F2F3F5"/>
-									<path d="M1 6.09071L0.25 6.07945V6.09071H1ZM9.99998 3.58704L9.42219 4.06521C9.56467 4.23738 9.77651 4.33704 9.99998 4.33704C10.2235 4.33704 10.4353 4.23738 10.5778 4.06521L9.99998 3.58704ZM19 6.09071H19.7501L19.7499 6.07945L19 6.09071ZM1.74992 6.10196C1.77636 4.34039 2.80175 2.68479 4.20482 2.04091C4.89023 1.72637 5.68269 1.64218 6.54398 1.91143C7.41449 2.18355 8.40208 2.83256 9.42219 4.06521L10.5778 3.10887C9.4237 1.71433 8.20674 0.859628 6.99153 0.479749C5.76711 0.096991 4.59267 0.212514 3.57919 0.677612C1.58446 1.59301 0.284052 3.81644 0.250084 6.07945L1.74992 6.10196ZM9.99998 16.25C9.93037 16.25 9.73579 16.2165 9.39891 16.0811C9.08065 15.9532 8.69109 15.7573 8.2537 15.4949C7.37949 14.9703 6.3541 14.2039 5.37754 13.2544C3.40233 11.3341 1.75 8.78951 1.75 6.09071H0.25C0.25 9.3834 2.23732 12.2935 4.33193 14.3299C5.39027 15.3589 6.50735 16.1963 7.48194 16.7811C7.96896 17.0733 8.43039 17.3084 8.83957 17.4729C9.23013 17.6299 9.63943 17.75 9.99998 17.75V16.25ZM19.7499 6.07945C19.7159 3.81644 18.4155 1.59301 16.4208 0.677611C15.4073 0.212514 14.2329 0.0969911 13.0084 0.479749C11.7932 0.859628 10.5763 1.71433 9.42218 3.10887L10.5778 4.06521C11.5979 2.83256 12.5855 2.18355 13.456 1.91143C14.3173 1.64218 15.1098 1.72637 15.7952 2.04091C17.1982 2.68479 18.2236 4.34039 18.2501 6.10196L19.7499 6.07945ZM9.99998 17.75C10.3605 17.75 10.7698 17.6299 11.1604 17.4729C11.5696 17.3084 12.031 17.0733 12.518 16.7811C13.4926 16.1963 14.6097 15.3589 15.6681 14.3299C17.7627 12.2935 19.75 9.3834 19.75 6.09071H18.25C18.25 8.78951 16.5977 11.3341 14.6224 13.2544C13.6459 14.2039 12.6205 14.9703 11.7463 15.4949C11.3089 15.7573 10.9193 15.9532 10.6011 16.0811C10.2642 16.2165 10.0696 16.25 9.99998 16.25V17.75Z" fill="#353949"/>
-								</svg>								
-							</button>
+						<div class="header-main__search">
+							<form class="header-main__search-form">
+								<input class="header-main__search-input" type="text" placeholder="Поиск по сайту">
+								<button class="header-main__search-btn" type="submit">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M1 7.14554C0.999557 4.21437 3.06975 1.69108 5.94452 1.11883C8.81929 0.546586 11.698 2.08477 12.82 4.79267C13.9421 7.50057 12.995 10.624 10.558 12.2528C8.12104 13.8815 4.87287 13.562 2.8 11.4895C1.64763 10.3376 1.00014 8.77495 1 7.14554Z" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M11.4883 11.4905L14.9993 15.0015" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>								
+								</button>
+							</form>
 						</div>
-						<div class="header-main__basket">
-							<button class="header-main__basket-btn">
-								<div class="header-main__basket-icon">
+						<div class="header-main__contact">
+							<div class="header-main__contact-call">
+								<a class="header-main__contact-btn" href="tel:+79202114903">
 									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path class="bg" d="M2.14991 17.0586C1.40314 14.183 1.10756 10.6607 1.0256 8.74863C1.00195 8.19685 1.44772 7.75 2 7.75H18C18.5523 7.75 18.998 8.19685 18.9744 8.74863C18.8924 10.6607 18.5969 14.183 17.8501 17.0586C17.6501 17.8287 17.0868 18.4292 16.3043 18.5736C15.133 18.7896 13.1135 19 10 19C6.88651 19 4.86695 18.7896 3.69568 18.5736C2.91323 18.4292 2.3499 17.8287 2.14991 17.0586Z" fill="#F2F3F5"/>
-										<path d="M1.0256 8.74863L0.276291 8.78074L1.0256 8.74863ZM2.14991 17.0586L2.87583 16.8701L2.14991 17.0586ZM3.69568 18.5736L3.83173 17.836H3.83173L3.69568 18.5736ZM18.9744 8.74863L19.7237 8.78074V8.78074L18.9744 8.74863ZM17.8501 17.0586L18.576 17.2471L17.8501 17.0586ZM16.3043 18.5736L16.1683 17.836L16.3043 18.5736ZM0.276291 8.78074C0.359088 10.7125 0.657599 14.296 1.42399 17.2471L2.87583 16.8701C2.14868 14.07 1.85603 10.6089 1.77491 8.71651L0.276291 8.78074ZM3.55963 19.3111C4.78925 19.5379 6.85701 19.75 10 19.75V18.25C6.91602 18.25 4.94465 18.0413 3.83173 17.836L3.55963 19.3111ZM18.2251 8.71651C18.144 10.6089 17.8513 14.07 17.1242 16.8701L18.576 17.2471C19.3424 14.296 19.6409 10.7125 19.7237 8.78074L18.2251 8.71651ZM16.1683 17.836C15.0553 18.0413 13.084 18.25 10 18.25V19.75C13.143 19.75 15.2107 19.5379 16.4404 19.3111L16.1683 17.836ZM2 8.5H18V7H2V8.5ZM17.1242 16.8701C16.986 17.4022 16.6218 17.7523 16.1683 17.836L16.4404 19.3111C17.5517 19.1061 18.3142 18.2552 18.576 17.2471L17.1242 16.8701ZM19.7237 8.78074C19.7664 7.78447 18.9608 7 18 7V8.5C18.1438 8.5 18.2297 8.60922 18.2251 8.71651L19.7237 8.78074ZM1.42399 17.2471C1.68577 18.2552 2.44831 19.1061 3.55963 19.3111L3.83173 17.836C3.37815 17.7523 3.01403 17.4022 2.87583 16.8701L1.42399 17.2471ZM1.77491 8.71651C1.77032 8.60922 1.85623 8.5 2 8.5V7C1.0392 7 0.233589 7.78447 0.276291 8.78074L1.77491 8.71651Z" fill="#353949"/>
-										<path d="M4 7.75C4 8.16421 4.33579 8.5 4.75 8.5C5.16421 8.5 5.5 8.16421 5.5 7.75H4ZM14.5 7.75C14.5 8.16421 14.8358 8.5 15.25 8.5C15.6642 8.5 16 8.16421 16 7.75H14.5ZM5.5 7.75V6H4V7.75H5.5ZM9.75 1.75H10.25V0.25H9.75V1.75ZM14.5 6V7.75H16V6H14.5ZM10.25 1.75C12.5972 1.75 14.5 3.65279 14.5 6H16C16 2.82436 13.4256 0.25 10.25 0.25V1.75ZM5.5 6C5.5 3.65279 7.40279 1.75 9.75 1.75V0.25C6.57436 0.25 4 2.82436 4 6H5.5Z" fill="#353949"/>
-										<path class="stroke" d="M7 12.25V14.5M13 12.25V14.5" stroke="#353949" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>		
-									<div class="header-main__basket-num"><span>2</span></div>					
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M2.11143 2.75015C3.24419 1.55893 3.64452 1.22482 4.12723 1.06933C4.46129 0.981944 4.81164 0.977092 5.148 1.05519C5.5908 1.1837 5.70794 1.28136 7.15993 2.72573C8.43557 3.99406 8.56301 4.13156 8.68529 4.37957C8.91912 4.8149 8.95565 5.32918 8.7857 5.7931C8.65698 6.14648 8.47419 6.38036 7.70057 7.15523L7.19597 7.66025C7.06346 7.79468 7.03232 7.99883 7.11874 8.16655C8.23983 10.0759 9.83037 11.6682 11.7399 12.7927C11.9597 12.9101 12.2303 12.8722 12.4092 12.6988L12.8945 12.2221C13.1945 11.9152 13.5121 11.626 13.8458 11.356C14.3699 11.0347 15.0229 11.0061 15.5732 11.2802C15.8423 11.4087 15.9311 11.4884 17.2466 12.7991C18.6034 14.1496 18.642 14.1921 18.7913 14.5017C19.0723 15.0144 19.0694 15.6353 18.7836 16.1453C18.6381 16.4331 18.5493 16.5372 17.786 17.316C17.3252 17.7863 16.8914 18.2155 16.8219 18.2784C16.1921 18.7989 15.3842 19.0543 14.5692 18.9904C13.078 18.8547 11.6347 18.3946 10.3407 17.6424C7.47418 16.1263 5.03395 13.9173 3.2429 11.2172C2.8528 10.6521 2.50598 10.0585 2.2054 9.4413C1.39906 8.06165 0.982659 6.4895 1.00055 4.89229C1.06211 4.05672 1.46351 3.28269 2.11143 2.75015Z" stroke="#505567" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>								
+								</a>
+							</div>
+							<div class="header-main__contact-info contact-info">
+								<div class="header-main__contact-phone hover-menu">
+									<div class="contact-info__title hover-menu__title">+7 (920) 211-49-03</div>
+									<div class="hover-menu__wrapper">
+										<ul class="contact-info__list hover-menu__list">
+											<li class="contact-info__list-top">
+												<ul>
+													<li><a class="phone" href="tel:+79202114903">+7 (920) 211-49-03</a></li>
+													<li><a class="address" href="#">ул. Революции 1905 года 80</a></li>
+													<li><a class="address" href="#">ул. Вл. Невского 17</a></li>
+													<li><a class="mail" href="mailto:info@lavkaroz.ru">info@lavkaroz.ru</a></li>
+												</ul>
+											</li>
+											<li class="contact-info__list-bottom">
+												<div class="contact-info__list-title">Напишите нам:</div>
+												<ul>
+													<li><a href="#"><img src="./img/icons/contact/whatsApp.svg" alt="WhatsApp"></a></li>
+													<li><a href="#"><img src="./img/icons/contact/telegram.svg" alt="Telegram"></a></li>
+													<li><a href="#"><img src="./img/icons/contact/vk.svg" alt="VK"></a></li>
+													<li><a href="#"><img src="./img/icons/contact/instagram.svg" alt="Instagram"></a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
 								</div>
-							</button>
-							<div class="header-main__basket-text">16 500 ₽</div>
+								<a class="header-main__contact-order" href="#">Заказать звонок</a>
+							</div>
+						</div>
+						<div class="header-main__baskets">
+							<div class="header-main__baskets-liked">
+								<button class="header-main__liked">
+									<svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="bg" d="M9.99998 3.58704C5.6516 -1.66734 1.06041 2.06612 1 6.09071C1 12.0822 8.2793 17 9.99998 17C11.7207 17 19 12.0822 19 6.09071C18.9396 2.06612 14.3484 -1.66734 9.99998 3.58704Z" fill="#F2F3F5"/>
+										<path d="M1 6.09071L0.25 6.07945V6.09071H1ZM9.99998 3.58704L9.42219 4.06521C9.56467 4.23738 9.77651 4.33704 9.99998 4.33704C10.2235 4.33704 10.4353 4.23738 10.5778 4.06521L9.99998 3.58704ZM19 6.09071H19.7501L19.7499 6.07945L19 6.09071ZM1.74992 6.10196C1.77636 4.34039 2.80175 2.68479 4.20482 2.04091C4.89023 1.72637 5.68269 1.64218 6.54398 1.91143C7.41449 2.18355 8.40208 2.83256 9.42219 4.06521L10.5778 3.10887C9.4237 1.71433 8.20674 0.859628 6.99153 0.479749C5.76711 0.096991 4.59267 0.212514 3.57919 0.677612C1.58446 1.59301 0.284052 3.81644 0.250084 6.07945L1.74992 6.10196ZM9.99998 16.25C9.93037 16.25 9.73579 16.2165 9.39891 16.0811C9.08065 15.9532 8.69109 15.7573 8.2537 15.4949C7.37949 14.9703 6.3541 14.2039 5.37754 13.2544C3.40233 11.3341 1.75 8.78951 1.75 6.09071H0.25C0.25 9.3834 2.23732 12.2935 4.33193 14.3299C5.39027 15.3589 6.50735 16.1963 7.48194 16.7811C7.96896 17.0733 8.43039 17.3084 8.83957 17.4729C9.23013 17.6299 9.63943 17.75 9.99998 17.75V16.25ZM19.7499 6.07945C19.7159 3.81644 18.4155 1.59301 16.4208 0.677611C15.4073 0.212514 14.2329 0.0969911 13.0084 0.479749C11.7932 0.859628 10.5763 1.71433 9.42218 3.10887L10.5778 4.06521C11.5979 2.83256 12.5855 2.18355 13.456 1.91143C14.3173 1.64218 15.1098 1.72637 15.7952 2.04091C17.1982 2.68479 18.2236 4.34039 18.2501 6.10196L19.7499 6.07945ZM9.99998 17.75C10.3605 17.75 10.7698 17.6299 11.1604 17.4729C11.5696 17.3084 12.031 17.0733 12.518 16.7811C13.4926 16.1963 14.6097 15.3589 15.6681 14.3299C17.7627 12.2935 19.75 9.3834 19.75 6.09071H18.25C18.25 8.78951 16.5977 11.3341 14.6224 13.2544C13.6459 14.2039 12.6205 14.9703 11.7463 15.4949C11.3089 15.7573 10.9193 15.9532 10.6011 16.0811C10.2642 16.2165 10.0696 16.25 9.99998 16.25V17.75Z" fill="#353949"/>
+									</svg>								
+								</button>
+							</div>
+							<div class="header-main__basket">
+								<button class="header-main__basket-btn">
+									<div class="header-main__basket-icon">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="bg" d="M2.14991 17.0586C1.40314 14.183 1.10756 10.6607 1.0256 8.74863C1.00195 8.19685 1.44772 7.75 2 7.75H18C18.5523 7.75 18.998 8.19685 18.9744 8.74863C18.8924 10.6607 18.5969 14.183 17.8501 17.0586C17.6501 17.8287 17.0868 18.4292 16.3043 18.5736C15.133 18.7896 13.1135 19 10 19C6.88651 19 4.86695 18.7896 3.69568 18.5736C2.91323 18.4292 2.3499 17.8287 2.14991 17.0586Z" fill="#F2F3F5"/>
+											<path d="M1.0256 8.74863L0.276291 8.78074L1.0256 8.74863ZM2.14991 17.0586L2.87583 16.8701L2.14991 17.0586ZM3.69568 18.5736L3.83173 17.836H3.83173L3.69568 18.5736ZM18.9744 8.74863L19.7237 8.78074V8.78074L18.9744 8.74863ZM17.8501 17.0586L18.576 17.2471L17.8501 17.0586ZM16.3043 18.5736L16.1683 17.836L16.3043 18.5736ZM0.276291 8.78074C0.359088 10.7125 0.657599 14.296 1.42399 17.2471L2.87583 16.8701C2.14868 14.07 1.85603 10.6089 1.77491 8.71651L0.276291 8.78074ZM3.55963 19.3111C4.78925 19.5379 6.85701 19.75 10 19.75V18.25C6.91602 18.25 4.94465 18.0413 3.83173 17.836L3.55963 19.3111ZM18.2251 8.71651C18.144 10.6089 17.8513 14.07 17.1242 16.8701L18.576 17.2471C19.3424 14.296 19.6409 10.7125 19.7237 8.78074L18.2251 8.71651ZM16.1683 17.836C15.0553 18.0413 13.084 18.25 10 18.25V19.75C13.143 19.75 15.2107 19.5379 16.4404 19.3111L16.1683 17.836ZM2 8.5H18V7H2V8.5ZM17.1242 16.8701C16.986 17.4022 16.6218 17.7523 16.1683 17.836L16.4404 19.3111C17.5517 19.1061 18.3142 18.2552 18.576 17.2471L17.1242 16.8701ZM19.7237 8.78074C19.7664 7.78447 18.9608 7 18 7V8.5C18.1438 8.5 18.2297 8.60922 18.2251 8.71651L19.7237 8.78074ZM1.42399 17.2471C1.68577 18.2552 2.44831 19.1061 3.55963 19.3111L3.83173 17.836C3.37815 17.7523 3.01403 17.4022 2.87583 16.8701L1.42399 17.2471ZM1.77491 8.71651C1.77032 8.60922 1.85623 8.5 2 8.5V7C1.0392 7 0.233589 7.78447 0.276291 8.78074L1.77491 8.71651Z" fill="#353949"/>
+											<path d="M4 7.75C4 8.16421 4.33579 8.5 4.75 8.5C5.16421 8.5 5.5 8.16421 5.5 7.75H4ZM14.5 7.75C14.5 8.16421 14.8358 8.5 15.25 8.5C15.6642 8.5 16 8.16421 16 7.75H14.5ZM5.5 7.75V6H4V7.75H5.5ZM9.75 1.75H10.25V0.25H9.75V1.75ZM14.5 6V7.75H16V6H14.5ZM10.25 1.75C12.5972 1.75 14.5 3.65279 14.5 6H16C16 2.82436 13.4256 0.25 10.25 0.25V1.75ZM5.5 6C5.5 3.65279 7.40279 1.75 9.75 1.75V0.25C6.57436 0.25 4 2.82436 4 6H5.5Z" fill="#353949"/>
+											<path class="stroke" d="M7 12.25V14.5M13 12.25V14.5" stroke="#353949" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>		
+										<div class="header-main__basket-num"><span>2</span></div>					
+									</div>
+								</button>
+								<div class="header-main__basket-text">16 500 ₽</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="header-bottom">
-			<div class="container">
-				<div class="header-bottom__wrapper">
-					<nav class="header-bottom__nav nav">
-						<ul class="nav-list">
-							<li class="nav-list__item">
-								<a class="nav-list__link sale" href="#">АКЦИИ</a>
-							</li>
-							<li class="nav-list__item hover-menu">
-								<a class="nav-list__item-title hover-menu__title" href="#">Цветы поштучно</a>
-								<div class="hover-menu__wrapper">
-									<ul class="hover-menu__list">
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Розы поштучно</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Кустовая роза</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Пионовидная роза</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Хризантемы поштучно</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Альстромерия</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Тюльпаны</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Герберы поштучно</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Лилии поштучно</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Пионы</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Эустома</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Маттиола</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Каллы поштучно</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="nav-list__item hover-menu">
-								<a class="nav-list__item-title hover-menu__title" href="#">Розы</a>
-								<div class="hover-menu__wrapper">
-									<ul class="hover-menu__list">
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Голландские розы</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Местная роза</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Кустовые розы</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Пионовидные розы</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Букет из 101 розы</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="nav-list__item hover-menu">
-								<a class="nav-list__item-title hover-menu__title" href="#">Букеты</a>
-								<div class="hover-menu__wrapper">
-									<ul class="hover-menu__list">
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Сборные букеты</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты из хризантем</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты из Альстромерий</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты из эустом</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты Гипсофилы</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты из гербер</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты из пионов</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты из тюльпанов</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="nav-list__item hover-menu">
-								<a class="nav-list__item-title hover-menu__title" href="#">Композиции</a>
-								<div class="hover-menu__wrapper">
-									<ul class="hover-menu__list">
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Ящики с цветами</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Коробки с цветами</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Корзины с цветами</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="nav-list__item hover-menu">
-								<a class="nav-list__item-title hover-menu__title" href="#">Подарки</a>
-								<div class="hover-menu__wrapper">
-									<ul class="hover-menu__list">
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Коробки конфет</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Мягкие игрушки</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="nav-list__item hover-menu">
-								<a class="nav-list__item-title hover-menu__title" href="#">Шары</a>
-								<div class="hover-menu__wrapper">
-									<ul class="hover-menu__list">
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Шары в виде цифр</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Фольгированные шары</a></li>
-										<li><a class="nav-list__link hover-menu__list-link" href="#">Латексные шары</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="nav-list__item">
-								<a class="nav-list__link" href="#">Свадебные букеты</a>
-							</li>
-							<li class="nav-list__item">
-								<a class="nav-list__link" href="#">Повод</a>
-							</li>
-						</ul>
-					</nav>
+	
+			<div class="header-bottom">
+				<div class="container">
+					<div class="header-bottom__wrapper">
+						<nav class="header-bottom__nav nav">
+							<ul class="nav-list">
+								<li class="nav-list__item">
+									<a class="nav-list__link sale" href="#">АКЦИИ</a>
+								</li>
+								<li class="nav-list__item hover-menu">
+									<div class="nav-list__item-title hover-menu__title">Цветы поштучно</div>
+									<div class="hover-menu__wrapper">
+										<ul class="hover-menu__list">
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Розы поштучно</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Кустовая роза</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Пионовидная роза</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Хризантемы поштучно</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Альстромерия</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Тюльпаны</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Герберы поштучно</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Лилии поштучно</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Пионы</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Эустома</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Маттиола</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Каллы поштучно</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-list__item hover-menu">
+									<div class="nav-list__item-title hover-menu__title">Розы</div>
+									<div class="hover-menu__wrapper">
+										<ul class="hover-menu__list">
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Голландские розы</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Местная роза</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Кустовые розы</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Пионовидные розы</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Букет из 101 розы</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-list__item hover-menu">
+									<div class="nav-list__item-title hover-menu__title">Букеты</div>
+									<div class="hover-menu__wrapper">
+										<ul class="hover-menu__list">
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Сборные букеты</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты из хризантем</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты из Альстромерий</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты из эустом</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты Гипсофилы</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты из гербер</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты из пионов</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Букеты из тюльпанов</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-list__item hover-menu">
+									<div class="nav-list__item-title hover-menu__title">Композиции</div>
+									<div class="hover-menu__wrapper">
+										<ul class="hover-menu__list">
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Ящики с цветами</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Коробки с цветами</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Корзины с цветами</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-list__item hover-menu">
+									<div class="nav-list__item-title hover-menu__title">Подарки</div>
+									<div class="hover-menu__wrapper">
+										<ul class="hover-menu__list">
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Коробки конфет</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Мягкие игрушки</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-list__item hover-menu">
+									<div class="nav-list__item-title hover-menu__title">Шары</div>
+									<div class="hover-menu__wrapper">
+										<ul class="hover-menu__list">
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Шары в виде цифр</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Фольгированные шары</a></li>
+											<li><a class="nav-list__link hover-menu__list-link" href="#">Латексные шары</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-list__item">
+									<a class="nav-list__link" href="#">Свадебные букеты</a>
+								</li>
+								<li class="nav-list__item">
+									<a class="nav-list__link" href="#">Повод</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
 				</div>
+				
 			</div>
-			
 		</div>
+		
 	</header>
 
 	<!-- ========== Main ========== -->
-	<main class="main" style="height: 15vh">
-		<div class="container">
+	<main class="main">
+		<!-- ========== Banner ========== -->
+		<section class="banner">
+			<div class="container">
+				<div class="banner-wrapper">
+					<div class="banner-inner">
+						<div class="banner-slider swiper">
+							<div class="banner-slider__wrapper swiper-wrapper">
+								<div class="banner-slider__slide swiper-slide">
+									<img class="banner-slider__slide-bg" src="./img/banner/bg-1.jpg" alt="bg">
+									<div class="banner-slider__slide-text">
+										<h3 class="banner-slider__slide-title">Бесплатная доставка от 5000 руб</h3>
+										<span class="banner-slider__slide-promotext">Промокод:</span>
+										<div class="banner-slider__slide-promocode" data-copy="wrapper">
+											<p data-copy="text">ЛАВКАРОЗ</p>
+											<button data-copy="btn"><img src="./img/icons/copy.svg" alt="btn"></button>
+										</div>
+									</div>
+								</div>
+								<div class="banner-slider__slide swiper-slide">
+									<img class="banner-slider__slide-bg" src="./img/banner/bg-2.jpg" alt="bg">
+									<div class="banner-slider__slide-text">
+										<h3 class="banner-slider__slide-title">Опытные флористы</h3>
+										<div class="banner-slider__slide-descr">Мастера своего дела!<br>Выразят Ваши чувства в цветах</div>
+									</div>
+								</div>
+								<div class="banner-slider__slide swiper-slide">
+									<img class="banner-slider__slide-bg" src="./img/banner/bg-3.jpg" alt="bg">
+									<div class="banner-slider__slide-text">
+										<h3 class="banner-slider__slide-title">Удивительные букеты</h3>
+										<div class="banner-slider__slide-descr">Подарите Вашим любимым настроение!</div>
+									</div>
+								</div>
+							</div>
+							<div class="banner-slider__btn-next swiper-button-next"></div>
+							<div class="banner-slider__btn-prev swiper-button-prev"></div>
+							<div class="banner-slider__pagination swiper-pagination"></div>
+						</div>
+					</div>
 
+					<div class="banner-proposition">
+						<div class="banner-proposition__title">Букет недели</div>
+						<div class="banner-proposition__inner">
+							<div class="banner-proposition__slider swiper">
+								<div class="banner-proposition__slider-wrapper swiper-wrapper">
+									<div class="card card--small">
+
+									</div>
+								</div>
+								<div class="banner-proposition__btn-next swiper-button-next"></div>
+								<div class="banner-proposition__btn-prev swiper-button-prev"></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+
+
+		<!-- data-card="sale-15" data-card="sale-20" data-card="sale-25" data-card="sale-35" data-card="hot" data-card="new"-->
+
+		<div class="container">
+			<div class="container-s" style="display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 20px;
+			margin: 300px 0;">
+
+				<article class="card card--slider"> 
+					<button class="card-btn--like">
+						<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+							<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+						</svg>							
+					</button>
+					<div class="card-img">
+						<a href="#">
+							<div class="card-img__slider swiper">
+								<div class="card-img__wrapper swiper-wrapper">
+									<div class="card-img__slide swiper-slide">
+										<img src="./img/products/1(1).jpg" alt="image">
+									</div>
+									<div class="card-img__slide swiper-slide">
+										<img src="./img/products/1(2).jpg" alt="image">
+									</div>
+								</div>
+								<div class="card-img__pagination swiper-pagination"></div>
+							</div>
+						</a>
+					</div>
+					<div class="card-description">
+						<div class="card-top">
+							<h3 class="card-title"><a href="#">Букет 25 роз Нежный микс</a></h3>
+							<div class="card-size">Высота: 60 см, Ширина: 35 см</div>
+						</div>
+
+						<div class="card-bottom">
+							<div class="card-price">13 499 ₽</div>
+							<button class="btn btn-full card-btn--basket"><span>В корзину</span></button>
+						</div>
+					</div>
+				</article>
+
+				<article class="card card--slider" data-card="sale-20"> 
+					<button class="card-btn--like active">
+						<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+							<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+						</svg>							
+					</button>
+					<div class="card-img">
+						<a href="#">
+							<div class="card-img__slider swiper">
+								<div class="card-img__wrapper swiper-wrapper">
+									<div class="card-img__slide swiper-slide">
+										<img src="./img/products/6(1).jpg" alt="image">
+									</div>
+									<div class="card-img__slide swiper-slide">
+										<img src="./img/products/6(2).jpg" alt="image">
+									</div>
+									<div class="card-img__slide swiper-slide">
+										<img src="./img/products/6(3).jpg" alt="image">
+									</div>
+								</div>
+								<div class="card-img__pagination swiper-pagination"></div>
+							</div>
+						</a>
+					</div>
+					<div class="card-description">
+						<div class="card-top">
+							<h3 class="card-title"><a href="#">Букет роз Ред наоми 60 см</a></h3>
+							<div class="card-size">Высота: 60 см, Ширина: 35 см</div>
+						</div>
+
+						<div class="card-bottom">
+							<div class="card-price">
+								<div class="card-price--new">13 499 ₽</div>
+								<div class="card-price--old">15 499 ₽</div>
+							</div>
+							<button class="btn btn-full card-btn--basket"><span>В корзину</span></button>
+						</div>
+					</div>
+				</article>
+
+				<article class="card card--slider" data-card="hot"> 
+					<button class="card-btn--like">
+						<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+							<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+						</svg>							
+					</button>
+					<div class="card-img">
+						<a href="#">
+							<div class="card-img__slider swiper">
+								<div class="card-img__wrapper swiper-wrapper">
+									<div class="card-img__slide swiper-slide">
+										<img src="./img/products/2(1).jpg" alt="image">
+									</div>
+								</div>
+								<div class="card-img__pagination swiper-pagination"></div>
+							</div>
+						</a>
+					</div>
+					<div class="card-description">
+						<div class="card-top">
+							<h3 class="card-title"><a href="#">Букет 5 пионовидных роз Мисти баблс</a></h3>
+							<div class="card-size">Высота: 60 см, Ширина: 35 см</div>
+						</div>
+
+						<div class="card-bottom">
+							<div class="card-price">9 499 ₽</div>
+							<button class="btn btn-full card-btn--basket"><span>В корзину</span></button>
+						</div>
+					</div>
+				</article>
+
+				<article class="card card--slider" data-card="new"> 
+					<button class="card-btn--like">
+						<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+							<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+						</svg>							
+					</button>
+					<div class="card-img">
+						<a href="#">
+							<div class="card-img__slider swiper">
+								<div class="card-img__wrapper swiper-wrapper">
+									<div class="card-img__slide swiper-slide">
+										<img src="./img/products/7(1).jpg" alt="image">
+									</div>
+									<div class="card-img__slide swiper-slide">
+										<img src="./img/products/8(1).jpg" alt="image">
+									</div>
+									<div class="card-img__slide swiper-slide">
+										<img src="./img/products/9(1).jpg" alt="image">
+									</div>
+									<div class="card-img__slide swiper-slide">
+										<img src="./img/products/3(1).jpg" alt="image">
+									</div>
+								</div>
+								<div class="card-img__pagination swiper-pagination"></div>
+							</div>
+						</a>
+					</div>
+					<div class="card-description">
+						<div class="card-top">
+							<h3 class="card-title"><a href="#">Букет роз микс 40 см</a></h3>
+							<div class="card-size">Высота: 60 см, Ширина: 40 см</div>
+						</div>
+
+						<div class="card-bottom">
+							<div class="card-price">10 999 ₽</div>
+							<button class="btn btn-full card-btn--basket"><span>В корзину</span></button>
+						</div>
+					</div>
+				</article>
+
+			</div>
 		</div>
+		
 	</main>
+
 
 	<!-- ========== Footer ========== -->
 	<footer class="footer">
@@ -551,7 +774,8 @@
 		</div>
 	</footer>
 
-	<!-- ========== Main js ========== -->
+	<!-- ========== Scripts ========== -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
