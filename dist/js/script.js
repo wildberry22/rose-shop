@@ -96,8 +96,11 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_copyText_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/copyText.js */ "./src/assets/js/modules/copyText.js");
+/* harmony import */ var _modules_cutString_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/cutString.js */ "./src/assets/js/modules/cutString.js");
+
 
 document.addEventListener("DOMContentLoaded", () => {
+  /* ========== Header ========== */
   // Working with extra-block in header
   const header = document.querySelector('.header--extra');
 
@@ -110,7 +113,9 @@ document.addEventListener("DOMContentLoaded", () => {
         header.classList.remove('header--extra');
       }
     });
-  } // Banner slider section > button to copy promo
+  }
+  /* ========== Banner ========== */
+  // Banner slider section > button to copy promo
 
 
   Object(_modules_copyText_js__WEBPACK_IMPORTED_MODULE_0__["default"])(); // Banner slider
@@ -133,7 +138,25 @@ document.addEventListener("DOMContentLoaded", () => {
       nextEl: ".banner-slider__btn-next",
       prevEl: ".banner-slider__btn-prev"
     }
-  }); // Card slider
+  }); // Banner Proposition slider
+
+  const bannerPropositionSlider = new Swiper(".banner-proposition__slider", {
+    slidesPerView: 1,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+    navigation: {
+      nextEl: ".banner-proposition__btn-next",
+      prevEl: ".banner-proposition__btn-prev"
+    }
+  });
+  /* ========== Product card ========== */
+
+  const cards = document.querySelectorAll('.card'); // Card slider
 
   const cardSlider = new Swiper(".card-img__slider", {
     slidesPerView: 1,
@@ -141,15 +164,49 @@ document.addEventListener("DOMContentLoaded", () => {
     centeredSlides: true,
     effect: "fade",
     autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true
+      delay: 1000
     },
     pagination: {
       el: ".card-img__pagination",
       clickable: false
     },
     allowTouchMove: false
+  }); // Slider not autoplay after creation
+
+  cardSlider.forEach(slider => {
+    slider.autoplay.stop();
+  }); // When we hover at the card it starts working
+
+  cards.forEach((card, idx) => {
+    card.addEventListener('mouseenter', e => {
+      cardSlider[idx].autoplay.start();
+    });
+    card.addEventListener('mouseleave', e => {
+      cardSlider[idx].autoplay.stop();
+    });
+  }); // When we hover over the picture, the title link is highlighted so that it is clear that the picture is also a link
+
+  cards.forEach(card => {
+    const title = card.querySelector('.card-title');
+    const imgWrapper = card.querySelector('.card-img');
+    imgWrapper.addEventListener('mouseenter', e => {
+      title.classList.add('hover');
+    });
+    imgWrapper.addEventListener('mouseleave', e => {
+      title.classList.remove('hover');
+    });
+  }); // Toggle class on Like button
+
+  cards.forEach(card => {
+    const likedBtn = card.querySelector('.card-btn--like');
+    likedBtn.addEventListener('click', () => {
+      likedBtn.classList.toggle('active');
+    });
+  }); // Cut the Title if it's too long
+
+  cards.forEach(card => {
+    const title = card.querySelector('.card-title a');
+    title.innerText = Object(_modules_cutString_js__WEBPACK_IMPORTED_MODULE_1__["default"])(title, 50);
   });
 });
 
@@ -189,6 +246,22 @@ function copyText() {
       }, 2000);
     }
   });
+}
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/cutString.js":
+/*!********************************************!*\
+  !*** ./src/assets/js/modules/cutString.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cutString; });
+function cutString(str, numTo) {
+  return str.innerText.length > numTo ? str.innerText.slice(0, numTo) + '...' : str.innerText;
 }
 
 /***/ })

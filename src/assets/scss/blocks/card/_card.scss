@@ -17,64 +17,21 @@
   }
   &--small {
     height: 404px;
-  }
-  &::before {
-    content: 'text';
-    font-family: $ttnorms-font;
-    font-weight: $font-medium;
-    font-size: 12px;
-    line-height: 133%;
-    color: $white-color;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    text-transform: uppercase;
-    padding: 5px 10px;
-    background: $blue-color;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
-    border-radius: 5px;
-    z-index: 99;
-    display: none;
+    .card-description {
+      padding: 15px 20px 20px;
+    }
+    .card-title a{
+      line-height: 120%;
+      margin-bottom: 5px;
+    }
+    &:hover {
+      box-shadow: none !important; 
+      border: 1px solid rgba(#730b2d, 0.3) !important;
+    }
   }
   &:hover {
     border: 1px solid $gray-light-3-color;
     box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
-  }
-  &[data-card="sale-15"] {
-    &::before {
-      content: '-15%';
-      display: block;
-    }
-  }
-  &[data-card="sale-20"] {
-    &::before {
-      content: '-20%';
-      display: block;
-    }
-  }
-  &[data-card="sale-25"] {
-    &::before {
-      content: '-25%';
-      display: block;
-    }
-  }
-  &[data-card="sale-35"] {
-    &::before {
-      content: '-35%';
-      display: block;
-    }
-  }
-  &[data-card="hot"] {
-    &::before {
-      content: 'HOT';
-      display: block;
-    }
-  }
-  &[data-card="new"] {
-    &::before {
-      content: 'NEW';
-      display: block;
-    }
   }
 
   &-img {
@@ -109,6 +66,74 @@
       }
     }
   }
+  
+  &-btn--label {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 99;
+    &::before {
+      content: 'text';
+      font-family: $ttnorms-font;
+      font-weight: $font-medium;
+      font-size: 12px;
+      line-height: 133%;
+      color: $white-color;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      background: $blue-color;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+      border-radius: 5px;
+      transition: .2s ease;
+      z-index: 99;
+      display: none;
+    }
+    &:hover {
+      &::before {
+        background: #208087;
+      }
+    }
+  }
+  &[data-card="sale-15"] {
+    .card-btn--label::before {
+      content: '-15%';
+      display: block;
+    }
+  }
+  &[data-card="sale-20"] {
+    .card-btn--label::before {
+      content: '-20%';
+      display: block;
+    }
+  }
+  &[data-card="sale-25"] {
+    .card-btn--label::before {
+      content: '-25%';
+      display: block;
+    }
+  }
+  &[data-card="sale-35"] {
+    .card-btn--label::before {
+      content: '-35%';
+      display: block;
+    }
+  }
+  &[data-card="hot"] {
+    .card-btn--label::before {
+      content: 'HOT';
+      display: block;
+    }
+  }
+  &[data-card="new"] {
+    .card-btn--label::before {
+      content: 'NEW';
+      display: block;
+    }
+  }
+
+
   &-description {
     padding: 20px;
     height: 100%;
@@ -119,6 +144,11 @@
     align-self: end;
   }
   &-title {
+    &.hover {
+      a {
+        color: $pink-color;
+      }
+    }
     a {
       display: block;
       font-family: $ttnorms-font;
