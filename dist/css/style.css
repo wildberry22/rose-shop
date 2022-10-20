@@ -134,6 +134,15 @@ body {
   padding: 0 15px;
   margin: 0 auto; }
 
+.margin {
+  margin: 60px 0; }
+
+.margin-top {
+  margin-top: 60px; }
+
+.margin-bottom {
+  margin-bottom: 60px; }
+
 .swiper-button-next, .swiper-button-prev {
   width: 40px;
   height: 40px;
@@ -346,6 +355,8 @@ body {
       line-height: 138%;
       text-decoration-line: line-through;
       color: #B0B2B9; }
+  .card .swiper-horizontal > .swiper-pagination-bullets, .card .swiper-pagination-bullets.swiper-pagination-horizontal, .card .swiper-pagination-custom, .card .swiper-pagination-fraction {
+    bottom: 15px !important; }
 
 .header {
   position: sticky;
@@ -448,7 +459,7 @@ body {
     list-style-type: none;
     display: flex;
     align-items: center;
-    gap: 10px; }
+    gap: 5px; }
   .header-top__social-item a {
     display: block;
     width: 28px;
@@ -470,7 +481,9 @@ body {
     line-height: 1;
     text-decoration: none;
     color: #505567;
-    padding-left: 24px; }
+    padding-left: 24px;
+    border-bottom: 1px solid transparent;
+    transition: .2s ease; }
     .header-top__account::before {
       content: '';
       width: 13.5px;
@@ -479,7 +492,13 @@ body {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: 0px; }
+      left: 0px;
+      transition: .25s ease; }
+    .header-top__account:hover {
+      border-bottom: 1px solid #505567;
+      padding-bottom: 3px; }
+      .header-top__account:hover::before {
+        transform: translateY(-60%); }
 
 .header-main {
   padding: 16px 0;
@@ -488,7 +507,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px; }
+    gap: 25px; }
   .header-main__logo {
     display: flex;
     align-items: center;
@@ -578,6 +597,7 @@ body {
     .header-main__contact .contact-info .hover-menu__wrapper {
       top: 14px; }
     .header-main__contact .contact-info__title {
+      white-space: nowrap;
       font-weight: 700;
       font-size: 1rem;
       line-height: 138%;
@@ -998,3 +1018,30 @@ body {
     left: 10px; }
   .banner .banner-proposition .swiper-button-next, .banner .banner-proposition .swiper-rtl .swiper-button-prev {
     right: 10px; }
+
+.benefits-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 15px; }
+  .benefits-list__item {
+    height: 90px;
+    padding: 25px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: #FFFFFF;
+    border: 1px solid #F2F3F5;
+    box-shadow: 0px 4px 12px rgba(34, 42, 70, 0.03);
+    border-radius: 5px; }
+    .benefits-list__item-img img {
+      height: 40px;
+      width: 40px;
+      object-fit: contain; }
+    .benefits-list__item-text {
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 138%;
+      color: #222A46; }

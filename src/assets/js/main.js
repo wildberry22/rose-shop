@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 1,
     loop: true,
     centeredSlides: true,
+    allowTouchMove: false,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
