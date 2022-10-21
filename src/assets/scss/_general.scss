@@ -18,6 +18,10 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
+.container-sl {
+  max-width: 1230px;
+  margin: 0 auto;
+}
 
 .margin {
   margin: 60px 0;
@@ -27,4 +31,12 @@ body {
 }
 .margin-bottom {
   margin-bottom: 60px;
+}
+
+.title {
+  font-family: $yeseva-one-font;
+  font-weight: $font-regular;
+  font-size: $fz-1;
+  line-height: 125%;
+  color: $dark-blue-1-color;
 }

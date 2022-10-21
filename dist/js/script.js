@@ -209,6 +209,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = card.querySelector('.card-title a');
     title.innerText = Object(_modules_cutString_js__WEBPACK_IMPORTED_MODULE_1__["default"])(title, 50);
   });
+  /* ========== Sliders ========== */
+
+  const sliders = new Swiper(".slider-swiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    grabCursor: true,
+    loop: false,
+    centeredSlides: false,
+    allowTouchMove: true,
+    autoplay: false,
+    navigation: {
+      nextEl: ".slider-swiper__btn-next",
+      prevEl: ".slider-swiper__btn-prev"
+    }
+  });
 });
 
 /***/ }),

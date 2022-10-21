@@ -1,0 +1,27 @@
+.slider {
+  margin-bottom: 30px;
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    &__link {
+      display: block;
+      padding: 5px;
+      transition: .2s ease;
+      svg path {
+        transition: .2s ease;
+      }
+      &:hover {
+        transform: translateX(5px);
+        svg path {
+          fill: $blue-color;
+        }
+      }
+    }
+  }
+  &-swiper {
+    padding: 0 30px 30px;
+    
+  }
+}

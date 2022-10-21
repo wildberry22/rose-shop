@@ -127,4 +127,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+  /* ========== Sliders ========== */
+  const sliders = new Swiper(".slider-swiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    grabCursor: true,
+    loop: false,
+    centeredSlides: false,
+    allowTouchMove: true,
+    autoplay: false,
+    navigation: {
+      nextEl: ".slider-swiper__btn-next",
+      prevEl: ".slider-swiper__btn-prev",
+    },
+  });
+
 });

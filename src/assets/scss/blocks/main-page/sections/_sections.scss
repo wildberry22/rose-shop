@@ -1,0 +1,98 @@
+.sections {
+  padding: 60px 0;
+  background: #F2F6F7;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    &__item {
+      max-width: 280px;
+      height: 350px;
+      display: block;
+      text-decoration: none;
+      background: $white-color;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+      transition: .2s ease;
+      border: 1px solid transparent;
+      &:hover {
+        border: 1px solid $blue-color;
+        .go-corner {
+          margin-right: -22px;
+        }
+        .go-arrow {
+          opacity: 1;
+        }
+      }
+      &-img {
+        img {
+          height: 250px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      &-descr {
+        height: 92px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      &-title {
+        font-weight: $font-bold;
+        font-size: $fz-4;
+        line-height: 143%;
+        text-align: center;
+        color: $dark-blue-1-color;
+        margin-bottom: 10px;
+      }
+      &-price {
+        font-weight: $font-regular;
+        font-size: $fz-6;
+        line-height: 138%;
+        text-align: center;
+        color: $dark-blue-1-color;
+        span {
+          font-weight: $font-bold;
+        }
+      }
+
+      .go-corner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        background-color: $blue-color;
+        height: 100%;
+        width: 33px;
+        padding-right: 9px;
+        border-radius: 0;
+        transform: skew(6deg);
+        margin-right: -52px;
+        align-items: start;
+        background-image: linear-gradient(180deg, $blue-color 0%, #831037 60%, $pink-color 100%);
+        transition: all 0.3s ease-out;
+      }
+      .go-arrow {
+        transform: skew(-6deg);
+        margin-left: 2px;
+        margin-top: 9px;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+        svg path {
+          fill: $white-color;
+        }
+      }
+    }
+  }
+}

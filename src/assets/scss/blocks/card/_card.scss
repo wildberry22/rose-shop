@@ -4,6 +4,7 @@
   position: relative;
   transition: .2s ease;
   height: 440px;
+  max-width: 280px;
   background: $white-color;
   border: 1px solid $gray-light-2-color;
   border-radius: 5px;
@@ -26,7 +27,7 @@
     }
     &:hover {
       box-shadow: none !important; 
-      border: 1px solid rgba(#730b2d, 0.3) !important;
+      border: 1px solid rgba(#0b6073, 0.3) !important;
     }
   }
   &:hover {
@@ -146,7 +147,7 @@
   &-title {
     &.hover {
       a {
-        color: $pink-color;
+        color: $blue-color;
       }
     }
     a {
@@ -160,7 +161,7 @@
       margin-bottom: 10px;
       transition: .2s linear;
       &:hover {
-        color: $pink-color;
+        color: $blue-color;
       }
     }
   }
