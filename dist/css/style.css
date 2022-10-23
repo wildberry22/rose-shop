@@ -1161,3 +1161,20 @@ body {
         transition: all 0.3s ease-out; }
         .sections-list__item .go-arrow svg path {
           fill: #FFFFFF; }
+
+.gallery-title {
+  margin-bottom: 30px; }
+
+.gallery-slider {
+  padding: 0px 30px; }
+  .gallery-slider__slide {
+    display: block;
+    width: 278px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #E2ECE8;
+    border-radius: 10px; }
+    .gallery-slider__slide-img {
+      width: 278px;
+      height: 300px;
+      object-fit: cover; }

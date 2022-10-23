@@ -1,0 +1,22 @@
+.gallery {
+  &-title {
+    margin-bottom: 30px;
+  }
+  &-slider {
+    padding: 0px 30px;
+    &__slide {
+      display: block;
+      width: 278px;
+      height: 300px;
+      overflow: hidden;
+      border: 1px solid #E2ECE8;
+      border-radius: 10px;  
+      &-img {
+        width: 278px;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+  }
+  
+}

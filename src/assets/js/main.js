@@ -142,4 +142,42 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+
+
+  /* ========== Gallery ========== */
+  //gallery  
+  lightGallery(document.getElementById('mainpage-gallery'), {
+    plugins: [lgAutoplay, lgZoom],
+    mode: 'lg-fade',
+    autoplay: true,
+    slideShowAutoplay: true,
+    speed: 200,
+    mobileSettings: {
+      controls: true,
+      showCloseIcon: true,
+      download: true,
+      rotate: false
+    },
+  });
+
+  // swiper
+  const gallerySlider = new Swiper(".gallery-slider", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    grabCursor: true,
+    loop: true,
+    centeredSlides: false,
+    allowTouchMove: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
+    navigation: {
+      nextEl: ".gallery-slider__btn-next",
+      prevEl: ".gallery-slider__btn-prev",
+    },
+  });
+
+  
 });
