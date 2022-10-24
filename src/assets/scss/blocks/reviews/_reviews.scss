@@ -1,0 +1,185 @@
+.reviews {
+  padding: 80px 0;
+  background: #F2F6F7;
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &-slider {
+    position: relative;
+    padding: 0px 30px 10px;
+    margin-bottom: 30px;
+    &__slide {
+      height: 300px;
+      padding: 40px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      gap: 40px;
+      background: $white-color;
+      box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+      border-radius: 10px;
+      &-content {
+        flex: 1;
+        min-width: 0;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+      &-starrating {
+        margin-bottom: 10px;
+        display: flex;
+        gap: 7px;
+        &[data-rating="5"] {
+          .star {
+            svg path {
+              fill: $yellow-color;
+            }
+          }
+        }
+        &[data-rating="4"] {
+          .star:nth-child(-n+4) {
+            svg path {
+              fill: $yellow-color;
+            }
+          }
+        }
+        &[data-rating="3"] {
+          .star:nth-child(-n+3) {
+            svg path {
+              fill: $yellow-color;
+            }
+          }
+        }
+        &[data-rating="2"] {
+          .star:nth-child(-n+2) {
+            svg path {
+              fill: $yellow-color;
+            }
+          }
+        }
+        &[data-rating="1"] {
+          .star:nth-child(-n+1) {
+            svg path {
+              fill: $yellow-color;
+            }
+          }
+        }
+      }
+      &-name {
+        font-weight: $font-bold;
+        font-size: $fz-5;
+        line-height: 138%;
+        color: $dark-blue-1-color;
+        margin-bottom: 15px;
+      }
+      &-text {
+        font-size: $fz-6;
+        line-height: 138%;
+        color: $dark-blue-1-color;
+      }
+      &-bottom {
+        align-self: flex-end;
+      }
+      &-bouquet {
+        font-weight: $font-medium;
+        font-size: $fz-6;
+        line-height: 138%;
+        color: $dark-blue-1-color;
+        a {
+          text-decoration: none;
+          border-bottom: 1px solid transparent;
+          color: $blue-color;
+          transition: .1s ease;
+          &:hover {
+            border-bottom: 1px solid $blue-color;
+          }
+        }
+      }
+      &-img {
+        height: 220px;
+        width: 220px;
+        border: 2px solid $blue-color;
+        border-radius: 50%;
+        overflow: hidden;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+    }
+    
+  }
+
+  &-btn--more {
+    display: block;
+    text-align: center;
+    border: none;
+    box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+    margin: 0 auto;
+    padding: 13px 50px;
+    &:hover {
+      background-color: $white-color;
+      color: $blue-color;
+      box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.18);
+    }
+    &:active {
+      box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+    }
+  }
+}
+
+
+.reviews-slider__progress-bar {
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 1;
+  height: 2px;
+  .slide_progress-bar {
+    position: absolute;
+    height: 2px;
+    background: rgba($blue-color, 0.3);
+    width: auto;
+    clear: both;
+    opacity: 0;
+    bottom: 1px;
+    left: 10px;
+    right: 10px;
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $blue-color;
+      height: 100%;
+      width: 0;
+      content: "";
+      transition: 0.1s width linear;
+    }
+  }
+  &.active {
+    .slide_progress-bar {
+      opacity: 1;
+    }
+  }
+  &.animate {
+    .slide_progress-bar {
+      &:after {
+        transition: width linear;
+        transition-delay: unset;
+        width: 100%;
+        transition-duration: 5s;
+      }
+    }
+  }
+}

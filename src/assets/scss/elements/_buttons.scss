@@ -43,3 +43,24 @@
     }
   }
 }
+
+.btn-blue {
+  display: inline-block;
+  padding: 13px 30px;
+  background: $white-color;
+  border: 1px solid $blue-color;
+  border-radius: 5px;
+  transition: .2s ease;
+  cursor: pointer;
+
+  font-family: $ttnorms-font;
+  font-weight: $font-medium;
+  font-size: $fz-6;
+  line-height: 138%;
+  color: $blue-color;
+  text-decoration: none;
+  &:hover {
+    color: $white-color;
+    background: $blue-color;
+  }
+}
