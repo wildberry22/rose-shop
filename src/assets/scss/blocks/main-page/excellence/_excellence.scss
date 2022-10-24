@@ -1,0 +1,65 @@
+.excellence {
+  padding: 70px 0;
+  position: relative;
+  z-index: -2;
+  &::before {
+    content: '';
+    width: 330px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('../img/bg-leaves.svg') center right/cover no-repeat;
+    z-index: -1;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+  &-content {
+    font-size: $fz-5;
+    line-height: 144%;
+    color: $dark-blue-2-color;
+    p {
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      li {
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -12px;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background-color: $dark-blue-2-color;
+        }
+      }
+    }
+  }
+  &-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    background: $white-color;
+    border: 1px solid #F2F6F7;
+    box-shadow: 0px 15px 30px rgba(34, 42, 70, 0.05);
+    overflow: hidden;
+  }
+}
