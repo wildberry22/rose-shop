@@ -64,35 +64,7 @@
         }
       }
 
-      .go-corner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        right: 0;
-        background-color: $blue-color;
-        height: 100%;
-        width: 33px;
-        padding-right: 9px;
-        border-radius: 0;
-        transform: skew(6deg);
-        margin-right: -52px;
-        align-items: start;
-        background-image: linear-gradient(180deg, $blue-color 0%, #831037 60%, $pink-color 100%);
-        transition: all 0.3s ease-out;
-      }
-      .go-arrow {
-        transform: skew(-6deg);
-        margin-left: 2px;
-        margin-top: 9px;
-        opacity: 0;
-        transition: all 0.3s ease-out;
-        svg path {
-          fill: $white-color;
-        }
-      }
+      
     }
   }
 }

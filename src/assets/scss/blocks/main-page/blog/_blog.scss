@@ -1,0 +1,125 @@
+.blog {
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    &__btn {
+      padding-right: 5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      span {
+        font-weight: $font-medium;
+        font-size: $fz-7;
+        line-height: 138%;
+        color: $black-color;
+        transition: .2s ease;
+      }
+      svg {
+        transition: .2s ease;
+        path {
+          transition: .2s ease;
+        }
+      }
+       
+      &:hover {
+        span {
+          color: $blue-color;
+        }
+        svg {
+          transform: translateX(5px);
+          path {
+            fill: $blue-color;
+          }
+        }
+      }
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+.blog-card {
+  flex: 1;
+  height: 430px;
+  background: $white-color;
+  border: 1px solid $gray-light-3-color;
+  box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+  border-radius: 5px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  transition: .2s ease;
+  &.hover {
+    border: 1px solid $blue-color;
+  }
+  &__img {
+    height: 250px; 
+    overflow: hidden;
+    img {
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+      transition: .2s linear;
+    }
+    &:hover {
+      img {
+        transform: scale(1.12);
+      }
+    }
+    &.hover {
+      img {
+        transform: scale(1.12);
+      }
+    }
+  }
+  &__content {
+    padding: 20px 25px;
+    max-width: 380px;
+    height: 180px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  &__title {
+    a {
+      display: block;
+      text-decoration: none;
+      font-weight: $font-bold;
+      font-size: $fz-5;
+      line-height: 138%;
+      color: $black-color;
+      margin-bottom: 10px;
+      transition: .2s ease;
+    }
+    &:hover {
+      a {
+        color: $blue-color;
+      }
+    }
+    &.hover {
+      a {
+        color: $blue-color;
+      }
+    }
+  }
+  &__descr {
+    font-size: $fz-6;
+    line-height: 138%;
+    color: $dark-blue-2-color;
+    margin-bottom: 10px;
+  }
+  &__content-bottom {
+    align-self: flex-end;
+    time {
+      font-size: $fz-7;
+      color: $gray-1-color;
+    }
+  }
+}
