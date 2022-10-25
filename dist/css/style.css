@@ -468,7 +468,7 @@ body {
       content: '';
       width: 12px;
       height: 12px;
-      background: url("../../../img/icons/clock.svg") center center/contain no-repeat;
+      background: url("../img/icons/clock.svg") center center/contain no-repeat;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -549,7 +549,7 @@ body {
       content: '';
       width: 13.5px;
       height: 15px;
-      background: url("../../../img/icons/account.svg") center center/contain no-repeat;
+      background: url("../img/icons/account.svg") center center/contain no-repeat;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -697,11 +697,11 @@ body {
             height: 18px;
             transition: .2s ease; }
           .header-main__contact .contact-info__list-top a.phone::before {
-            background: url("../../../img/icons/phone.svg") center center/contain no-repeat; }
+            background: url("../img/icons/phone.svg") center center/contain no-repeat; }
           .header-main__contact .contact-info__list-top a.address::before {
-            background: url("../../../img/icons/mark.svg") center center/contain no-repeat; }
+            background: url("../img/icons/mark.svg") center center/contain no-repeat; }
           .header-main__contact .contact-info__list-top a.mail::before {
-            background: url("../../../img/icons/mail.svg") center center/contain no-repeat; }
+            background: url("../img/icons/mail.svg") center center/contain no-repeat; }
       .header-main__contact .contact-info__list-bottom {
         width: 100%; }
         .header-main__contact .contact-info__list-bottom ul {
@@ -840,7 +840,7 @@ body {
       top: 55%;
       right: 0;
       transform: translateY(-50%);
-      background: url("../../../img/icons/arrow-down.svg") center center/contain no-repeat; }
+      background: url("../img/icons/arrow-down.svg") center center/contain no-repeat; }
   .hover-menu__wrapper {
     position: absolute;
     visibility: hidden;
@@ -1508,3 +1508,90 @@ body {
     border: 1px solid #F2F6F7;
     box-shadow: 0px 15px 30px rgba(34, 42, 70, 0.05);
     overflow: hidden; }
+
+.map {
+  position: relative; }
+  .map-info {
+    position: absolute;
+    top: 120px;
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.15);
+    border-radius: 10px; }
+    .map-info__top {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px; }
+      .map-info__top-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border: 1px solid #E2E4EB;
+        border-radius: 50%;
+        transition: .2s ease; }
+        .map-info__top-btn svg path {
+          transition: .2s ease; }
+        .map-info__top-btn:hover {
+          background-color: #7D818E; }
+          .map-info__top-btn:hover svg path {
+            stroke: #FFFFFF; }
+      .map-info__top-call {
+        text-decoration: none;
+        display: block;
+        font-weight: 700;
+        color: #222A46;
+        transition: .2s ease; }
+        .map-info__top-call:hover {
+          color: #0093A2; }
+      .map-info__top-order {
+        position: relative;
+        font-size: 0.875rem;
+        line-height: 143%;
+        text-decoration: none;
+        color: #E2195B;
+        cursor: pointer; }
+        .map-info__top-order::after {
+          content: '';
+          width: 100%;
+          height: 1px;
+          background: #E2195B;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -2px; }
+    .map-info__time {
+      position: relative;
+      padding-left: 28px;
+      color: #1B1C21;
+      margin-bottom: 15px; }
+      .map-info__time::before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        background: url("../img/icons/clock-sm.svg") center center/contain no-repeat;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%); }
+    .map-info__mail {
+      position: relative; }
+      .map-info__mail a {
+        font-weight: 500;
+        padding-left: 28px;
+        text-decoration: none;
+        color: #1B1C21;
+        transition: .2s ease; }
+        .map-info__mail a:hover {
+          color: #0093A2; }
+      .map-info__mail::before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        background: url("../img/icons/mail.svg") center center/contain no-repeat;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%); }
