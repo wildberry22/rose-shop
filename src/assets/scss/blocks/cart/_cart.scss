@@ -1,0 +1,241 @@
+.cart {
+  position: fixed;
+  right: -101%;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 502;
+  transition: .7s ease-in-out;
+  &.active {
+    right: 0;
+    transition: .5s ease-in-out;
+    .cart-top,
+    .cart-bottom {
+      right: 0;
+    }
+  }
+  &-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: $white-color;
+    width: 480px;
+  }
+  &-top {
+    padding: 22px 20px;
+    border-bottom: 1px solid $gray-light-2-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white-color;
+  }
+  &__title {
+    font-weight: $font-medium;
+    font-size: $fz-5;
+    line-height: 138%;
+    color: $dark-blue-1-color;
+  }
+  &__close-btn {
+    border: none;
+    padding: 5px;
+    background: none;
+    cursor: pointer;
+    svg, svg path {
+      transition: .2s ease;
+    }
+    &:hover {
+      svg {
+        transform: rotate(90deg);
+        path {
+          fill: $blue-color;
+        }
+      }
+    }
+  }
+
+  &-content {
+    height: calc(100vh - (70px + 159px));
+    border-top: 1px solid $gray-light-2-color;
+    border-bottom: 1px solid $gray-light-2-color;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: $white-color;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $blue-color;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #01737f;
+    }
+  }
+  &-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+  &-item {
+    padding: 20px 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    border-bottom: 1px solid $gray-light-2-color;
+    &:last-child {
+      border-bottom: none;
+    }
+    &__inner {
+      flex: 1;
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+    &__img {
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      border-radius: 10px;
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+      }
+    }
+    &__content {
+      flex: 1;
+      &-bottom {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+      }
+    }
+    &__title {
+      margin-bottom: 5px;
+      a {
+        display: block;
+        text-decoration: none;
+        font-weight: $font-medium;
+        font-size: $fz-6;
+        line-height: 138%;
+        color: $dark-blue-1-color;
+        transition: .2s ease;
+        &:hover {
+          color: $blue-color;
+        }
+      }
+      &.hover {
+        a {
+          color: $blue-color;
+        }
+      }
+    }
+    &__code {
+      font-size: $fz-7;
+      line-height: 143%;
+      color: $blue-gray-color;
+      margin-bottom: 15px;
+    }
+    &__counter {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      &-num {
+        font-weight: $font-medium;
+        color: $black-color;
+      }
+      button {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $white-color;
+        border: 1px solid $gray-light-1-color;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .2s ease;
+        svg path {
+          transition: .2s ease;
+        }
+        &:hover {
+          background-color: $gray-1-color;
+          border-color: $gray-1-color;
+          svg path {
+            fill: $white-color;
+          }
+        }
+      }
+    }
+    &__sum {
+      font-weight: $font-medium;
+      font-size: $fz-5;
+      line-height: 144%;
+      color: $black-color;
+    }
+    &__btn {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $gray-light-2-color;
+      border-radius: 50%;
+      background: $white-color;
+      transition: .2s ease;
+      cursor: pointer;
+      svg path {
+        fill: $gray-light-2-color;
+        transition: .2s ease;
+      }
+      &:hover {
+        border-color: $blue-color;
+        svg path {
+          fill: $blue-color;
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    background-color: $white-color;
+  }
+  &-sum {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__text, &__num {
+      font-weight: $font-bold;
+      font-size: $fz-4;
+      line-height: 138%;
+      color: $dark-blue-1-color;
+    }
+    &__num {
+      color: $black-color;
+    }
+  }
+  &-btns {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: #F2F6F7;
+  }
+  &__continue-btn {
+    width: 50%;
+    padding: 13px;
+    color: $blue-gray-color;
+    border-color: $blue-gray-color;
+    &:hover {
+      background-color: $blue-gray-color;
+    }
+  }
+  &__checkout-btn {
+    width: 50%;
+    padding: 13px;
+  }
+}

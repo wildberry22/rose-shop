@@ -97,6 +97,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_copyText_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/copyText.js */ "./src/assets/js/modules/copyText.js");
 /* harmony import */ var _modules_cutString_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/cutString.js */ "./src/assets/js/modules/cutString.js");
+/* harmony import */ var _modules_shadow_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/shadow.js */ "./src/assets/js/modules/shadow.js");
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -114,9 +116,69 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+  /* ========== Cart ========== */
+  // When we hover over the picture, the title link is highlighted so that it is clear that the picture is also a link
+
+
+  window.addEventListener('mouseover', e => {
+    if (e.target.classList.contains('cart-item__img') || e.target.closest('.cart-item__img')) {
+      if (e.target.classList.contains('cart-item__img')) {
+        e.target.parentNode.querySelector('.cart-item__title').classList.add('hover');
+      } else if (e.target.closest('.cart-item__img')) {
+        e.target.parentNode.parentNode.parentNode.querySelector('.cart-item__title').classList.add('hover');
+      }
+    } else {
+      if (e.target.classList.contains('cart') || e.target.closest('.cart')) {
+        if (e.target.classList.contains('cart')) {
+          e.target.querySelectorAll('.cart-item__title').forEach(item => {
+            item.classList.remove('hover');
+          });
+        } else {
+          e.target.closest('.cart').querySelectorAll('.cart-item__title').forEach(item => {
+            item.classList.remove('hover');
+          });
+        }
+      }
+    }
+  }); // activating cart
+
+  const cart = document.querySelector('.cart');
+  document.querySelector('.header-main__basket-btn').addEventListener('click', () => {
+    Object(_modules_shadow_js__WEBPACK_IMPORTED_MODULE_2__["default"])('activate');
+    cart.classList.add('active');
+  }); // deactivating cart
+
+  window.addEventListener('click', e => {
+    if (e.target.hasAttribute('data-cart-close') || e.target.closest('[data-cart-close]') || e.target == cart) {
+      Object(_modules_shadow_js__WEBPACK_IMPORTED_MODULE_2__["default"])('deactivate');
+      cart.classList.remove('active');
+    }
+  }); // remove item in cart 
+
+  window.addEventListener('click', e => {
+    if (e.target.classList.contains('cart-item__btn') || e.target.closest('.cart-item__btn')) {
+      e.target.closest('.cart-item').remove();
+    }
+  }); // cart-item counter
+
+  window.addEventListener('click', e => {
+    if (e.target.dataset.action === 'plus' || e.target.dataset.action === 'minus' || e.target.closest('[data-action="plus"]') || e.target.closest('[data-action="minus"]')) {
+      const counterWrapper = e.target.closest('.cart-item__counter');
+      const counter = counterWrapper.querySelector('[data-counter]');
+
+      if (e.target.dataset.action === 'plus' || e.target.closest('[data-action="plus"]')) {
+        counter.innerText = ++counter.innerText;
+      }
+
+      if (e.target.dataset.action === 'minus' || e.target.closest('[data-action="minus"]')) {
+        if (+counter.innerText > 1) {
+          counter.innerText = --counter.innerText;
+        }
+      }
+    }
+  });
   /* ========== Banner ========== */
   // Banner slider section > button to copy promo
-
 
   Object(_modules_copyText_js__WEBPACK_IMPORTED_MODULE_0__["default"])(); // Banner slider
 
@@ -340,6 +402,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /***/ }),
 
+/***/ "./src/assets/js/modules/calcScroll.js":
+/*!*********************************************!*\
+  !*** ./src/assets/js/modules/calcScroll.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return calcScroll; });
+function calcScroll() {
+  let div = document.createElement('div');
+  div.style.width = '50px';
+  div.style.height = '50px';
+  div.style.overflowY = 'scroll';
+  div.style.visibility = 'hidden';
+  document.body.appendChild(div);
+  let scrollWidth = div.offsetWidth - div.clientWidth;
+  div.remove();
+  return scrollWidth;
+}
+
+/***/ }),
+
 /***/ "./src/assets/js/modules/copyText.js":
 /*!*******************************************!*\
   !*** ./src/assets/js/modules/copyText.js ***!
@@ -390,6 +476,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return cutString; });
 function cutString(str, numTo) {
   return str.innerText.length > numTo ? str.innerText.slice(0, numTo) + '...' : str.innerText;
+}
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/shadow.js":
+/*!*****************************************!*\
+  !*** ./src/assets/js/modules/shadow.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return shadow; });
+/* harmony import */ var _calcScroll_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calcScroll.js */ "./src/assets/js/modules/calcScroll.js");
+
+function shadow() {
+  let activateOrDeactivate = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'deactivate';
+  const shadow = document.querySelector('.shadow');
+  const scroll = Object(_calcScroll_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
+  if (activateOrDeactivate == 'activate') {
+    shadow.classList.add('active');
+    document.body.style.overflowY = 'hidden';
+    document.body.style.marginRight = scroll + 'px';
+  } else if (activateOrDeactivate == 'deactivate') {
+    shadow.classList.remove('active');
+    setTimeout(() => {
+      document.body.style.overflowY = 'auto';
+      document.body.style.marginRight = 0;
+    }, 200);
+  } else {
+    return 0;
+  }
 }
 
 /***/ })

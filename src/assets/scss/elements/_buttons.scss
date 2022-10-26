@@ -63,4 +63,12 @@
     color: $white-color;
     background: $blue-color;
   }
+  &--full {
+    color: $white-color;
+    background-color: $blue-color;
+    &:hover {
+      color: $blue-color;
+      background: $white-color;
+    }
+  }
 }

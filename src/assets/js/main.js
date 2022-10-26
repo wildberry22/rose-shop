@@ -1,9 +1,9 @@
 import copyText from './modules/copyText.js';
 import cutString from './modules/cutString.js';
-
+import shadow from './modules/shadow.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-
+  
   /* ========== Header ========== */
   // Working with extra-block in header
   const header = document.querySelector('.header--extra');
@@ -19,6 +19,72 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+
+
+  /* ========== Cart ========== */
+  // When we hover over the picture, the title link is highlighted so that it is clear that the picture is also a link
+  window.addEventListener('mouseover', e => {
+    if (e.target.classList.contains('cart-item__img') || e.target.closest('.cart-item__img')) {
+      if (e.target.classList.contains('cart-item__img')) {
+        e.target.parentNode.querySelector('.cart-item__title').classList.add('hover');
+      } else if (e.target.closest('.cart-item__img')) {
+        e.target.parentNode.parentNode.parentNode.querySelector('.cart-item__title').classList.add('hover'); 
+      }
+    } else {
+      if (e.target.classList.contains('cart') || e.target.closest('.cart')) {
+        if (e.target.classList.contains('cart')) {
+          e.target.querySelectorAll('.cart-item__title').forEach(item => {
+            item.classList.remove('hover');
+          });
+        } else {
+          e.target.closest('.cart').querySelectorAll('.cart-item__title').forEach(item => {
+            item.classList.remove('hover');
+          });
+        }
+      }
+    }
+  });
+
+  // activating cart
+  const cart = document.querySelector('.cart');
+  document.querySelector('.header-main__basket-btn').addEventListener('click', () => {
+    shadow('activate');
+    cart.classList.add('active');
+  });
+
+  // deactivating cart
+  window.addEventListener('click', e => {
+    if(e.target.hasAttribute('data-cart-close') || e.target.closest('[data-cart-close]') || e.target == cart) {
+      shadow('deactivate');
+      cart.classList.remove('active');
+    }
+  });
+
+  // remove item in cart 
+  window.addEventListener('click', e => {
+    if(e.target.classList.contains('cart-item__btn') || e.target.closest('.cart-item__btn')) {
+      e.target.closest('.cart-item').remove();
+    }
+  });
+
+  // cart-item counter
+  window.addEventListener('click', e => {
+    if(e.target.dataset.action === 'plus' || e.target.dataset.action === 'minus' || e.target.closest('[data-action="plus"]') || e.target.closest('[data-action="minus"]')) {
+      const counterWrapper = e.target.closest('.cart-item__counter');
+      const counter = counterWrapper.querySelector('[data-counter]');
+  
+      if(e.target.dataset.action === 'plus' || e.target.closest('[data-action="plus"]')) {
+        counter.innerText = ++counter.innerText;
+      }
+      
+      if(e.target.dataset.action === 'minus' || e.target.closest('[data-action="minus"]')) {
+        if (+counter.innerText > 1) {
+          counter.innerText = --counter.innerText;
+        }
+      }
+    }
+  });
 
 
 
