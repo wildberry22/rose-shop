@@ -98,6 +98,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_copyText_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/copyText.js */ "./src/assets/js/modules/copyText.js");
 /* harmony import */ var _modules_cutString_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/cutString.js */ "./src/assets/js/modules/cutString.js");
 /* harmony import */ var _modules_shadow_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/shadow.js */ "./src/assets/js/modules/shadow.js");
+/* harmony import */ var _modules_openModal_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/openModal.js */ "./src/assets/js/modules/openModal.js");
+/* harmony import */ var _modules_closeModal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/closeModal.js */ "./src/assets/js/modules/closeModal.js");
+/* harmony import */ var _modules_phoneMask_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/phoneMask.js */ "./src/assets/js/modules/phoneMask.js");
+/* harmony import */ var _modules_forms_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/forms.js */ "./src/assets/js/modules/forms.js");
+
+
+
+
 
 
 
@@ -398,6 +406,18 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.remove('hover');
     });
   });
+  /* ========== Modal ========== */
+
+  window.addEventListener('click', e => {
+    if (e.target.dataset.modal === 'request-call' || e.target.closest('[data-modal="request-call"]')) {
+      e.preventDefault();
+      Object(_modules_shadow_js__WEBPACK_IMPORTED_MODULE_2__["default"])('activate');
+      Object(_modules_openModal_js__WEBPACK_IMPORTED_MODULE_3__["default"])('request-call');
+      Object(_modules_phoneMask_js__WEBPACK_IMPORTED_MODULE_5__["default"])('.modal__input--phone');
+      Object(_modules_forms_js__WEBPACK_IMPORTED_MODULE_6__["default"])();
+    }
+  });
+  Object(_modules_closeModal_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
 });
 
 /***/ }),
@@ -422,6 +442,32 @@ function calcScroll() {
   let scrollWidth = div.offsetWidth - div.clientWidth;
   div.remove();
   return scrollWidth;
+}
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/closeModal.js":
+/*!*********************************************!*\
+  !*** ./src/assets/js/modules/closeModal.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return closeModal; });
+/* harmony import */ var _shadow_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shadow.js */ "./src/assets/js/modules/shadow.js");
+
+function closeModal() {
+  window.addEventListener('click', e => {
+    if (e.target.dataset.modal === 'close' || e.target.closest('[data-modal="close"]') || e.target == document.querySelector('[data-modal=""]')) {
+      Object(_shadow_js__WEBPACK_IMPORTED_MODULE_0__["default"])('deactivate');
+      document.querySelector('[data-modal=""]').classList.remove('active');
+      setTimeout(() => {
+        document.querySelector('[data-modal=""]').remove();
+      }, 600);
+    }
+  });
 }
 
 /***/ }),
@@ -477,6 +523,194 @@ __webpack_require__.r(__webpack_exports__);
 function cutString(str, numTo) {
   return str.innerText.length > numTo ? str.innerText.slice(0, numTo) + '...' : str.innerText;
 }
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/forms.js":
+/*!****************************************!*\
+  !*** ./src/assets/js/modules/forms.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return forms; });
+function forms() {
+  let loadingMsg = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Завантаження...";
+  let successMsg = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "Дякуємо за вашу заявку. Ми зв'яжемося з вами найближчим часом!";
+  let failureMsg = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "Щось пішло не так...";
+  const form = document.querySelectorAll('form');
+  const input = document.querySelectorAll('input');
+  let valid = false;
+  const message = {
+    loading: loadingMsg,
+    success: successMsg,
+    failure: failureMsg
+  };
+
+  const postData = async (url, data) => {
+    document.querySelector('.modal__text').classList.add('hide');
+    document.querySelector('.status').textContent = message.loading;
+    let res = await fetch(url, {
+      method: 'POST',
+      body: data
+    });
+    return await res.text();
+  };
+
+  const clearInputs = () => {
+    input.forEach(item => {
+      item.value = '';
+    });
+  };
+
+  form.forEach(item => {
+    item.addEventListener('submit', e => {
+      e.preventDefault(); // validation check
+
+      valid = false;
+
+      if (document.querySelector('.modal__input--phone').value.length == 19) {
+        valid = true;
+
+        try {
+          document.querySelector('.phone-error').remove();
+        } catch (error) {}
+      } else {
+        if (!document.querySelector('.phone-error')) {
+          const phoneErrMsg = document.createElement('div');
+          phoneErrMsg.classList.add('phone-error');
+          phoneErrMsg.innerText = 'Номер телефону введено неправильно!';
+          document.querySelector('.modal__input--phone').after(phoneErrMsg);
+        }
+      }
+
+      if (valid) {
+        let statusMessage = document.createElement('div');
+        statusMessage.classList.add('status');
+        item.replaceWith(statusMessage);
+        const formData = new FormData(item);
+        postData('./server.php', formData).then(res => {
+          console.log(res);
+          document.querySelector('.modal__text').classList.add('hide');
+          statusMessage.textContent = message.success;
+          statusMessage.classList.add('ok');
+        }).catch(() => {
+          document.querySelector('.modal__text').classList.add('hide');
+          statusMessage.textContent = message.failure;
+          statusMessage.classList.add('error');
+        }).finally(() => {
+          clearInputs();
+        });
+      }
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/openModal.js":
+/*!********************************************!*\
+  !*** ./src/assets/js/modules/openModal.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return openModal; });
+function openModal(type) {
+  const modalWindow = document.createElement('div');
+  modalWindow.classList.add('modal');
+  modalWindow.setAttribute('data-modal', '');
+
+  if (type == 'request-call') {
+    modalWindow.classList.add('modal--request-call');
+    modalWindow.innerHTML = `
+      <div class="modal-wrapper">
+        <button class="modal__close-btn" data-modal="close">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.46967 10.4697C0.176777 10.7626 0.176777 11.2374 0.46967 11.5303C0.762563 11.8232 1.23744 11.8232 1.53033 11.5303L0.46967 10.4697ZM6.53033 6.53033C6.82322 6.23744 6.82322 5.76256 6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967L6.53033 6.53033ZM5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033C5.76256 6.82322 6.23744 6.82322 6.53033 6.53033L5.46967 5.46967ZM11.5303 1.53033C11.8232 1.23744 11.8232 0.762563 11.5303 0.46967C11.2374 0.176777 10.7626 0.176777 10.4697 0.46967L11.5303 1.53033ZM6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033L6.53033 5.46967ZM10.4697 11.5303C10.7626 11.8232 11.2374 11.8232 11.5303 11.5303C11.8232 11.2374 11.8232 10.7626 11.5303 10.4697L10.4697 11.5303ZM5.46967 6.53033C5.76256 6.82322 6.23744 6.82322 6.53033 6.53033C6.82322 6.23744 6.82322 5.76256 6.53033 5.46967L5.46967 6.53033ZM1.53033 0.46967C1.23744 0.176777 0.762563 0.176777 0.46967 0.46967C0.176777 0.762563 0.176777 1.23744 0.46967 1.53033L1.53033 0.46967ZM1.53033 11.5303L6.53033 6.53033L5.46967 5.46967L0.46967 10.4697L1.53033 11.5303ZM6.53033 6.53033L11.5303 1.53033L10.4697 0.46967L5.46967 5.46967L6.53033 6.53033ZM5.46967 6.53033L10.4697 11.5303L11.5303 10.4697L6.53033 5.46967L5.46967 6.53033ZM6.53033 5.46967L1.53033 0.46967L0.46967 1.53033L5.46967 6.53033L6.53033 5.46967Z" fill="#505567"/>
+          </svg>										
+        </button>
+        <h3 class="modal__title">Замовити дзвінок</h3>
+        <div class="modal__text">Залишіть свій номер телефону і найближчим часом ми вам передзвонимо</div>
+        <form class="modal-form">
+          <div class="modal__input-wrapper">
+            <label class="modal__label" for="phone">Телефон</label>
+            <input class="modal__input modal__input--phone" type="text" id="phone" name="phone" placeholder="+38 (0__) ___ - __ - __">
+          </div>
+          <button class="modal__send-btn btn-blue btn-blue--full" type="submit">Надіслати</button>
+        </form>
+      </div>
+    `;
+  }
+
+  document.body.appendChild(modalWindow);
+  setTimeout(() => {
+    modalWindow.classList.add('active');
+  }, 10);
+}
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/phoneMask.js":
+/*!********************************************!*\
+  !*** ./src/assets/js/modules/phoneMask.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return phoneMask; });
+function phoneMask(selector) {
+  function setCursorPosition(pos, elem) {
+    elem.focus();
+
+    if (elem.setSelectionRange) {
+      elem.setSelectionRange(pos, pos);
+    } else if (elem.createTextRange) {
+      let range = elem.createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', pos);
+      range.moveStart('character', pos);
+      range.select();
+    }
+  }
+
+  function createMask(event) {
+    let matrix = '+38 (0__) ___ __ __';
+    let i = 0;
+    let def = matrix.replace(/\D/g, '');
+    let val = this.value.replace(/\D/g, '');
+
+    if (def.length >= val.length) {
+      val = def;
+    }
+
+    this.value = matrix.replace(/./g, function (a) {
+      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
+    });
+
+    if (event.type === 'blur') {
+      if (this.value.length == 2) {
+        this.value = '';
+      }
+    } else {
+      setCursorPosition(this.value.length, this);
+    }
+  }
+
+  let inputs = document.querySelectorAll(selector);
+  inputs.forEach(input => {
+    input.addEventListener('input', createMask);
+    input.addEventListener('focus', createMask);
+    input.addEventListener('blur', createMask);
+  });
+}
+;
 
 /***/ }),
 

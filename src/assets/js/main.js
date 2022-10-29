@@ -1,6 +1,10 @@
 import copyText from './modules/copyText.js';
 import cutString from './modules/cutString.js';
 import shadow from './modules/shadow.js';
+import openModal from './modules/openModal.js';
+import closeModal from './modules/closeModal.js';
+import phoneMask from './modules/phoneMask.js';
+import forms from './modules/forms.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   
@@ -333,5 +337,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+
+  /* ========== Modal ========== */
+  window.addEventListener('click', e => {
+
+    if(e.target.dataset.modal === 'request-call' || e.target.closest('[data-modal="request-call"]')) {
+      e.preventDefault();
+      shadow('activate');
+      openModal('request-call');
+      phoneMask('.modal__input--phone');
+      forms();
+    }
+
+  });
+
+  closeModal();
 
 });
