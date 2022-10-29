@@ -1208,6 +1208,27 @@ body {
   .modal.active {
     opacity: 1;
     transition: .3s ease-in-out; }
+  .modal.modal--reviews {
+    padding: 0 15px; }
+    .modal.modal--reviews .modal-wrapper {
+      max-width: 1200px;
+      max-height: 95vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 40px 50px; }
+      .modal.modal--reviews .modal-wrapper::-webkit-scrollbar {
+        width: 6px; }
+      .modal.modal--reviews .modal-wrapper::-webkit-scrollbar-track {
+        border-radius: 4px;
+        background: transparent; }
+      .modal.modal--reviews .modal-wrapper::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background: #0093A2; }
+      .modal.modal--reviews .modal-wrapper::-webkit-scrollbar-thumb:hover {
+        background: #01737f; }
+    .modal.modal--reviews .modal__title {
+      font-size: 1.875rem;
+      text-align-last: left; }
   .modal-wrapper {
     max-width: 400px;
     width: 100%;
@@ -1272,6 +1293,12 @@ body {
       outline: none; }
   .modal__send-btn {
     width: 100%; }
+  .modal-review__items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; }
+  .modal .review-item {
+    border: 1px solid #E2E4EB; }
   .modal .phone-error {
     font-size: 0.875rem;
     color: #E2195B; }
@@ -1297,76 +1324,6 @@ body {
     position: relative;
     padding: 0px 30px 10px;
     margin-bottom: 30px; }
-    .reviews-slider__slide {
-      height: 300px;
-      padding: 40px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-      background: #FFFFFF;
-      box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
-      border-radius: 10px; }
-      .reviews-slider__slide-content {
-        flex: 1;
-        min-width: 0;
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px; }
-      .reviews-slider__slide-starrating {
-        margin-bottom: 10px;
-        display: flex;
-        gap: 7px; }
-        .reviews-slider__slide-starrating[data-rating="5"] .star svg path {
-          fill: #FFA500; }
-        .reviews-slider__slide-starrating[data-rating="4"] .star:nth-child(-n+4) svg path {
-          fill: #FFA500; }
-        .reviews-slider__slide-starrating[data-rating="3"] .star:nth-child(-n+3) svg path {
-          fill: #FFA500; }
-        .reviews-slider__slide-starrating[data-rating="2"] .star:nth-child(-n+2) svg path {
-          fill: #FFA500; }
-        .reviews-slider__slide-starrating[data-rating="1"] .star:nth-child(-n+1) svg path {
-          fill: #FFA500; }
-      .reviews-slider__slide-name {
-        font-weight: 700;
-        font-size: 1.125rem;
-        line-height: 138%;
-        color: #222A46;
-        margin-bottom: 15px; }
-      .reviews-slider__slide-text {
-        font-size: 1rem;
-        line-height: 138%;
-        color: #222A46; }
-      .reviews-slider__slide-bottom {
-        align-self: flex-end; }
-      .reviews-slider__slide-bouquet {
-        font-weight: 500;
-        font-size: 1rem;
-        line-height: 138%;
-        color: #222A46; }
-        .reviews-slider__slide-bouquet a {
-          text-decoration: none;
-          border-bottom: 1px solid transparent;
-          color: #0093A2;
-          transition: .1s ease; }
-          .reviews-slider__slide-bouquet a:hover {
-            border-bottom: 1px solid #0093A2; }
-      .reviews-slider__slide-img {
-        height: 220px;
-        width: 220px;
-        border: 2px solid #0093A2;
-        border-radius: 50%;
-        overflow: hidden;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        .reviews-slider__slide-img img {
-          width: 200px;
-          height: 200px;
-          object-fit: cover;
-          border-radius: 50%; }
   .reviews-btn--more {
     display: block;
     text-align: center;
@@ -1380,6 +1337,77 @@ body {
       box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.18); }
     .reviews-btn--more:active {
       box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08); }
+
+.review-item {
+  height: 300px;
+  padding: 40px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08);
+  border-radius: 10px; }
+  .review-item__content {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px; }
+  .review-item__starrating {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 7px; }
+    .review-item__starrating[data-rating="5"] .star svg path {
+      fill: #FFA500; }
+    .review-item__starrating[data-rating="4"] .star:nth-child(-n+4) svg path {
+      fill: #FFA500; }
+    .review-item__starrating[data-rating="3"] .star:nth-child(-n+3) svg path {
+      fill: #FFA500; }
+    .review-item__starrating[data-rating="2"] .star:nth-child(-n+2) svg path {
+      fill: #FFA500; }
+    .review-item__starrating[data-rating="1"] .star:nth-child(-n+1) svg path {
+      fill: #FFA500; }
+  .review-item__name {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 138%;
+    color: #222A46;
+    margin-bottom: 15px; }
+  .review-item__text {
+    font-size: 1rem;
+    line-height: 138%;
+    color: #222A46; }
+  .review-item__bottom {
+    align-self: flex-end; }
+  .review-item__bouquet {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 138%;
+    color: #222A46; }
+    .review-item__bouquet a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      color: #0093A2;
+      transition: .1s ease; }
+      .review-item__bouquet a:hover {
+        border-bottom: 1px solid #0093A2; }
+  .review-item__img {
+    height: 220px;
+    width: 220px;
+    border: 2px solid #0093A2;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .review-item__img img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%; }
 
 .reviews-slider__progress-bar {
   position: relative;

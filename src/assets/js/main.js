@@ -348,6 +348,11 @@ document.addEventListener("DOMContentLoaded", () => {
       phoneMask('.modal__input--phone');
       forms();
     }
+    if(e.target.dataset.modal === 'reviews' || e.target.closest('[data-modal="reviews"]')) {
+      e.preventDefault();
+      shadow('activate');
+      openModal('reviews');
+    }
 
   });
 

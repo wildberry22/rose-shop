@@ -11,6 +11,35 @@
     opacity: 1;
     transition: .3s ease-in-out;
   }
+  &.modal--reviews {
+    padding: 0 15px;
+    .modal-wrapper {
+      max-width: 1200px;
+      max-height: 95vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 40px 50px;
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-track {
+        border-radius: 4px;
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background: $blue-color;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #01737f;
+      }
+    }
+    .modal__title {
+      font-size: $fz-2;
+      text-align-last: left;
+    }
+    
+  }
   &-wrapper {
     max-width: 400px;
     width: 100%;
@@ -91,6 +120,20 @@
   &__send-btn {
     width: 100%;
   }
+
+  &-review__items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .review-item {
+    border: 1px solid $gray-light-2-color;
+  }
+
+
+
+
 
   .phone-error {
     font-size: $fz-7;
