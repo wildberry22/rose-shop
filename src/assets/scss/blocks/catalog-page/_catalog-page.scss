@@ -1,0 +1,14 @@
+
+@import 'filter/filter';
+@import 'catalog/catalog';
+
+.catalog-page-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.catalog-page-inner {
+  flex: 1;
+}
