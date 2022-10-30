@@ -1,0 +1,46 @@
+.breadcrumbs {
+  margin: 20px 0 30px;
+  &-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 35px;
+    &__item {
+      position: relative;
+      &::after {
+        content: '';
+        width: 14px;
+        height: 10px;
+        background: url('../img/icons/arrow-right-3.svg') center center/contain no-repeat;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-40%);
+        right: -25px;
+      }
+      &--main-page {
+        .breadcrumbs-list__link {
+          color: $black-color;
+        }
+      }
+      &--current-page {
+        &::after {
+          display: none;
+        }
+        .breadcrumbs-list__link {
+          pointer-events: none;
+        }
+      }
+    }
+    &__link {
+      text-decoration: none;
+      font-weight: $font-medium;
+      font-size: $fz-7;
+      color: $blue-gray-color;
+      transition: .2s ease;
+      &:hover {
+        color: $blue-color;
+      }
+    }
+  }
+}
