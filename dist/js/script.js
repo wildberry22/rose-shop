@@ -102,6 +102,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_closeModal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/closeModal.js */ "./src/assets/js/modules/closeModal.js");
 /* harmony import */ var _modules_phoneMask_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/phoneMask.js */ "./src/assets/js/modules/phoneMask.js");
 /* harmony import */ var _modules_forms_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/forms.js */ "./src/assets/js/modules/forms.js");
+/* harmony import */ var _modules_rangeSlider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/rangeSlider.js */ "./src/assets/js/modules/rangeSlider.js");
+
 
 
 
@@ -455,6 +457,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   Object(_modules_closeModal_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  /* ========== Filter ========== */
+
+  try {
+    Object(_modules_rangeSlider_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
+  } catch (error) {} // script for filterCompositionBtn - show more/hide content
+
+
+  try {
+    const filterCompositionBtn = document.querySelector('.filter-item__composition-btn');
+    const filterCompositionItems = document.querySelectorAll('.filter-item__composition-item');
+
+    for (let i = 6; i < filterCompositionItems.length; i++) {
+      filterCompositionItems[i].classList.add('hide');
+    }
+
+    filterCompositionBtn.addEventListener('click', () => {
+      if (!filterCompositionBtn.classList.contains('show-more')) {
+        for (let i = 6; i < filterCompositionItems.length; i++) {
+          filterCompositionItems[i].classList.add('hide');
+        }
+
+        filterCompositionBtn.classList.add('show-more');
+        filterCompositionBtn.innerText = 'Показати всі';
+      } else {
+        filterCompositionItems.forEach(item => {
+          item.classList.remove('hide');
+        });
+        filterCompositionBtn.classList.remove('show-more');
+        filterCompositionBtn.innerText = 'Приховати';
+      }
+    });
+  } catch (error) {}
 });
 
 /***/ }),
@@ -990,6 +1024,60 @@ function phoneMask(selector) {
   });
 }
 ;
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/rangeSlider.js":
+/*!**********************************************!*\
+  !*** ./src/assets/js/modules/rangeSlider.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rangeSlider; });
+function rangeSlider() {
+  const rangeInput = document.querySelectorAll('.range-input input');
+  const priceInput = document.querySelectorAll('.price-input input');
+  const progress = document.querySelector('.slider .progress');
+  let priceGap = 1000;
+  priceInput.forEach(input => {
+    input.addEventListener('input', e => {
+      let minVal = parseInt(priceInput[0].value),
+          maxVal = parseInt(priceInput[1].value);
+
+      if (maxVal - minVal >= priceGap && maxVal <= 20000 && minVal >= 200) {
+        if (e.target.className == 'input-min') {
+          rangeInput[0].value = minVal;
+          progress.style.left = minVal / rangeInput[0].max * 100 + '%';
+        } else {
+          rangeInput[1].value = maxVal;
+          progress.style.right = 100 - maxVal / rangeInput[1].max * 100 + '%';
+        }
+      }
+    });
+  });
+  rangeInput.forEach(input => {
+    input.addEventListener('input', e => {
+      let minVal = parseInt(rangeInput[0].value),
+          maxVal = parseInt(rangeInput[1].value);
+
+      if (maxVal - minVal < priceGap) {
+        if (e.target.className == 'range-min') {
+          rangeInput[0].value = maxVal - priceGap;
+        } else {
+          rangeInput[1].value = minVal + priceGap;
+        }
+      } else {
+        priceInput[0].value = minVal;
+        priceInput[1].value = maxVal;
+        progress.style.left = minVal / rangeInput[0].max * 100 + '%';
+        progress.style.right = 100 - maxVal / rangeInput[1].max * 100 + '%';
+      }
+    });
+  });
+}
 
 /***/ }),
 

@@ -5,6 +5,7 @@ import openModal from './modules/openModal.js';
 import closeModal from './modules/closeModal.js';
 import phoneMask from './modules/phoneMask.js';
 import forms from './modules/forms.js';
+import rangeSlider from './modules/rangeSlider.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   
@@ -382,5 +383,39 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   closeModal();
+
+
+
+  /* ========== Filter ========== */
+  try {
+    rangeSlider();
+  } catch (error) {}
+
+  // script for filterCompositionBtn - show more/hide content
+  try { 
+    const filterCompositionBtn = document.querySelector('.filter-item__composition-btn');
+    const filterCompositionItems = document.querySelectorAll('.filter-item__composition-item');
+
+    for(let i = 6; i < filterCompositionItems.length; i++) {
+      filterCompositionItems[i].classList.add('hide');
+    }
+
+    filterCompositionBtn.addEventListener('click', () => {
+      if (!filterCompositionBtn.classList.contains('show-more')) {
+        for (let i = 6; i < filterCompositionItems.length; i++) {
+          filterCompositionItems[i].classList.add('hide');
+        }
+        filterCompositionBtn.classList.add('show-more');
+        filterCompositionBtn.innerText = 'Показати всі';
+      } else {
+        filterCompositionItems.forEach(item => {
+          item.classList.remove('hide');
+        });
+        filterCompositionBtn.classList.remove('show-more');
+        filterCompositionBtn.innerText = 'Приховати';
+      }
+      
+    });
+  } catch (error) {}
 
 });

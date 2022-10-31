@@ -316,7 +316,265 @@
 
         <!-- ========== Filter ========== -->
         <aside class="filter">
+          <div class="filter-wrapper">
+            <div class="filter-top">
+              <h5 class="filter-top__title">Букети з троянд</h5>
+              <ul class="filter-top__list">
+                <li class="filter-top__list-item">
+                  <input type="radio" id="filterR1" name="filterR" value="Місцеві троянди">
+                  <label for="filterR1">Місцеві троянди</label>
+                </li>
+                <li class="filter-top__list-item">
+                  <input type="radio" id="filterR2" name="filterR" value="Еквадорські троянди">
+                  <label for="filterR2">Еквадорські троянди</label>
+                </li>
+                <li class="filter-top__list-item">
+                  <input type="radio" id="filterR3" name="filterR" value="Кенійські троянди">
+                  <label for="filterR3">Кенійські троянди</label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-inner">
+              <ul class="filter-inner__list">
 
+                <li class="filter-inner__list-item filter-item filter-item--price">
+                  <div class="filter-item__title">Ціна</div>
+                  <div class="filter-item__wrapper">
+                    <div class="price-input">
+                      <input class="input-min" type="number" value="1200">
+                      <input class="input-max" type="number" value="12500">
+                    </div>
+                    <div class="slider">
+                      <div class="progress"></div>
+                    </div>
+                    <div class="range-input">
+                      <input class="range-min" type="range" min="200" max="20000" value="1200" step="100">
+                      <input class="range-max" type="range" min="200" max="20000" value="12500" step="100">
+                    </div>
+                    <div class="range-text__wr">
+                      <div class="range-text range-text__from">від <span>200 грн</span></div>
+                      <div class="range-text range-text__to">до <span>20 000 грн</span></div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="filter-inner__list-item filter-item filter-item--color">
+                  <div class="filter-item__title">Кольори</div>
+                  <div class="filter-item__wrapper">
+                    <ul class="filter-item__color-list">
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor1" value="color1">
+                        <label for="filterColor1"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor2" value="color2">
+                        <label for="filterColor2"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor3" value="color3">
+                        <label for="filterColor3"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor4" value="color4">
+                        <label for="filterColor4"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor5" value="color5">
+                        <label for="filterColor5"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor6" value="color6">
+                        <label for="filterColor6"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor7" value="color7">
+                        <label for="filterColor7"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor8" value="color8">
+                        <label for="filterColor8"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor9" value="color9">
+                        <label for="filterColor9"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor10" value="color10">
+                        <label for="filterColor10"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor11" value="color11">
+                        <label for="filterColor11"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor12" value="color12">
+                        <label for="filterColor12"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor13" value="color13">
+                        <label for="filterColor13"><span></span></label>
+                      </li>
+                      <li class="filter-item__color-item">
+                        <input type="checkbox" name="filterColor" id="filterColor14" value="color14">
+                        <label for="filterColor14"><span></span></label>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="filter-inner__list-item filter-item filter-item--size">
+                  <div class="filter-item__title">Розмір</div>
+                  <div class="filter-item__wrapper">
+                    <div class="filter-item__size-wrapper">
+                      <div class="filter-item__size-title">Діаметр букета</div>
+                      <ul class="filter-item__size-list">
+                        <li class="filter-item__size-item checkbox">
+                          <input type="checkbox" name="filterDiameter" id="filterDiameter1" value="До 25 см">
+                          <label for="filterDiameter1">До 25 см</label>
+                        </li>
+                        <li class="filter-item__size-item checkbox">
+                          <input type="checkbox" name="filterDiameter" id="filterDiameter2" value="26-40 см">
+                          <label for="filterDiameter2">26-40 см</label>
+                        </li>
+                        <li class="filter-item__size-item checkbox">
+                          <input type="checkbox" name="filterDiameter" id="filterDiameter3" value="41-55 см">
+                          <label for="filterDiameter3">41-55 см</label>
+                        </li>
+                        <li class="filter-item__size-item checkbox">
+                          <input type="checkbox" name="filterDiameter" id="filterDiameter4" value="Більше 55 см">
+                          <label for="filterDiameter4">Більше 55 см</label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="filter-item__size-wrapper">
+                      <div class="filter-item__size-title">Висота букета</div>
+                      <ul class="filter-item__size-list">
+                        <li class="filter-item__size-item checkbox">
+                          <input type="checkbox" name="filterHeight" id="filterHeight1" value="До 45 см">
+                          <label for="filterHeight1">До 45 см</label>
+                        </li>
+                        <li class="filter-item__size-item checkbox">
+                          <input type="checkbox" name="filterHeight" id="filterHeight2" value="46-60 см">
+                          <label for="filterHeight2">46-60 см</label>
+                        </li>
+                        <li class="filter-item__size-item checkbox">
+                          <input type="checkbox" name="filterHeight" id="filterHeight3" value="61-75 см">
+                          <label for="filterHeight3">61-75 см</label>
+                        </li>
+                        <li class="filter-item__size-item checkbox">
+                          <input type="checkbox" name="filterHeight" id="filterHeight4" value="Більше 75 см">
+                          <label for="filterHeight4">Більше 75 см</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="filter-inner__list-item filter-item filter-item--composition">
+                  <div class="filter-item__title">Склад</div>
+                  <div class="filter-item__wrapper">
+                    <ul class="filter-item__composition-list">
+                      <li class="filter-item__composition-item checkbox">
+                        <input type="checkbox" name="filterComposition" id="filterComposition1" value="Тюльпани">
+                        <label for="filterComposition1">Тюльпани</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox">
+                        <input type="checkbox" name="filterComposition" id="filterComposition2" value="Еустоми">
+                        <label for="filterComposition2">Еустоми</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox">
+                        <input type="checkbox" name="filterComposition" id="filterComposition3" value="Хризантеми">
+                        <label for="filterComposition3">Хризантеми</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox">
+                        <input type="checkbox" name="filterComposition" id="filterComposition4" value="Півонії">
+                        <label for="filterComposition4">Півонії</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox">
+                        <input type="checkbox" name="filterComposition" id="filterComposition5" value="Гербери">
+                        <label for="filterComposition5">Гербери</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox">
+                        <input type="checkbox" name="filterComposition" id="filterComposition6" value="Альстромерії">
+                        <label for="filterComposition6">Альстромерії</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox hide">
+                        <input type="checkbox" name="filterComposition" id="filterComposition7" value="Тюльпани">
+                        <label for="filterComposition7">Тюльпани</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox hide">
+                        <input type="checkbox" name="filterComposition" id="filterComposition8" value="Еустоми">
+                        <label for="filterComposition8">Еустоми</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox hide">
+                        <input type="checkbox" name="filterComposition" id="filterComposition9" value="Хризантеми">
+                        <label for="filterComposition9">Хризантеми</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox hide">
+                        <input type="checkbox" name="filterComposition" id="filterComposition10" value="Півонії">
+                        <label for="filterComposition10">Півонії</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox hide">
+                        <input type="checkbox" name="filterComposition" id="filterComposition11" value="Гербери">
+                        <label for="filterComposition11">Гербери</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox hide">
+                        <input type="checkbox" name="filterComposition" id="filterComposition12" value="Альстромерії">
+                        <label for="filterComposition12">Альстромерії</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox hide">
+                        <input type="checkbox" name="filterComposition" id="filterComposition13" value="Тюльпани">
+                        <label for="filterComposition13">Тюльпани</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox hide">
+                        <input type="checkbox" name="filterComposition" id="filterComposition14" value="Еустоми">
+                        <label for="filterComposition14">Еустоми</label>
+                      </li>
+                      <li class="filter-item__composition-item checkbox hide">
+                        <input type="checkbox" name="filterComposition" id="filterComposition15" value="Хризантеми">
+                        <label for="filterComposition15">Хризантеми</label>
+                      </li>
+                    </ul>
+                    <button class="filter-item__composition-btn show-more">Показати всі</button>
+                  </div>
+                </li>
+
+                <li class="filter-inner__list-item filter-item filter-item--towhom">
+                  <div class="filter-item__title">Кому</div>
+                  <div class="filter-item__wrapper">
+                    <ul class="filter-item__towhom-list">
+                      <li class="filter-item__towhom-item checkbox">
+                        <input type="checkbox" name="filterTowhom" id="filterTowhom1" value="Дружині">
+                        <label for="filterTowhom1">Дружині</label>
+                      </li>
+                      <li class="filter-item__towhom-item checkbox">
+                        <input type="checkbox" name="filterTowhom" id="filterTowhom2" value="Мамі">
+                        <label for="filterTowhom2">Мамі</label>
+                      </li>
+                      <li class="filter-item__towhom-item checkbox">
+                        <input type="checkbox" name="filterTowhom" id="filterTowhom3" value="Колезі">
+                        <label for="filterTowhom3">Колезі</label>
+                      </li>
+                      <li class="filter-item__towhom-item checkbox">
+                        <input type="checkbox" name="filterTowhom" id="filterTowhom4" value="Доньці">
+                        <label for="filterTowhom4">Доньці</label>
+                      </li>
+                      <li class="filter-item__towhom-item checkbox">
+                        <input type="checkbox" name="filterTowhom" id="filterTowhom5" value="Подрузі">
+                        <label for="filterTowhom5">Подрузі</label>
+                      </li>
+                      <li class="filter-item__towhom-item checkbox">
+                        <input type="checkbox" name="filterTowhom" id="filterTowhom6" value="Начальнику">
+                        <label for="filterTowhom6">Начальнику</label>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <button class="filter__btn-clear btn-blue">Очистити фільтри</button>
         </aside>
 
 
