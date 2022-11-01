@@ -6,15 +6,19 @@ import closeModal from './modules/closeModal.js';
 import phoneMask from './modules/phoneMask.js';
 import forms from './modules/forms.js';
 import rangeSlider from './modules/rangeSlider.js';
+import counter from './modules/counter.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   
+  //counter
+  counter();
+
+
   /* ========== Header ========== */
   // Working with extra-block in header
   const header = document.querySelector('.header--extra');
   if (header) {
     const headerExtra = header.querySelector('.header-extra');
-
     window.addEventListener('click', e => {
       if(e.target.classList.contains('.header-extra__close') || e.target.closest('.header-extra__close')) {
         headerExtra.remove();
@@ -23,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
         header.classList.remove('header--extra');
       }
     });
+  } else {
+    document.querySelector('.header').style.top = '-50px';
   }
 
 
@@ -74,23 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // cart-item counter
-    window.addEventListener('click', e => {
-      if(e.target.dataset.action === 'plus' || e.target.dataset.action === 'minus' || e.target.closest('[data-action="plus"]') || e.target.closest('[data-action="minus"]')) {
-        const counterWrapper = e.target.closest('.cart-item__counter');
-        const counter = counterWrapper.querySelector('[data-counter]');
-    
-        if(e.target.dataset.action === 'plus' || e.target.closest('[data-action="plus"]')) {
-          counter.innerText = ++counter.innerText;
-        }
-        
-        if(e.target.dataset.action === 'minus' || e.target.closest('[data-action="minus"]')) {
-          if (+counter.innerText > 1) {
-            counter.innerText = --counter.innerText;
-          }
-        }
-      }
-    });
   } catch (error) {}
   
 
@@ -418,4 +407,48 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   } catch (error) {}
 
+
+
+  /* ========== Product card ========== */
+  //gallery  
+  try {
+    lightGallery(document.getElementById('productCardGallery'), {
+      plugins: [lgAutoplay, lgZoom, lgThumbnail],
+      mode: 'lg-fade',
+      autoplay: true,
+      slideShowAutoplay: true,
+      speed: 200,
+      thumbnail: true,
+      mobileSettings: {
+        controls: true,
+        showCloseIcon: true,
+        download: true,
+        rotate: false
+      },
+    });
+  } catch (error) {}
+
+  //slider
+  try {
+    const productCardSliderSm = new Swiper(".product-card__slider--small", {
+      spaceBetween: 10,
+      slidesPerView: 4.2,
+      freeMode: true,
+      watchSlidesProgress: true,
+      grabCursor: true,
+      allowTouchMove: true,
+    });
+    const productCardSliderBg = new Swiper(".product-card__slider--big", {
+      spaceBetween: 10,
+      thumbs: {
+        swiper: productCardSliderSm,
+      },
+    });
+  } catch (error) {}
+
+  // Toggle class on Like button
+  document.querySelector('.product-card__btns-like button').addEventListener('click', () => {
+    document.querySelector('.product-card__btns-like button').classList.toggle('active');
+  });
+ 
 });

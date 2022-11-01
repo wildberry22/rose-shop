@@ -92,6 +92,10 @@ body {
   }
 }
 
+.lg-outer.lg-components-open:not(.lg-zoomed) .lg-sub-html {
+  display: none;
+}
+
 .hide {
   opacity: 0;
   visibility: hidden;

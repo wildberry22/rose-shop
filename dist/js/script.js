@@ -103,6 +103,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_phoneMask_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/phoneMask.js */ "./src/assets/js/modules/phoneMask.js");
 /* harmony import */ var _modules_forms_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/forms.js */ "./src/assets/js/modules/forms.js");
 /* harmony import */ var _modules_rangeSlider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/rangeSlider.js */ "./src/assets/js/modules/rangeSlider.js");
+/* harmony import */ var _modules_counter_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/counter.js */ "./src/assets/js/modules/counter.js");
+
 
 
 
@@ -112,8 +114,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  //counter
+  Object(_modules_counter_js__WEBPACK_IMPORTED_MODULE_8__["default"])();
   /* ========== Header ========== */
   // Working with extra-block in header
+
   const header = document.querySelector('.header--extra');
 
   if (header) {
@@ -125,6 +130,8 @@ document.addEventListener("DOMContentLoaded", () => {
         header.classList.remove('header--extra');
       }
     });
+  } else {
+    document.querySelector('.header').style.top = '-50px';
   }
   /* ========== Cart ========== */
   // When we hover over the picture, the title link is highlighted so that it is clear that the picture is also a link
@@ -169,23 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('click', e => {
       if (e.target.classList.contains('cart-item__btn') || e.target.closest('.cart-item__btn')) {
         e.target.closest('.cart-item').remove();
-      }
-    }); // cart-item counter
-
-    window.addEventListener('click', e => {
-      if (e.target.dataset.action === 'plus' || e.target.dataset.action === 'minus' || e.target.closest('[data-action="plus"]') || e.target.closest('[data-action="minus"]')) {
-        const counterWrapper = e.target.closest('.cart-item__counter');
-        const counter = counterWrapper.querySelector('[data-counter]');
-
-        if (e.target.dataset.action === 'plus' || e.target.closest('[data-action="plus"]')) {
-          counter.innerText = ++counter.innerText;
-        }
-
-        if (e.target.dataset.action === 'minus' || e.target.closest('[data-action="minus"]')) {
-          if (+counter.innerText > 1) {
-            counter.innerText = --counter.innerText;
-          }
-        }
       }
     });
   } catch (error) {}
@@ -489,6 +479,49 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   } catch (error) {}
+  /* ========== Product card ========== */
+  //gallery  
+
+
+  try {
+    lightGallery(document.getElementById('productCardGallery'), {
+      plugins: [lgAutoplay, lgZoom, lgThumbnail],
+      mode: 'lg-fade',
+      autoplay: true,
+      slideShowAutoplay: true,
+      speed: 200,
+      thumbnail: true,
+      mobileSettings: {
+        controls: true,
+        showCloseIcon: true,
+        download: true,
+        rotate: false
+      }
+    });
+  } catch (error) {} //slider
+
+
+  try {
+    const productCardSliderSm = new Swiper(".product-card__slider--small", {
+      spaceBetween: 10,
+      slidesPerView: 4.2,
+      freeMode: true,
+      watchSlidesProgress: true,
+      grabCursor: true,
+      allowTouchMove: true
+    });
+    const productCardSliderBg = new Swiper(".product-card__slider--big", {
+      spaceBetween: 10,
+      thumbs: {
+        swiper: productCardSliderSm
+      }
+    });
+  } catch (error) {} // Toggle class on Like button
+
+
+  document.querySelector('.product-card__btns-like button').addEventListener('click', () => {
+    document.querySelector('.product-card__btns-like button').classList.toggle('active');
+  });
 });
 
 /***/ }),
@@ -575,6 +608,37 @@ function copyText() {
       setTimeout(() => {
         wrapper.classList.remove('text-copied');
       }, 2000);
+    }
+  });
+}
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/counter.js":
+/*!******************************************!*\
+  !*** ./src/assets/js/modules/counter.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return counter; });
+function counter() {
+  window.addEventListener('click', e => {
+    if (e.target.dataset.action === 'plus' || e.target.dataset.action === 'minus' || e.target.closest('[data-action="plus"]') || e.target.closest('[data-action="minus"]')) {
+      const counterWrapper = e.target.closest('[data-counter-wrapper]');
+      const counter = counterWrapper.querySelector('[data-counter]');
+
+      if (e.target.dataset.action === 'plus' || e.target.closest('[data-action="plus"]')) {
+        counter.innerText = ++counter.innerText;
+      }
+
+      if (e.target.dataset.action === 'minus' || e.target.closest('[data-action="minus"]')) {
+        if (+counter.innerText > 1) {
+          counter.innerText = --counter.innerText;
+        }
+      }
     }
   });
 }
