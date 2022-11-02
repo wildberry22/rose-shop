@@ -10,6 +10,12 @@ export default function forms (loadingMsg = "Завантаження...", succe
   };
 
   const postData = async (url, data) => {
+    try {
+      document.querySelector('.modal__text').classList.add('hide');
+    } catch (error) {}
+    try {
+      document.querySelector('.modal-call__list').classList.add('hide');
+    } catch (error) {}
     document.querySelector('.modal__text').classList.add('hide');
     document.querySelector('.status').textContent = message.loading;
 

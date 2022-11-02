@@ -363,10 +363,22 @@ document.addEventListener("DOMContentLoaded", () => {
       phoneMask('.modal__input--phone');
       forms();
     }
+    if(e.target.dataset.modal === 'buy1click' || e.target.closest('[data-modal="buy1click"]')) {
+      e.preventDefault();
+      shadow('activate');
+      openModal('buy1click');
+      phoneMask('.modal__input--phone');
+      forms();
+    }
     if(e.target.dataset.modal === 'reviews-all' || e.target.closest('[data-modal="reviews-all"]')) {
       e.preventDefault();
       shadow('activate');
       openModal('reviews-all');
+    }
+    if(e.target.dataset.modal === 'reviews-product' || e.target.closest('[data-modal="reviews-product"]')) {
+      e.preventDefault();
+      shadow('activate');
+      openModal('reviews-product');
     }
 
   });

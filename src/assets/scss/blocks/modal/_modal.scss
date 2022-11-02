@@ -40,6 +40,50 @@
     }
     
   }
+  &.modal--buy1click {
+    .modal-form {
+      margin-bottom: 20px;
+    }
+    .modal-call__list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+      align-items: center;
+    }
+    .modal-call__link {
+      display: block;
+      position: relative;
+      padding-left: 34px;
+      transition: .2s ease;
+
+      text-decoration: none;
+      font-weight: $font-medium;
+      font-size: $fz-6;
+      line-height: 143%;
+      color: $dark-blue-1-color;
+      &:hover {
+        color: $blue-color;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 22px;
+        height: 22px;
+        background: url('../img/icons/phone.svg') center center/contain no-repeat;
+      }
+    }
+    .modal-call__item--whatsapp {
+      .modal-call__link::before {
+        top: -1px;
+        width: 24px;
+        height: 24px;
+        background: url('../img/icons/contact/whatsApp.svg') center center/contain no-repeat;
+      }
+    }
+  }
   &-wrapper {
     max-width: 400px;
     width: 100%;
@@ -132,9 +176,6 @@
   }
 
 
-
-
-
   .phone-error {
     font-size: $fz-7;
     color: $pink-color;
@@ -152,4 +193,5 @@
       color: $pink-color;
     }
   }
+
 }

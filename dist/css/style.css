@@ -1542,6 +1542,39 @@ body {
     .modal.modal--reviews .modal__title {
       font-size: 1.875rem;
       text-align-last: left; }
+  .modal.modal--buy1click .modal-form {
+    margin-bottom: 20px; }
+  .modal.modal--buy1click .modal-call__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    align-items: center; }
+  .modal.modal--buy1click .modal-call__link {
+    display: block;
+    position: relative;
+    padding-left: 34px;
+    transition: .2s ease;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 143%;
+    color: #222A46; }
+    .modal.modal--buy1click .modal-call__link:hover {
+      color: #0093A2; }
+    .modal.modal--buy1click .modal-call__link::before {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      background: url("../img/icons/phone.svg") center center/contain no-repeat; }
+  .modal.modal--buy1click .modal-call__item--whatsapp .modal-call__link::before {
+    top: -1px;
+    width: 24px;
+    height: 24px;
+    background: url("../img/icons/contact/whatsApp.svg") center center/contain no-repeat; }
   .modal-wrapper {
     max-width: 400px;
     width: 100%;
