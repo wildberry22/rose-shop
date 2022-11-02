@@ -363,10 +363,10 @@ document.addEventListener("DOMContentLoaded", () => {
       phoneMask('.modal__input--phone');
       forms();
     }
-    if(e.target.dataset.modal === 'reviews' || e.target.closest('[data-modal="reviews"]')) {
+    if(e.target.dataset.modal === 'reviews-all' || e.target.closest('[data-modal="reviews-all"]')) {
       e.preventDefault();
       shadow('activate');
-      openModal('reviews');
+      openModal('reviews-all');
     }
 
   });
@@ -447,8 +447,11 @@ document.addEventListener("DOMContentLoaded", () => {
   } catch (error) {}
 
   // Toggle class on Like button
-  document.querySelector('.product-card__btns-like button').addEventListener('click', () => {
-    document.querySelector('.product-card__btns-like button').classList.toggle('active');
-  });
+  try {
+    document.querySelector('.product-card__btns-like button').addEventListener('click', () => {
+      document.querySelector('.product-card__btns-like button').classList.toggle('active');
+    });
+  } catch (error) {}
+  
  
 });

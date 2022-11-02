@@ -1497,6 +1497,18 @@ body {
   .slider-swiper {
     padding: 0 30px 30px; }
 
+.sliders-pr .slider-top {
+  margin-bottom: 20px; }
+
+.sliders-pr .slider-top__title {
+  font-family: "TTNorms", sans-serif;
+  font-weight: 700;
+  font-size: 1.875rem;
+  color: #222A46; }
+
+.sliders-pr .swiper-button-next, .sliders-pr .swiper-button-prev {
+  box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.15); }
+
 .modal {
   position: fixed;
   width: 100vw;
@@ -1742,6 +1754,35 @@ body {
     transition-delay: unset;
     width: 100%;
     transition-duration: 5s; }
+
+.reviews-pr {
+  padding: 0;
+  margin-bottom: 60px;
+  background-color: #FFFFFF; }
+  .reviews-pr .reviews-top {
+    margin-bottom: 20px; }
+  .reviews-pr .reviews-pr__title {
+    font-family: "TTNorms", sans-serif;
+    font-weight: 700;
+    font-size: 1.875rem;
+    color: #222A46; }
+  .reviews-pr .reviews-pr__button {
+    padding: 12px 20px;
+    font-size: 0.875rem; }
+  .reviews-pr .review-item {
+    padding: 30px 40px;
+    height: 230px;
+    border: 1px solid #E2E4EB; }
+  .reviews-pr .review-item__img {
+    width: 165px;
+    height: 165px; }
+    .reviews-pr .review-item__img img {
+      width: 150px;
+      height: 150px; }
+  .reviews-pr .reviews-slider__progress-bar .slide_progress-bar {
+    bottom: 2px; }
+  .reviews-pr .swiper-button-next, .reviews-pr .swiper-button-prev {
+    box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.15); }
 
 .banner {
   margin: 30px 0; }
@@ -2945,3 +2986,34 @@ body {
       border-radius: 5px; }
       .product-card__deliverypay .product-card__pay-item img {
         max-width: 35px; }
+
+.benefits-pr {
+  padding: 50px 0;
+  border-top: 1px solid #E2E4EB;
+  border-bottom: 1px solid #E2E4EB; }
+  .benefits-pr__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    list-style-type: none; }
+  .benefits-pr__item {
+    height: 150px;
+    max-width: 220px;
+    padding: 25px;
+    width: 100%;
+    background: #F2F6F7;
+    border-radius: 5px; }
+  .benefits-pr__item-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 48px;
+    max-height: 48px;
+    object-fit: cover;
+    margin-bottom: 10px; }
+  .benefits-pr__item-text {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 143%;
+    text-align: center;
+    color: #222A46; }

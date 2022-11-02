@@ -27,7 +27,7 @@ export default function openModal(type) {
 
   }
 
-  if (type == 'reviews') {
+  if (type == 'reviews-all') {
     modalWindow.classList.add('modal--reviews');
     modalWindow.innerHTML = `
       <div class="modal-wrapper">

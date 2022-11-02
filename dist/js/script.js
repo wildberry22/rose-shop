@@ -440,10 +440,10 @@ document.addEventListener("DOMContentLoaded", () => {
       Object(_modules_forms_js__WEBPACK_IMPORTED_MODULE_6__["default"])();
     }
 
-    if (e.target.dataset.modal === 'reviews' || e.target.closest('[data-modal="reviews"]')) {
+    if (e.target.dataset.modal === 'reviews-all' || e.target.closest('[data-modal="reviews-all"]')) {
       e.preventDefault();
       Object(_modules_shadow_js__WEBPACK_IMPORTED_MODULE_2__["default"])('activate');
-      Object(_modules_openModal_js__WEBPACK_IMPORTED_MODULE_3__["default"])('reviews');
+      Object(_modules_openModal_js__WEBPACK_IMPORTED_MODULE_3__["default"])('reviews-all');
     }
   });
   Object(_modules_closeModal_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
@@ -519,9 +519,11 @@ document.addEventListener("DOMContentLoaded", () => {
   } catch (error) {} // Toggle class on Like button
 
 
-  document.querySelector('.product-card__btns-like button').addEventListener('click', () => {
-    document.querySelector('.product-card__btns-like button').classList.toggle('active');
-  });
+  try {
+    document.querySelector('.product-card__btns-like button').addEventListener('click', () => {
+      document.querySelector('.product-card__btns-like button').classList.toggle('active');
+    });
+  } catch (error) {}
 });
 
 /***/ }),
@@ -782,7 +784,7 @@ function openModal(type) {
     `;
   }
 
-  if (type == 'reviews') {
+  if (type == 'reviews-all') {
     modalWindow.classList.add('modal--reviews');
     modalWindow.innerHTML = `
       <div class="modal-wrapper">

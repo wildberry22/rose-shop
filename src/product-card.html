@@ -306,6 +306,7 @@
 
 
   <main class="main">
+		<!-- ========== Product card ========== -->
     <section class="product-card">
       <div class="container">
         <div class="product-card__wrapper">
@@ -555,13 +556,13 @@
               <div class="product-card__deliverypay-text product-card__pay-text">
                 Ви можете сплатити готівкою або карткою:
               </div>
-              <div class="product-card__pay-list">
+              <ul class="product-card__pay-list">
                 <li class="product-card__pay-item"><img src="./img/icons/pay/cash.svg" alt="cash"></li>
                 <li class="product-card__pay-item"><img src="./img/icons/pay/visa.svg" alt="visa"></li>
                 <li class="product-card__pay-item"><img src="./img/icons/pay/mastercard.svg" alt="mastercard"></li>
                 <li class="product-card__pay-item"><img src="./img/icons/pay/maestro.svg" alt="maestro"></li>
                 <li class="product-card__pay-item"><img src="./img/icons/pay/paypal.svg" alt="paypal"></li>
-              </div>
+              </ul>
             </div>
 
             <div class="product-card__deliverypay-item product-card__return">
@@ -575,7 +576,878 @@
       </div>
     </section>
 
+		<!-- ========== Reviews ========== -->
+		<section class="reviews reviews-pr">
+			<div class="container">
+				<div class="reviews-top">
+					<h2 class="reviews__title reviews-pr__title title">Відгуки</h2>
+					<button class="reviews-pr__button btn-blue" data-modal="reviews-product">Всі відгуки</button>
+				</div>
+			</div>
 
+			<div class="container-sl">
+				<div class="reviews-slider swiper">
+					<div class="reviews-slider__wrapper swiper-wrapper">
+						
+						<div class="reviews-slider__slide review-item swiper-slide">
+							<div class="reviews-slider__slide-content review-item__content">
+								<div class="reviews-slider__slide-top review-item__top">
+									<div class="reviews-slider__slide-starrating review-item__starrating" data-rating="5">
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+									</div>
+									<div class="reviews-slider__slide-name review-item__name">Юлія Горобець</div>
+									<div class="reviews-slider__slide-text review-item__text">
+										Хочу висловити свою подяку колективу, за чудову роботу та професіоналізм! Замовляю вже 3 разів і щоразу це повне захоплення! Букети красиві, квіточки свіжі, довго стоять! Замовляла і готові та збирав за своїм бажанням-все чудово! Дякую Roseshop - ви той випадок, коли точно знаєш куди повертатися за квіточками.
+									</div>
+								</div>
+							</div>
+
+							<div class="reviews-slider__slide-img review-item__img">
+								<img src="./img/reviews/people/1.jpg" alt="review icon">
+							</div>
+						</div>
+
+						<div class="reviews-slider__slide review-item swiper-slide">
+							<div class="reviews-slider__slide-content review-item__content">
+								<div class="reviews-slider__slide-top review-item__top">
+									<div class="reviews-slider__slide-starrating review-item__starrating" data-rating="4">
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+									</div>
+									<div class="reviews-slider__slide-name review-item__name">Oksana Sydorovych</div>
+									<div class="reviews-slider__slide-text review-item__text">
+										Просто казкові букети! Гармонійні, зроблені з увагою до деталей - відчувається любов до своєї справи  Постійний хороший настрій гарантовано  Хоч і раніше користувався послугами флористів, та тут як справжнє откровення було. Є от букети, а є букети від Roseshop. Взагалі з іншої ліги! 
+									</div>
+								</div>
+							</div>
+
+							<div class="reviews-slider__slide-img review-item__img">
+								<img src="./img/reviews/people/2.jpg" alt="review icon">
+							</div>
+						</div>
+
+						<div class="reviews-slider__slide review-item swiper-slide">
+							<div class="reviews-slider__slide-content review-item__content">
+								<div class="reviews-slider__slide-top review-item__top">
+									<div class="reviews-slider__slide-starrating review-item__starrating" data-rating="5">
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+									</div>
+									<div class="reviews-slider__slide-name review-item__name">Olena Levchuk</div>
+									<div class="reviews-slider__slide-text review-item__text">
+										Шикарні квіти, які дарують чарівний настрій))) букети зберігають свою красу більше тижня!) дякуємо за душевність та індивідуальний підхід, які ви вкладаєте в свої творіння.
+									</div>
+								</div>
+							</div>
+
+							<div class="reviews-slider__slide-img review-item__img">
+								<img src="./img/reviews/people/3.jpg" alt="review icon">
+							</div>
+						</div>
+
+						<div class="reviews-slider__slide review-item swiper-slide">
+							<div class="reviews-slider__slide-content review-item__content">
+								<div class="reviews-slider__slide-top review-item__top">
+									<div class="reviews-slider__slide-starrating review-item__starrating" data-rating="5">
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+									</div>
+									<div class="reviews-slider__slide-name review-item__name">Іра Мокра</div>
+									<div class="reviews-slider__slide-text review-item__text">
+										Хотіла написати,щось про Вас,але настільки в захваті,що не можу підібрати слів. Я дуже гурман у справах флористичних,Ви задовільнили всі мої побажання,та ще й в рази перевершили їх:)
+									</div>
+								</div>
+							</div>
+
+							<div class="reviews-slider__slide-img review-item__img">
+								<img src="./img/reviews/people/4.jpg" alt="review icon">
+							</div>
+						</div>
+
+						<div class="reviews-slider__slide review-item swiper-slide">
+							<div class="reviews-slider__slide-content review-item__content">
+								<div class="reviews-slider__slide-top review-item__top">
+									<div class="reviews-slider__slide-starrating review-item__starrating" data-rating="5">
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+										<div class="star">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.849 4.52013L8 1.00513L6.151 4.52013C6.02038 4.77699 5.83131 4.99962 5.599 5.17013C5.36556 5.34151 5.09543 5.4562 4.81 5.50513L1 6.25213L3.66 9.43313C4.02377 9.83181 4.19542 10.3694 4.13 10.9051L3.624 15.0051L7.132 13.3051C7.40262 13.1741 7.69931 13.1057 8 13.1051C8.28212 13.106 8.5599 13.1746 8.81 13.3051L12.4 14.9001L11.894 10.8491C11.83 10.3146 12.002 9.77868 12.365 9.38113L15 6.25213L11.19 5.50513C10.9042 5.45635 10.6337 5.34165 10.4 5.17013C10.1681 4.9995 9.97934 4.77688 9.849 4.52013Z" fill="white" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</div>
+									</div>
+									<div class="reviews-slider__slide-name review-item__name">Анна Аврашова</div>
+									<div class="reviews-slider__slide-text review-item__text">
+										Круто, що є така можливість – привітати дорогу людину на відстані! Кур'єр приїхав уранці, як і залишили у заявці. Листівку підписали. Замовлення швидке і чітке, враховуючи, що містечко маленьке. Велике дякую)
+									</div>
+								</div>
+							</div>
+
+							<div class="reviews-slider__slide-img review-item__img">
+								<img src="./img/reviews/people/5.jpg" alt="review icon">
+							</div>
+						</div>
+
+					</div>
+					<div class="reviews-slider__btn-next swiper-button-next"></div>
+					<div class="reviews-slider__btn-prev swiper-button-prev"></div>
+					<div class="reviews-slider__progress-bar">
+						<span class="slide_progress-bar"></span>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- ========== Sliders ========== -->
+		<div class="sliders sliders-pr">
+			<section class="slider">
+				<div class="container">
+					<div class="slider-top">
+						<h2 class="slider-top__title title">Рекомендовані товари</h2>
+					</div>
+				</div>
+				<div class="container-sl">
+					<div class="slider-swiper swiper">
+						<div class="slider-swiper__wrapper swiper-wrapper">
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-id="1"> 
+									<button class="card-btn--like">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/1(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/1(2).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Букет 25 троянд Ніжний мікс</a></h3>
+											<div class="card-size">Висота: 60 см, Ширина: 35 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">1 599 грн</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-card="sale-20" data-id="2"> 
+									<button class="card-btn--like active">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/6(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/6(2).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/6(3).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Букет троянд Ред наомі 60 см</a></h3>
+											<div class="card-size">Висота: 60 см, Ширина: 35 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">
+												<div class="card-price--new">2 499 грн</div>
+												<div class="card-price--old">2 999 грн</div>
+											</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-card="hot" data-id="3"> 
+									<button class="card-btn--like">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/2(1).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Букет 5 піоноподібних троянд Місті баблс</a></h3>
+											<div class="card-size">Висота: 60 см, Ширина: 35 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">799 грн</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-card="new" data-id="4"> 
+									<button class="card-btn--like">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/7(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/8(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/9(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/3(1).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Букет троянд мікс 40 см</a></h3>
+											<div class="card-size">Висота: 60 см, Ширина: 40 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">1 299 грн</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-card="sale-35" data-id="5"> 
+									<button class="card-btn--like active">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/4(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/5(1).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Троянда "Мондіаль" 60см 25шт з евкаліптом</a></h3>
+											<div class="card-size">Ширина: 60 см, Висота: 70 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">
+												<div class="card-price--new">3 999 грн</div>
+												<div class="card-price--old">4 599 грн</div>
+											</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="slider-swiper__slide swiper-slide" data-id="6">
+								<article class="card card--slider"> 
+									<button class="card-btn--like">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/9(1).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Троянда "Мондіаль" 60см 25шт з евкаліптом</a></h3>
+											<div class="card-size">Висота: 70 см, Ширина: 45 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">2 699 грн</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-card="hot" data-id="7"> 
+									<button class="card-btn--like">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/2(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/1(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/7(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/1(2).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/9(1).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Троянда "Експлорер" 80 см 101 шт</a></h3>
+											<div class="card-size">Ширина: 60 см Висота: 80 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">5 099 грн</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article> 
+							</div>
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-card="new" data-id="3"> 
+									<button class="card-btn--like">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/2(1).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Букет 5 піоноподібних троянд Місті баблс</a></h3>
+											<div class="card-size">Висота: 60 см, Ширина: 35 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">799 грн</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+						</div>
+						<div class="slider-swiper__btn-next swiper-button-next"></div>
+						<div class="slider-swiper__btn-prev swiper-button-prev"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slider">
+				<div class="container">
+					<div class="slider-top">
+						<h2 class="slider-top__title title">Раніше ви дивилися</h2>
+					</div>
+				</div>
+				<div class="container-sl">
+					<div class="slider-swiper swiper">
+						<div class="slider-swiper__wrapper swiper-wrapper">
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-card="hot" data-id="3"> 
+									<button class="card-btn--like">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/2(1).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Букет 5 піоноподібних троянд Місті баблс</a></h3>
+											<div class="card-size">Висота: 60 см, Ширина: 35 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">799 грн</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-card="new" data-id="4"> 
+									<button class="card-btn--like">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/7(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/8(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/9(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/3(1).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Букет троянд мікс 40 см</a></h3>
+											<div class="card-size">Висота: 60 см, Ширина: 40 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">1 299 грн</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-card="hot" data-id="1"> 
+									<button class="card-btn--like">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/1(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/1(2).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Букет 25 троянд Ніжний мікс</a></h3>
+											<div class="card-size">Висота: 60 см, Ширина: 35 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">1 599 грн</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-card="sale-20" data-id="2"> 
+									<button class="card-btn--like active">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/6(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/6(2).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/6(3).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Букет троянд Ред наомі 60 см</a></h3>
+											<div class="card-size">Висота: 60 см, Ширина: 35 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">
+												<div class="card-price--new">2 499 грн</div>
+												<div class="card-price--old">2 999 грн</div>
+											</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-id="7"> 
+									<button class="card-btn--like">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/9(1).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Троянда "Мондіаль" 60см 25шт з евкаліптом</a></h3>
+											<div class="card-size">Висота: 70 см, Ширина: 45 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">2 699 грн</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="slider-swiper__slide swiper-slide">
+								<article class="card card--slider" data-card="hot" data-id="6"> 
+									<button class="card-btn--like">
+										<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
+											<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
+										</svg>							
+									</button>
+									<a class="card-btn--label" href="#"></a>
+									<div class="card-img">
+										<a href="#">
+											<div class="card-img__slider swiper">
+												<div class="card-img__wrapper swiper-wrapper">
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/2(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/1(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/7(1).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/1(2).jpg" alt="image">
+													</div>
+													<div class="card-img__slide swiper-slide">
+														<img src="./img/products/9(1).jpg" alt="image">
+													</div>
+												</div>
+												<div class="card-img__pagination swiper-pagination"></div>
+											</div>
+										</a>
+									</div>
+									<div class="card-description">
+										<div class="card-top">
+											<h3 class="card-title"><a href="#">Троянда "Експлорер" 80 см 101 шт</a></h3>
+											<div class="card-size">Ширина: 60 см Висота: 80 см</div>
+										</div>
+								
+										<div class="card-bottom">
+											<div class="card-price">5 099 грн</div>
+											<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
+										</div>
+									</div>
+								</article> 
+							</div>
+
+						</div>
+						<div class="slider-swiper__btn-next swiper-button-next"></div>
+						<div class="slider-swiper__btn-prev swiper-button-prev"></div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- ========== Benefits-pr ========== -->
+		<div class="benefits-pr">
+			<div class="container">
+				<ul class="benefits-pr__list">
+					<li class="benefits-pr__item">
+						<img class="benefits-pr__item-img" src="./img/icons/benefits/delivery-blue.svg" alt="delivery icon">
+						<div class="benefits-pr__item-text">
+							Експрес-доставка<br>
+							від 90 хвилин
+						</div>
+					</li>
+					<li class="benefits-pr__item">
+						<img class="benefits-pr__item-img" src="./img/icons/benefits/sale-blue.svg" alt="sale icon">
+						<div class="benefits-pr__item-text">
+							Низькі ціни
+						</div>
+					</li>
+					<li class="benefits-pr__item">
+						<img class="benefits-pr__item-img" src="./img/icons/benefits/reward-blue.svg" alt="reward icon">
+						<div class="benefits-pr__item-text">
+							Щодня надходження <br>
+							свіжих квітів
+						</div>
+					</li>
+					<li class="benefits-pr__item">
+						<img class="benefits-pr__item-img" src="./img/icons/benefits/bouquet-blue.svg" alt="bouquet icon">
+						<div class="benefits-pr__item-text">
+							Досвідчені флористи
+						</div>
+					</li>
+					<li class="benefits-pr__item">
+						<img class="benefits-pr__item-img" src="./img/icons/benefits/check-blue.svg" alt="check icon">
+						<div class="benefits-pr__item-text">
+							Працюємо без вихідних
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 
   </main>
 
