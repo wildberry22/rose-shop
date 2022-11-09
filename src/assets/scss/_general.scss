@@ -102,3 +102,9 @@ body {
   position: absolute;
   top: -101%;
 }
+
+@media screen and (max-width: 375px) { 
+  .container {
+    padding: 0 10px;
+  }
+}

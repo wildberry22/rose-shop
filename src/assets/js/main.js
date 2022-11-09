@@ -7,6 +7,7 @@ import phoneMask from './modules/phoneMask.js';
 import forms from './modules/forms.js';
 import rangeSlider from './modules/rangeSlider.js';
 import counter from './modules/counter.js';
+import calcScroll from "./modules/calcScroll.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   
@@ -22,13 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('click', e => {
       if(e.target.classList.contains('.header-extra__close') || e.target.closest('.header-extra__close')) {
         headerExtra.remove();
-
-        header.style.top = '-50px';
+        if(window.innerWidth <= 680) { 
+          header.style.top = '0';
+        } else {
+          header.style.top = '-50px';
+        }
         header.classList.remove('header--extra');
       }
     });
   } else {
-    document.querySelector('.header').style.top = '-50px';
+    if(window.innerWidth <= 680) { 
+      document.querySelector('.header').style.top = '0';
+    } else {
+      document.querySelector('.header').style.top = '-50px';
+    }
   }
 
 
@@ -57,19 +65,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // activating cart
   try {
+    // activating cart 
     const cart = document.querySelector('.cart');
-    document.querySelector('.header-main__basket-btn').addEventListener('click', () => {
-      shadow('activate');
-      cart.classList.add('active');
+    window.addEventListener('click', e => {
+      if(e.target.hasAttribute('data-open-cart') || e.target.closest('[data-open-cart]')) {
+        if(window.innerWidth <= 680) {
+          cart.classList.add('active');
+          document.body.style.overflowY = 'hidden';
+          document.body.style.marginRight = calcScroll() + 'px';
+        } else {
+          shadow('activate');
+          cart.classList.add('active');
+        }
+      }
     });
 
     // deactivating cart
     window.addEventListener('click', e => {
       if(e.target.hasAttribute('data-cart-close') || e.target.closest('[data-cart-close]') || e.target == cart) {
-        shadow('deactivate');
-        cart.classList.remove('active');
+        if(window.innerWidth <= 680) {
+          cart.classList.remove('active');
+          document.body.style.overflowY = 'auto';
+          document.body.style.marginRight = 0;
+        } else {
+          shadow('deactivate');
+          cart.classList.remove('active');
+        }
       }
     });
 
