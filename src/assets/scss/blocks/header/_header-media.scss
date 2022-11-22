@@ -300,6 +300,9 @@
   .header-main__wrapper {
     gap: 15px;
   }
+  .header-mobile .mobile-catalog__top-text {
+    font-size: $fz-6;
+  }
 }
 
 @media screen and (max-width: 375px) { 
@@ -320,5 +323,82 @@
     flex-direction: column;
     gap: 0;
     align-items: flex-start;
+  }
+  .header-mobile .mobile-menu__time {
+    font-size: $fz-7;
+    padding-left: 22px;
+  }
+  .header-mobile .mobile-menu__time:before {
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .header-mobile .mobile-menu__content-wrapper,
+  .header-mobile .mobile-menu__contact {
+    padding: 20px 0;
+  }
+  .header-mobile .mobile-menu__contact-list {
+    gap: 20px;
+  }
+  .header-mobile .mobile-menu__nav-item a {
+    padding: 8px 10px 8px 0;
+  }
+  .header-mobile .mobile-menu__contact-bottom ul {
+    gap: 15px;
+  }
+  .header-mobile .mobile-catalog__top {
+    gap: 10px;
+  }
+  .header-mobile .mobile-catalog .catalog-menu__link--open ~ ul {
+    height: calc(100vh - 68px - 124px);
+    top: 124px;
+  }
+}
+
+
+
+@media screen and (max-height: 805px) {
+  .header-mobile .mobile-menu__content-wrapper,
+  .header-mobile .mobile-menu__contact {
+    padding: 20px 0;
+  }
+  .header-mobile .mobile-menu__contact-list {
+    gap: 20px;
+  }
+  .header-mobile .mobile-menu__nav-item a {
+    padding: 8px 10px 8px 0;
+  }
+}
+
+@media screen and (max-height: 725px) {
+  .header-mobile .mobile-menu__top-wrapper {
+    padding: 10px 0;
+  }
+  .header-mobile .mobile-menu__content-wrapper, 
+  .header-mobile .mobile-menu__contact {
+    padding: 15px 0;
+  }
+  .header-mobile .mobile-menu__contact-list,
+  .header-mobile .mobile-menu__contact-bottom ul {
+    gap: 15px;
+  }
+  .header-mobile .mobile-menu__nav-item a {
+    padding: 6px 10px 6px 0;
+  }
+}
+
+@media screen and (max-height: 640px) {
+  .header-mobile .mobile-menu__contact {
+    padding: 15px 0 10px;
+  }
+  .header-mobile .mobile-menu__contact-list {
+    gap: 10px;
+  }
+  .header-mobile .mobile-menu__contact-top a {
+    padding: 3px 0 3px 25px;
+  }
+  .header-mobile .mobile-menu__nav-item a {
+    padding: 5px 10px 5px 0;
   }
 }

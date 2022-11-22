@@ -4,11 +4,12 @@
   .cart {
     right: 0;
     left: 0;
-    top: -120%;
+    top: auto;
+    bottom: -120%;
     height: calc(100vh - 68px);
   }
   .cart.active {
-    top: 0;
+    bottom: 68px;
   }
   .cart-content {
     height: calc(100vh - calc(70px + 159px + 68px));
