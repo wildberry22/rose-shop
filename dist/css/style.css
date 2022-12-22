@@ -3656,6 +3656,87 @@ body {
   .header-mobile .mobile-menu__nav-item a {
     padding: 5px 10px 5px 0; } }
 
+/* 1440 / 1280 / 1230 / 1080 / 1024 / 900 / 768 / 680 / 568 / 480 / 375 / 320 */
+@media screen and (max-width: 1230px) {
+  .footer-top {
+    gap: 20px; } }
+
+@media screen and (max-width: 1080px) {
+  .footer-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 50px; }
+  .footer-top__col {
+    gap: 20px; } }
+
+@media screen and (max-width: 1024px) {
+  .footer-bottom {
+    gap: 30px; }
+  .footer-bottom__social-text {
+    text-align: right; } }
+
+@media screen and (max-width: 900px) {
+  .footer-bottom__social-list,
+  .footer-bottom__pay-list {
+    gap: 8px; }
+  .footer-bottom__social {
+    gap: 10px; }
+  .footer-bottom {
+    gap: 20px; } }
+
+@media screen and (max-width: 768px) {
+  .footer-bottom__social {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px; }
+  .footer-bottom__social-text {
+    text-align: left; }
+  .footer-bottom__copy {
+    max-width: 160px; } }
+
+@media screen and (max-width: 680px) {
+  .footer-bottom {
+    margin-bottom: 68px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; }
+  .footer-bottom__copy {
+    max-width: initial; }
+  .footer-bottom__social {
+    align-items: flex-start; }
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 50px; } }
+
+@media screen and (max-width: 480px) {
+  .footer-top {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    padding: 30px 0 20px; }
+  .footer-top__list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out; }
+    .footer-top__list.not-open {
+      max-height: initial;
+      overflow: visible; }
+  .footer-top__title {
+    position: relative; }
+    .footer-top__title::after {
+      content: '';
+      height: 11px;
+      width: 13px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url("../img/icons/arrow-down.svg") center center/contain no-repeat;
+      transition: 0.2s ease-out; }
+    .footer-top__title.active::after {
+      transform: translateY(-50%) rotate(180deg); }
+    .footer-top__title.not-open::after {
+      display: none; } }
+
 /* 1440 / 1280 / 1230 / 1024 / 900 / 768 / 680 / 568 / 480 / 375 / 320 */
 @media screen and (max-width: 680px) {
   .cart {

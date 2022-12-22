@@ -187,7 +187,34 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll('.catalog-menu__link--open ~ ul').forEach(el => el.classList.remove('active'));
     }
   });
+  /* ========== Footer ========== */
+
+  if (window.innerWidth <= 1080) {
+    document.querySelectorAll('.footer-top__col').forEach(item => item.style.maxWidth = 'auto');
+  }
+
+  if (window.innerWidth <= 480) {
+    const footerTitles = document.querySelectorAll('.footer-top__title');
+    footerTitles.forEach(item => {
+      if (!item.classList.contains('not-open')) {
+        item.addEventListener('click', () => {
+          item.classList.toggle('active');
+          const panel = item.nextElementSibling;
+
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    });
+    document.querySelectorAll('.footer-top__col').forEach(item => {
+      item.style.maxWidth = 'initial';
+    });
+  }
   /* ========== Mobile catalog ========== */
+
 
   if (window.innerWidth <= 680) {
     window.addEventListener('click', e => {
