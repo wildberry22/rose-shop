@@ -1,0 +1,44 @@
+/* 1440 / 1280 / 1230 / 1080 / 1024 / 900 / 768 / 680 / 568 / 480 / 375 / 320 */
+
+@media screen and (max-width: 1230px) {
+  .benefits-list__item-text {
+    white-space: nowrap;
+  }
+  .benefits-list {
+    margin: 0 auto;
+    max-width: 800px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) { 
+  .benefits-list {
+    gap: 15px 10px;
+  }
+  .benefits-list__item {
+    padding: 25px 18px;
+  }
+}
+
+@media screen and (max-width: 680px) {  
+  .benefits-list {
+    max-width: initial;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px 15px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .benefits-list__item {
+    height: 75px;
+    padding: 15px 20px;
+  }
+}
