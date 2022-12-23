@@ -34,29 +34,7 @@ body {
   margin-bottom: 60px;
 }
 
-@media screen and (max-width: 768px) {
-  .margin {
-    margin: 40px 0;
-  }
-  .margin-top {
-    margin-top: 40px;
-  }
-  .margin-bottom {
-    margin-bottom: 40px;
-  }
-}
 
-@media screen and (max-width: 480px) { 
-  .margin {
-    margin: 30px 0;
-  }
-  .margin-top {
-    margin-top: 30px;
-  }
-  .margin-bottom {
-    margin-bottom: 30px;
-  }
-}
 
 .title {
   font-family: $yeseva-one-font;
@@ -127,7 +105,42 @@ body {
   top: -101%;
 }
 
+
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: $fz-2;
+  }
+  .margin {
+    margin: 40px 0;
+  }
+  .margin-top {
+    margin-top: 40px;
+  }
+  .margin-bottom {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) { 
+  .title {
+    font-size: $fz-3;
+  }
+  .margin {
+    margin: 30px 0;
+  }
+  .margin-top {
+    margin-top: 30px;
+  }
+  .margin-bottom {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (max-width: 375px) { 
+  .title {
+    font-size: $fz-4;
+  }
   .container {
     padding: 0 10px;
   }

@@ -351,10 +351,32 @@ document.addEventListener("DOMContentLoaded", () => {
       centeredSlides: false,
       allowTouchMove: true,
       autoplay: false,
+      freeMode: false,
       navigation: {
         nextEl: ".slider-swiper__btn-next",
         prevEl: ".slider-swiper__btn-prev",
       },
+      breakpoints: {
+        280: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          freeMode: true,
+        },
+        340: {
+          slidesPerView: "auto",
+          spaceBetween: 20,
+          freeMode: true,
+        },
+        768: {
+          slidesPerView: "auto",
+          spaceBetween: 30,
+          freeMode: true,
+        },
+        1230: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
+      }
     });
   } catch (error) {}
   
@@ -376,6 +398,7 @@ document.addEventListener("DOMContentLoaded", () => {
         download: true,
         rotate: false
       },
+      
     });
   } catch (error) {}
   
@@ -398,6 +421,28 @@ document.addEventListener("DOMContentLoaded", () => {
         nextEl: ".gallery-slider__btn-next",
         prevEl: ".gallery-slider__btn-prev",
       },
+      breakpoints: {
+        320: {
+          slidesPerView: "auto",
+          spaceBetween: 20,
+          freeMode: true,
+          centeredSlides: true,
+        },
+        768: {
+          slidesPerView: "auto",
+          spaceBetween: 20,
+          freeMode: true,
+          centeredSlides: true,
+        },
+        900: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
+      }
     });
   } catch (error) {}
 

@@ -1,0 +1,20 @@
+/* 1440 / 1280 / 1230 / 1080 / 1024 / 900 / 768 / 680 / 568 / 480 / 375 / 320 */
+
+@media screen and (max-width: 1230px) {
+  .card--slider {
+    max-width: initial;
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .card--slider {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .sliders .swiper-slide img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}

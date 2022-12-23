@@ -1,0 +1,30 @@
+/* 1440 / 1280 / 1230 / 1080 / 1024 / 900 / 768 / 680 / 568 / 480 / 375 / 320 */
+
+@media screen and (max-width: 1230px) {
+  .gallery-slider {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .gallery-slider__slide,
+  .gallery-slider__slide-img {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery-title {
+    margin-bottom: 20px;
+  }
+  .gallery-slider__slide, .gallery-slider__slide-img {
+    height: 250px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .gallery-title {
+    margin-bottom: 15px;
+  }
+}

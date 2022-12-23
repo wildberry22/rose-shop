@@ -1,0 +1,42 @@
+/* 1440 / 1280 / 1230 / 1080 / 1024 / 900 / 768 / 680 / 568 / 480 / 375 / 320 */
+
+@media screen and (max-width: 1230px) {
+  .slider-swiper {
+    padding: 0 15px 30px;
+  }
+  .sliders .swiper-slide {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider-swiper {
+    padding: 0 15px 10px;
+  }
+  .slider-top {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider-top {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) { 
+  .slider-swiper {
+    padding: 0 10px 10px;
+  }
+  .slider-top {
+    margin-bottom: 13px;
+  }
+  .sliders .swiper-button-prev, .sliders .swiper-rtl .swiper-button-next {
+    left: 20px;
+  }
+  .sliders .swiper-button-next, .sliders .swiper-rtl .swiper-button-prev {
+    right: 20px;
+  }
+}
+
+
