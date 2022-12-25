@@ -1,0 +1,115 @@
+/* 1440 / 1280 / 1230 / 1080 / 1024 / 900 / 768 / 680 / 568 / 480 / 375 / 320 */
+
+@media screen and (max-width: 1230px) {
+  .excellence-imgWrapper {
+    margin-right: 60px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .excellence::before {
+    width: 370px;
+  }
+  .excellence-img {
+    width: 130px;
+    height: 130px;
+    img {
+      width: 74px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .excellence {
+    padding: 60px 0;
+  }
+  .excellence-wrapper {
+    gap: 30px;
+  }
+  .excellence-imgWrapper {
+    margin-right: 30px;
+  }
+  .excellence::before {
+    width: 258px;
+    height: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -57px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .excellence {
+    padding: 40px 0;
+  }
+  .excellence::before {
+    height: 85%;
+  }
+  .excellence-imgWrapper {
+    margin-right: 0px;
+  } 
+  .excellence-content {
+    font-size: $fz-6;
+  }
+  .excellence-content p {
+    margin-bottom: 15px;
+  }
+  .excellence-content ul {
+    padding-left: 20px;
+    gap: 10px;
+  }
+  .excellence-content ul li::before {
+    top: 10px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .excellence::before {
+    display: none;
+  }
+  .excellence-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .excellence-imgWrapper {
+    margin-left: 20px;
+    margin-bottom: -40px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    width: 100%;
+    position: relative;
+    &::before {
+      content: '';
+      width: 275px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url('../img/bg-leaves.svg') center right/cover no-repeat;
+    }
+  }
+  .excellence-img {
+    height: 150px;
+    width: 150px;
+  }
+  .excellence-img img {
+    width: 84px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .excellence {
+    padding: 30px 0;
+  }
+  .excellence__title {
+    margin-bottom: 15px;
+  }
+  .excellence-imgWrapper {
+    margin-bottom: -30px;
+    &::before {
+      content: '';
+      width: 177px;
+    }
+  }
+}

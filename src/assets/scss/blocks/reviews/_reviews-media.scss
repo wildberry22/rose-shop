@@ -1,0 +1,130 @@
+/* 1440 / 1280 / 1230 / 1080 / 1024 / 900 / 768 / 680 / 568 / 480 / 375 / 320 */
+
+@media screen and (max-width: 1024px) {
+  .reviews-slider {
+    padding: 0 15px 10px;
+  }
+  .review-item__img img {
+    width: 170px;
+    height: 170px;
+  }
+  .review-item__img {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .review-item {
+    padding: 30px 40px;
+  }
+  .review-item__img img {
+    width: 150px;
+    height: 150px;
+  }
+  .review-item__img {
+    width: 170px;
+    height: 170px;
+  }
+  .review-item__starrating {
+    margin-bottom: 5px;
+  }
+  .review-item__name {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reviews {
+    padding: 40px 0;
+  }
+  .review-item__img img {
+    width: 120px;
+    height: 120px;
+  }
+  .review-item__img {
+    width: 140px;
+    height: 140px;
+  }
+  .review-item {
+    gap: 30px;
+    padding: 20px 40px;
+  }
+  .review-item__content {
+    gap: 15px;
+  }
+  .reviews-top {
+    margin-bottom: 30px;
+  }
+  .reviews-slider {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .review-item {
+    flex-direction: column;
+    height: 275px;
+  }
+  .review-item__img {
+    display: none;
+  }
+  .reviews-top {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .reviews .swiper-button-next, .reviews .swiper-button-prev {
+    display: none;
+  }
+  .review-item {
+    padding: 20px;
+  }
+  .review-item {
+    height: 300px;
+  }
+  .review-item__starrating {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .reviews {
+    padding: 30px 0;
+  }
+  .review-item__name {
+    font-size: $fz-6;
+  }
+  .review-item__text,
+  .review-item__bouquet {
+    font-size: $fz-7;
+  }
+  .review-item__starrating {
+    gap: 3px;
+  }
+  .reviews-top {
+    margin-bottom: 20px;
+  }
+  .reviews-btn--more {
+    padding: 9px 40px;
+  }
+  .reviews-slider {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .review-item {
+    padding: 15px;
+  }
+  .reviews-top {
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .reviews-slider {
+    padding: 0 10px 10px;
+  }
+}

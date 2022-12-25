@@ -607,6 +607,50 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   } catch (error) {}
+  /* ========== About ========== */
+
+
+  try {
+    if (window.innerWidth <= 520) {
+      document.querySelectorAll('.about-content p').forEach((item, idx) => {
+        if (!idx == 0) {
+          item.style.display = 'none';
+        }
+      });
+      const linkToShowMore = document.createElement('div');
+      linkToShowMore.classList.add('about__show-more');
+      linkToShowMore.innerHTML = 'Розгорнути';
+      document.querySelector('.about-content').appendChild(linkToShowMore);
+      linkToShowMore.addEventListener('click', () => {
+        console.log(linkToShowMore);
+
+        if (linkToShowMore.classList.contains('open')) {
+          linkToShowMore.classList.remove('open');
+          linkToShowMore.innerHTML = 'Розгорнути';
+          document.querySelectorAll('.about-content p').forEach((item, idx) => {
+            if (!idx == 0) {
+              item.style.display = 'none';
+            }
+          });
+        } else {
+          linkToShowMore.classList.add('open');
+          linkToShowMore.innerHTML = 'Згорнути';
+          document.querySelectorAll('.about-content p').forEach((item, idx) => {
+            item.style.display = 'block';
+          });
+        }
+      });
+    }
+  } catch (error) {}
+  /* ========== Map ========== */
+
+
+  try {
+    if (window.innerWidth <= 680) {
+      const mapWrapper = document.querySelector('.map iframe');
+      mapWrapper.setAttribute('height', 400);
+    }
+  } catch (error) {}
   /* ========== Modal ========== */
 
 

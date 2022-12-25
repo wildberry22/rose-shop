@@ -1,7 +1,7 @@
 .excellence {
   padding: 70px 0;
   position: relative;
-  z-index: -2;
+  overflow: hidden;
   &::before {
     content: '';
     width: 330px;
@@ -10,12 +10,13 @@
     top: 0;
     right: 0;
     background: url('../img/bg-leaves.svg') center right/cover no-repeat;
-    z-index: -1;
   }
   &__title {
     margin-bottom: 20px;
   }
   &-wrapper {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,8 +40,7 @@
         &::before {
           content: '';
           position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
+          top: 12px;
           left: -12px;
           width: 3px;
           height: 3px;

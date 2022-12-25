@@ -1,0 +1,130 @@
+/* 1440 / 1280 / 1230 / 1080 / 1024 / 900 / 768 / 680 / 568 / 480 / 375 / 320 */
+
+@media screen and (max-width: 1140px) {
+  .blog-card {
+    height: 450px;
+  }
+  .blog-card__content {
+    height: 200px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .blog-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 3px;
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(#0093A2, .2); 
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $blue-color;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #036974;
+    }
+  }
+  .blog-card {
+    overflow: unset;
+    width: 380px;
+    height: 430px;
+  }
+  .blog-card__content {
+    width: 380px;
+    height: 180px;
+    padding: 20px 25px;
+  }
+  .blog-card__img {
+    width: 378px;
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .blog-card,
+  .blog-card__content {
+    width: 350px;
+  }
+  .blog-card__img {
+    width: 348px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .blog-wrapper {
+    gap: 20px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .blog-card, .blog-card__content {
+    width: 335px;
+  }
+  .blog-card {
+    height: 400px;
+  }
+  .blog-card__img{
+    height: 220px;
+    width: 333px;
+    img {
+      height: 220px;
+    }
+  } 
+}
+
+@media screen and (max-width: 480px) {
+  .blog-top {
+    margin-bottom: 20px;
+  }
+  .blog-card__descr {
+    font-size: $fz-7;
+  }
+  .blog-card__title a {
+    font-size: $fz-6;
+  }
+  .blog-card, .blog-card__content {
+    width: 315px;
+  }
+  .blog-card__content {
+    padding: 20px;
+    height: 160px;
+  }
+  .blog-card {
+    height: 380px;
+  }
+  .blog-card__img{
+    height: 220px;
+    width: 313px;
+    img {
+      height: 220px;
+    }
+  } 
+}
+
+@media screen and (max-width: 375px) {
+  .blog-top {
+    margin-bottom: 15px;
+  }
+  .blog-top__btn {
+    gap: 5px;
+  }
+  .blog-top__btn span {
+    font-size: .8rem;
+  } 
+  .blog-wrapper {
+    gap: 15px;
+  }
+  .blog-card, .blog-card__content {
+    width: 280px;
+  }
+  .blog-card__content {
+    padding: 15px;
+  }
+  .blog-card__img{
+    width: 278px;
+  }
+}

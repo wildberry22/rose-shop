@@ -1,0 +1,58 @@
+/* 1440 / 1280 / 1230 / 1080 / 1024 / 900 / 768 / 680 / 568 / 480 / 375 / 320 */
+
+@media screen and (max-width: 768px) {
+  .map-info__mail a {
+    color: $blue-color;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .map-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    top: auto;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    padding: 20px 15px;
+  }
+  .map-info__top,
+  .map-info__time {
+    margin-bottom: 0;
+  }
+  .map-info__top {
+    gap: 5px;
+  }
+  .map-info__time,
+  .map-info__mail a {
+    font-size: $fz-7;
+    line-height: 1.3;
+    padding-left: 24px;
+  }
+  .map-info__top-call {
+    font-size: $fz-7;
+    line-height: 1;
+  }
+  .map-info__top-order {
+    font-size: 0.8rem;
+  }
+  .map-info__top-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .map-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    right: initial;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+}
