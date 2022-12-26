@@ -109,12 +109,18 @@
   }
 
   &-img {
+    height: 250px;
+    overflow: hidden;
     flex: 1;
     min-width: 0;
     position: relative;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
     &__description {
       position: absolute;
-      height: 98%;
+      height: 100%;
       width: 100%;
       top: 0;
       left: 0;

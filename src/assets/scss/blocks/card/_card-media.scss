@@ -5,6 +5,9 @@
     max-width: initial;
     width: 280px;
   }
+  .card-size__wrapper {
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 375px) {

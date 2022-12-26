@@ -650,6 +650,23 @@ document.addEventListener("DOMContentLoaded", () => {
       
     });
   } catch (error) {}
+  // adaptive
+  try {
+    if(window.innerWidth <= 900) { 
+      window.addEventListener('click', e => {
+        if(e.target.hasAttribute('data-filter-open') || e.target.closest('[data-filter-open]')) {
+          document.querySelector('.filter').classList.add('active');
+          document.body.style.overflowY = 'hidden';
+          document.body.style.marginRight = calcScroll() + 'px';
+        }
+        if(e.target.hasAttribute('data-filter-close') || e.target.closest('[data-filter-close]')) {
+          document.querySelector('.filter').classList.remove('active');
+          document.body.style.overflowY = 'auto';
+          document.body.style.marginRight = 0;
+        }
+      });
+    }
+  } catch (error) {}
 
 
 
