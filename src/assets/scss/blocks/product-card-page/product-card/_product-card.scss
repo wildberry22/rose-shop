@@ -6,6 +6,12 @@
     align-items: flex-start;
     gap: 20px;
   }
+  &__l {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
 
   &__slider-wrap {
     width: 476px;

@@ -49,10 +49,19 @@
   .breadcrumbs {
     margin: 20px 0;
   }
+  .breadcrumbs-list {
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .breadcrumbs-list__item {
+    white-space: nowrap;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .breadcrumbs {
-    margin: 15px 0 10px;
+    margin: 15px 0;
   } 
 }

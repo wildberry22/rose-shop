@@ -67,49 +67,40 @@
   .header-main__basket-text {
     display: none;
   }
+
   .header-bottom {
-    padding-top: 0;
+    padding: 10px 0;
   }
-  .header-bottom .nav-list__item-title {
-    border: 1px solid $gray-light-2-color;
-    padding: 6px 10px;
-    border-radius: 8px;
-    transition: .2s ease;
-    &:hover {
-      border: 1px solid $gray-light-1-color;
+  .header-bottom .nav-list{
+    overflow-x: auto;
+    padding-bottom: 8px;
+    &::-webkit-scrollbar {
+      height: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      background: rgba(#0093A2, .05); 
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba($blue-color, .2);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(#036974, .2);
     }
   }
   .header-bottom .nav-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    gap: 20px;
   }
-  .header-bottom .hover-menu__title::after {
-    top: 51%;
-    right: 10px;
-  } 
-  .nav-list > .nav-list__item > .nav-list__link {
-    display: block;
-    border: 1px solid $gray-light-2-color;
-    padding: 6px 10px;
-    border-radius: 8px;
-    transition: .2s ease;
-    &:hover {
-      border: 1px solid $gray-light-1-color;
-    }
+  .header-bottom .nav-list__link,
+  .header-bottom .nav-list__item-title {
+    white-space: nowrap;
   }
-  .header-bottom .nav-list__link.sale {
-    padding-left: 35px;
-  }
-  .header-bottom .nav-list__link.sale::before {
-    left: 10px;
+  .header-bottom .hover-menu {
+    position: static;
   }
   .header-bottom .nav-list .hover-menu__wrapper {
-    top: 27px;
+    top: initial;
   }
-  .hover-menu__wrapper {
-    padding: 10px 15px 20px;
-  }
+  
 }
 
 @media screen and (max-width: 900px) {
@@ -139,10 +130,6 @@
   .header-main__search-form {
     width: 215px;
   }
-
-  .header-bottom .nav-list {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -156,9 +143,6 @@
   }
   .header-top__social-list {
     display: none;
-  }
-  .header-bottom .nav-list {
-    grid-template-columns: repeat(3, 1fr);
   }
   .header-main__logo-delivery {
     display: none;

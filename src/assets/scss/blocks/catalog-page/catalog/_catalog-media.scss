@@ -259,6 +259,9 @@
     top: 6px;
     right: 6px;
   }
+  .catalog-description__text ul {
+    padding-left: 20px;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -344,6 +347,10 @@
   }
   .catalog-description__text {
     margin-bottom: 30px;
+    font-size: $fz-7;
+  }
+  .catalog-description__text p, .catalog-description__subtitle {
+    margin-bottom: 10px;
   }
   .catalog .card-btn--basket, .catalog .card--pre-order .card-btn--basket {
     height: 33px;
@@ -360,5 +367,7 @@
   }
   .catalog-description__title {
     font-size: $fz-4;
+    line-height: 131%;
+    margin-bottom: 15px;
   }
 }

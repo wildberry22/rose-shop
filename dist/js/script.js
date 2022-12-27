@@ -186,8 +186,23 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector('.mobile-catalog').classList.remove('active');
       document.querySelectorAll('.catalog-menu__link--open ~ ul').forEach(el => el.classList.remove('active'));
     }
-  });
+  }); // dropdown menu with overflowX for container
+
+  try {
+    if (window.innerWidth <= 1024 && window.innerWidth >= 680) {
+      const scrollHeaderWrapper = document.querySelector('.header .nav-list');
+      const dropDownElements = document.querySelectorAll('.nav-list__item.hover-menu');
+      dropDownElements.forEach(element => {
+        element.addEventListener('mouseenter', e => {
+          const dropDownMenuEl = e.target.querySelector('.hover-menu__wrapper');
+          dropDownMenuEl.style.left = element.getBoundingClientRect().left - 20 + 'px';
+        });
+        element.addEventListener('mouseleave', e => {});
+      });
+    }
+  } catch (error) {}
   /* ========== Footer ========== */
+
 
   if (window.innerWidth <= 1080) {
     document.querySelectorAll('.footer-top__col').forEach(item => item.style.maxWidth = 'auto');
@@ -764,7 +779,34 @@ document.addEventListener("DOMContentLoaded", () => {
       freeMode: true,
       watchSlidesProgress: true,
       grabCursor: true,
-      allowTouchMove: true
+      allowTouchMove: true,
+      breakpoints: {
+        280: {
+          spaceBetween: 10,
+          slidesPerView: 3.2,
+          freeMode: true
+        },
+        376: {
+          spaceBetween: 10,
+          slidesPerView: 3.7,
+          freeMode: true
+        },
+        568: {
+          spaceBetween: 10,
+          slidesPerView: 4.7,
+          freeMode: true
+        },
+        681: {
+          spaceBetween: 10,
+          slidesPerView: 3.2,
+          freeMode: true
+        },
+        820: {
+          spaceBetween: 10,
+          slidesPerView: 4.2,
+          freeMode: true
+        }
+      }
     });
     const productCardSliderBg = new Swiper(".product-card__slider--big", {
       spaceBetween: 10,
@@ -779,6 +821,57 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('.product-card__btns-like button').addEventListener('click', () => {
       document.querySelector('.product-card__btns-like button').classList.toggle('active');
     });
+  } catch (error) {}
+
+  try {
+    if (window.innerWidth <= 680) {
+      //btns
+      const btnsWrapper = document.querySelector('.product-card__btns');
+      const newBtnsWrapper = document.createElement('div');
+      newBtnsWrapper.classList.add('product-card__btns-new');
+      newBtnsWrapper.innerHTML = `
+        <div class="product-card__btns-top">
+          <div class="product-card__price">
+            <div class="product-card__price-new">2 499 грн</div>
+            <div class="product-card__price-old">2 999 грн</div>
+          </div>
+          <div class="product-card__counter" data-counter-wrapper>
+            <button class="product-card__counter-minus" data-action="minus">
+              <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1.75C11.4142 1.75 11.75 1.41421 11.75 1C11.75 0.585786 11.4142 0.25 11 0.25L11 1.75ZM1 0.25C0.585787 0.25 0.25 0.585786 0.25 1C0.25 1.41421 0.585787 1.75 1 1.75L1 0.25ZM11 0.25L1 0.25L1 1.75L11 1.75L11 0.25Z" fill="#7D818E"/>
+              </svg>											
+            </button>
+            <div class="product-card__counter-num" data-counter>25</div>
+            <button class="product-card__counter-plus" data-action="plus">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 6.75C11.4142 6.75 11.75 6.41421 11.75 6C11.75 5.58579 11.4142 5.25 11 5.25L11 6.75ZM1 5.25C0.585787 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585787 6.75 1 6.75L1 5.25ZM11 5.25L1 5.25L1 6.75L11 6.75L11 5.25Z" fill="#7D818E"/>
+                <path d="M6.75 1C6.75 0.585786 6.41421 0.25 6 0.25C5.58579 0.25 5.25 0.585786 5.25 1L6.75 1ZM5.25 11C5.25 11.4142 5.58579 11.75 6 11.75C6.41421 11.75 6.75 11.4142 6.75 11H5.25ZM5.25 1L5.25 11H6.75L6.75 1L5.25 1Z" fill="#7D818E"/>
+              </svg>											
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card__btns-bottom">
+          <button class="product-card__btn-buy btn btn-full">Придбати</button>
+					<button class="product-card__btn-buy1click btn-blue" data-modal="buy1click">Придбати в 1 клiк</button>
+          <div class="product-card__btns-like">
+            <button>
+              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.99998 3.58704C5.6516 -1.66734 1.06041 2.06612 1 6.09071C1 12.0822 8.2793 17 9.99998 17C11.7207 17 19 12.0822 19 6.09071C18.9396 2.06612 14.3484 -1.66734 9.99998 3.58704Z" fill="#F2F3F5"/>
+                <path class="line" d="M1 6.09071L0.25 6.07945V6.09071H1ZM9.99998 3.58704L9.42219 4.06521C9.56467 4.23738 9.77651 4.33704 9.99998 4.33704C10.2235 4.33704 10.4353 4.23738 10.5778 4.06521L9.99998 3.58704ZM19 6.09071H19.7501L19.7499 6.07945L19 6.09071ZM1.74992 6.10196C1.77636 4.34039 2.80175 2.68479 4.20482 2.04091C4.89023 1.72637 5.68269 1.64218 6.54398 1.91143C7.41449 2.18355 8.40208 2.83256 9.42219 4.06521L10.5778 3.10887C9.4237 1.71433 8.20674 0.859628 6.99153 0.479749C5.76711 0.096991 4.59267 0.212514 3.57919 0.677612C1.58446 1.59301 0.284052 3.81644 0.250084 6.07945L1.74992 6.10196ZM9.99998 16.25C9.93037 16.25 9.73579 16.2165 9.39891 16.0811C9.08065 15.9532 8.69109 15.7573 8.2537 15.4949C7.37949 14.9703 6.3541 14.2039 5.37754 13.2544C3.40233 11.3341 1.75 8.78951 1.75 6.09071H0.25C0.25 9.3834 2.23732 12.2935 4.33193 14.3299C5.39027 15.3589 6.50735 16.1963 7.48194 16.7811C7.96896 17.0733 8.43039 17.3084 8.83957 17.4729C9.23013 17.6299 9.63943 17.75 9.99998 17.75V16.25ZM19.7499 6.07945C19.7159 3.81644 18.4155 1.59301 16.4208 0.677611C15.4073 0.212514 14.2329 0.0969911 13.0084 0.479749C11.7932 0.859628 10.5763 1.71433 9.42218 3.10887L10.5778 4.06521C11.5979 2.83256 12.5855 2.18355 13.456 1.91143C14.3173 1.64218 15.1098 1.72637 15.7952 2.04091C17.1982 2.68479 18.2236 4.34039 18.2501 6.10196L19.7499 6.07945ZM9.99998 17.75C10.3605 17.75 10.7698 17.6299 11.1604 17.4729C11.5696 17.3084 12.031 17.0733 12.518 16.7811C13.4926 16.1963 14.6097 15.3589 15.6681 14.3299C17.7627 12.2935 19.75 9.3834 19.75 6.09071H18.25C18.25 8.78951 16.5977 11.3341 14.6224 13.2544C13.6459 14.2039 12.6205 14.9703 11.7463 15.4949C11.3089 15.7573 10.9193 15.9532 10.6011 16.0811C10.2642 16.2165 10.0696 16.25 9.99998 16.25V17.75Z" fill="#353949"/>
+              </svg>                    
+            </button>
+          </div>
+        </div>
+      `;
+      document.querySelector('.product-card__compound').before(newBtnsWrapper); // description 
+
+      const cardDescriptionEl = document.querySelector('.product-card__slider-wrap .product-card__slider-descr');
+      const newCardDescriptionEl = document.createElement('div');
+      newCardDescriptionEl.classList.add('product-card__slider-descr');
+      newCardDescriptionEl.innerHTML = cardDescriptionEl.innerHTML;
+      document.querySelector('.product-card__characteristics').appendChild(newCardDescriptionEl);
+    }
   } catch (error) {}
 });
 
