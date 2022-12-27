@@ -24,17 +24,51 @@
 	<meta name="theme-color" content="#ffffff">
 	<!-- ========== Title ========== -->
 	<title>Roseshop - Головна</title>
+
+	<!-- ========== Preloader Styles ========== -->
+  <style>
+    .preloader-bg {
+      position: fixed;
+      z-index: 99999;
+      background: #fff;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity .3s linear;
+      opacity: 1;
+    }
+    .preloader {
+      background: url('./img/preloader.svg') center center/cover no-repeat;
+      width: 250px;
+      height: 250px;
+    }
+
+    @media screen and (max-width: 480px) {
+      .preloader {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+
 	<!-- ========== Links ========== -->
 	<!-- Swiper -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 	<!-- Lightgallery -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lg-autoplay.min.css" integrity="sha512-LlHSkMTvyRwh1YjzXwk6bxjdt3huGhCyK1vlCC6f7Db/g+2sYXz2YNasyZHnMUgykqPksmD/44DIINhqpWBjig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lg-autoplay.min.css" integrity="sha512-LlHSkMTvyRwh1YjzXwk6bxjdt3huGhCyK1vlCC6f7Db/g+2sYXz2YNasyZHnMUgykqPksmD/44DIINhqpWBjig==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<!-- Style.css -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+	<div class="preloader-bg">
+    <div class="preloader"></div>
+  </div>
+
 	<!-- ========== Header ========== -->
 	<header class="header header--extra">
 		<div class="header-extra">
@@ -42,7 +76,7 @@
 				<div class="header-extra__wrapper">
 					<p class="header-extra__text">Сума мінімального замовлення 600 грн</p>
 					<button class="header-extra__close">
-						<img src="./img/icons/cross.svg" alt="close icon">					
+						<img src="./img/icons/cross.svg" alt="close icon" loading="lazy">					
 					</button>
 				</div>
 			</div>
@@ -131,7 +165,7 @@
 				<div class="header-main__wrapper">
 					<div class="header-main__logo">
 						<div class="logo">
-							<a href="./index.html"><img src="./img/logo.svg" alt="logo"></a>
+							<a href="./index.html"><img src="./img/logo.svg" alt="logo" loading="lazy"></a>
 						</div>
 						<div class="header-main__logo-delivery">
 							Доставка квітів <br> у Києві
@@ -172,10 +206,10 @@
 										<li class="contact-info__list-bottom">
 											<div class="contact-info__list-title">Напишіть нам:</div>
 											<ul>
-												<li><a href="#"><img src="./img/icons/contact/whatsApp.svg" alt="WhatsApp"></a></li>
-												<li><a href="#"><img src="./img/icons/contact/telegram.svg" alt="Telegram"></a></li>
-												<li><a href="#"><img src="./img/icons/contact/fb.svg" alt="Facebook"></a></li>
-												<li><a href="#"><img src="./img/icons/contact/instagram.svg" alt="Instagram"></a></li>
+												<li><a href="#"><img src="./img/icons/contact/whatsApp.svg" alt="WhatsApp" loading="lazy"></a></li>
+												<li><a href="#"><img src="./img/icons/contact/telegram.svg" alt="Telegram" loading="lazy"></a></li>
+												<li><a href="#"><img src="./img/icons/contact/fb.svg" alt="Facebook" loading="lazy"></a></li>
+												<li><a href="#"><img src="./img/icons/contact/instagram.svg" alt="Instagram" loading="lazy"></a></li>
 											</ul>
 										</li>
 									</ul>
@@ -195,15 +229,15 @@
 						</div>
 						<div class="header-main__basket">
 							<button class="header-main__basket-btn" data-open-cart>
-								<div class="header-main__basket-icon">
+								<span class="header-main__basket-icon">
 									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path class="bg" d="M2.14991 17.0586C1.40314 14.183 1.10756 10.6607 1.0256 8.74863C1.00195 8.19685 1.44772 7.75 2 7.75H18C18.5523 7.75 18.998 8.19685 18.9744 8.74863C18.8924 10.6607 18.5969 14.183 17.8501 17.0586C17.6501 17.8287 17.0868 18.4292 16.3043 18.5736C15.133 18.7896 13.1135 19 10 19C6.88651 19 4.86695 18.7896 3.69568 18.5736C2.91323 18.4292 2.3499 17.8287 2.14991 17.0586Z" fill="#F2F3F5"/>
 										<path d="M1.0256 8.74863L0.276291 8.78074L1.0256 8.74863ZM2.14991 17.0586L2.87583 16.8701L2.14991 17.0586ZM3.69568 18.5736L3.83173 17.836H3.83173L3.69568 18.5736ZM18.9744 8.74863L19.7237 8.78074V8.78074L18.9744 8.74863ZM17.8501 17.0586L18.576 17.2471L17.8501 17.0586ZM16.3043 18.5736L16.1683 17.836L16.3043 18.5736ZM0.276291 8.78074C0.359088 10.7125 0.657599 14.296 1.42399 17.2471L2.87583 16.8701C2.14868 14.07 1.85603 10.6089 1.77491 8.71651L0.276291 8.78074ZM3.55963 19.3111C4.78925 19.5379 6.85701 19.75 10 19.75V18.25C6.91602 18.25 4.94465 18.0413 3.83173 17.836L3.55963 19.3111ZM18.2251 8.71651C18.144 10.6089 17.8513 14.07 17.1242 16.8701L18.576 17.2471C19.3424 14.296 19.6409 10.7125 19.7237 8.78074L18.2251 8.71651ZM16.1683 17.836C15.0553 18.0413 13.084 18.25 10 18.25V19.75C13.143 19.75 15.2107 19.5379 16.4404 19.3111L16.1683 17.836ZM2 8.5H18V7H2V8.5ZM17.1242 16.8701C16.986 17.4022 16.6218 17.7523 16.1683 17.836L16.4404 19.3111C17.5517 19.1061 18.3142 18.2552 18.576 17.2471L17.1242 16.8701ZM19.7237 8.78074C19.7664 7.78447 18.9608 7 18 7V8.5C18.1438 8.5 18.2297 8.60922 18.2251 8.71651L19.7237 8.78074ZM1.42399 17.2471C1.68577 18.2552 2.44831 19.1061 3.55963 19.3111L3.83173 17.836C3.37815 17.7523 3.01403 17.4022 2.87583 16.8701L1.42399 17.2471ZM1.77491 8.71651C1.77032 8.60922 1.85623 8.5 2 8.5V7C1.0392 7 0.233589 7.78447 0.276291 8.78074L1.77491 8.71651Z" fill="#353949"/>
 										<path d="M4 7.75C4 8.16421 4.33579 8.5 4.75 8.5C5.16421 8.5 5.5 8.16421 5.5 7.75H4ZM14.5 7.75C14.5 8.16421 14.8358 8.5 15.25 8.5C15.6642 8.5 16 8.16421 16 7.75H14.5ZM5.5 7.75V6H4V7.75H5.5ZM9.75 1.75H10.25V0.25H9.75V1.75ZM14.5 6V7.75H16V6H14.5ZM10.25 1.75C12.5972 1.75 14.5 3.65279 14.5 6H16C16 2.82436 13.4256 0.25 10.25 0.25V1.75ZM5.5 6C5.5 3.65279 7.40279 1.75 9.75 1.75V0.25C6.57436 0.25 4 2.82436 4 6H5.5Z" fill="#353949"/>
 										<path class="stroke" d="M7 12.25V14.5M13 12.25V14.5" stroke="#353949" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 									</svg>		
-									<div class="header-main__basket-num"><span>3</span></div>					
-								</div>
+									<span class="header-main__basket-num"><span>3</span></span>					
+								</span>
 							</button>
 							<div class="header-main__basket-text">9 999 грн</div>
 						</div>
@@ -314,69 +348,69 @@
 					<ul class="sticky-bottom__nav">
 						<li class="sticky-bottom__nav-item active">
 							<button class="sticky-bottom__nav-btn" data-nav-main>
-								<div class="sticky-bottom__nav-icon">
+								<span class="sticky-bottom__nav-icon">
 									<svg width="24" height="24" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M0.442405 10.5269C0.165387 10.8348 0.190464 11.309 0.498415 11.586C0.806366 11.8631 1.28058 11.838 1.5576 11.53L0.442405 10.5269ZM18.4424 11.53C18.7194 11.838 19.1936 11.8631 19.5016 11.586C19.8095 11.309 19.8346 10.8348 19.5576 10.5269L18.4424 11.53ZM9.25654 1.84992L9.81413 2.3515L9.25654 1.84992ZM10.7435 1.84992L10.1859 2.3515L10.7435 1.84992ZM1.5576 11.53L9.81413 2.3515L8.69894 1.34833L0.442405 10.5269L1.5576 11.53ZM10.1859 2.3515L18.4424 11.53L19.5576 10.5269L11.3011 1.34833L10.1859 2.3515ZM9.81413 2.3515C9.91345 2.2411 10.0865 2.2411 10.1859 2.3515L11.3011 1.34833C10.6058 0.575486 9.39416 0.575486 8.69894 1.34833L9.81413 2.3515Z" fill="#7D818E"/>
 										<path class="icon-bg" d="M3.76848 7.95665L9.25435 1.83168C9.65181 1.38792 10.3467 1.38792 10.7442 1.83168L16.23 7.95665L16.5163 9.91356C16.7854 11.7536 16.7722 13.6239 16.4772 15.46C16.3348 16.3463 15.5699 16.9981 14.6721 16.9981H5.32636C4.42864 16.9981 3.66374 16.3463 3.52132 15.46C3.22628 13.6239 3.21311 11.7536 3.48225 9.91356L3.76848 7.95665Z" fill="#F2F6F7"/>
 										<path d="M3.76848 7.95665L3.2098 7.45627C3.1115 7.56603 3.0477 7.70231 3.02638 7.8481L3.76848 7.95665ZM16.23 7.95665L16.9721 7.8481C16.9508 7.70231 16.887 7.56603 16.7887 7.45627L16.23 7.95665ZM16.5163 9.91356L15.7741 10.0221L16.5163 9.91356ZM10.7442 1.83168L10.1855 2.33206L10.7442 1.83168ZM14.6721 16.2481H5.32636V17.7481H14.6721V16.2481ZM4.32716 8.45703L9.81302 2.33206L8.69567 1.3313L3.2098 7.45627L4.32716 8.45703ZM10.1855 2.33206L15.6713 8.45703L16.7887 7.45627L11.3028 1.3313L10.1855 2.33206ZM15.4879 8.0652L15.7741 10.0221L17.2584 9.80501L16.9721 7.8481L15.4879 8.0652ZM4.22435 10.0221L4.51058 8.0652L3.02638 7.8481L2.74014 9.80501L4.22435 10.0221ZM4.26182 15.341C3.97888 13.5803 3.96625 11.7867 4.22435 10.0221L2.74014 9.80501C2.45996 11.7205 2.47368 13.6676 2.78082 15.579L4.26182 15.341ZM15.7741 10.0221C16.0322 11.7867 16.0196 13.5803 15.7367 15.341L17.2177 15.579C17.5248 13.6676 17.5385 11.7205 17.2584 9.80501L15.7741 10.0221ZM9.81302 2.33206C9.91239 2.22112 10.0861 2.22112 10.1855 2.33206L11.3028 1.3313C10.6073 0.554708 9.39123 0.554711 8.69567 1.3313L9.81302 2.33206ZM5.32636 16.2481C4.79692 16.2481 4.34581 15.8637 4.26182 15.341L2.78082 15.579C2.98167 16.829 4.06036 17.7481 5.32636 17.7481V16.2481ZM14.6721 17.7481C15.9381 17.7481 17.0168 16.829 17.2177 15.579L15.7367 15.341C15.6527 15.8637 15.2016 16.2481 14.6721 16.2481V17.7481Z" fill="#7D818E"/>
 										<path class="icon-bg stroke-c" d="M9.99901 10.5039C11.3252 10.5039 12.4004 11.5342 12.4004 12.8052V17.0003H7.59766V12.8052C7.59766 11.5342 8.67278 10.5039 9.99901 10.5039Z" fill="white" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 									</svg>										
-								</div>
-								<div class="sticky-bottom__nav-text">Головна</div>
+								</span>
+								<span class="sticky-bottom__nav-text">Головна</span>
 							</button>
 						</li>
 
 						<li class="sticky-bottom__nav-item">
 							<button class="sticky-bottom__nav-btn" data-nav-catalog>
-								<div class="sticky-bottom__nav-icon">
+								<span class="sticky-bottom__nav-icon">
 									<svg width="24" height="24" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path class="icon-bg" fill-rule="evenodd" clip-rule="evenodd" d="M18.1825 2.57547C20.2832 4.6761 20.2832 8.08189 18.1825 10.1825C16.0819 12.2832 12.6761 12.2832 10.5755 10.1825C8.47484 8.0819 8.47484 4.67611 10.5755 2.57547C12.6761 0.474842 16.0819 0.474842 18.1825 2.57547" fill="#F2F6F7"/>
 										<path class="stroke-c" d="M18.1825 2.57547C20.2832 4.6761 20.2832 8.08189 18.1825 10.1825C16.0819 12.2832 12.6761 12.2832 10.5755 10.1825C8.47484 8.0819 8.47484 4.67611 10.5755 2.57547C12.6761 0.474842 16.0819 0.474842 18.1825 2.57547" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path  class="stroke-c"d="M20.9997 12.9997L18.1797 10.1797" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<path  class="stroke-c" d="M20.9997 12.9997L18.1797 10.1797" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										<path class="stroke-c" d="M1 3H5" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										<path class="stroke-c" d="M1 8H6" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										<path class="stroke-c" d="M1 13H9" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 									</svg>										
-								</div>
-								<div class="sticky-bottom__nav-text">Каталог</div>
+								</span>
+								<span class="sticky-bottom__nav-text">Каталог</span>
 							</button>
 						</li>
 
 						<li class="sticky-bottom__nav-item">
 							<button class="sticky-bottom__nav-btn" data-open-cart>
-								<div class="sticky-bottom__nav-icon">
+								<span class="sticky-bottom__nav-icon">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path class="icon-bg" d="M4.14991 19.0586C3.40314 16.183 3.10756 12.6607 3.0256 10.7486C3.00195 10.1968 3.44772 9.75 4 9.75H20C20.5523 9.75 20.998 10.1968 20.9744 10.7486C20.8924 12.6607 20.5969 16.183 19.8501 19.0586C19.6501 19.8287 19.0868 20.4292 18.3043 20.5736C17.133 20.7896 15.1135 21 12 21C8.88651 21 6.86695 20.7896 5.69568 20.5736C4.91323 20.4292 4.3499 19.8287 4.14991 19.0586Z" fill="#F2F6F7"/>
 										<path d="M3.0256 10.7486L2.27629 10.7807L3.0256 10.7486ZM4.14991 19.0586L4.87583 18.8701L4.14991 19.0586ZM5.69568 20.5736L5.83173 19.836H5.83173L5.69568 20.5736ZM20.9744 10.7486L21.7237 10.7807V10.7807L20.9744 10.7486ZM19.8501 19.0586L20.576 19.2471L19.8501 19.0586ZM18.3043 20.5736L18.1683 19.836L18.3043 20.5736ZM2.27629 10.7807C2.35909 12.7125 2.6576 16.296 3.42399 19.2471L4.87583 18.8701C4.14868 16.07 3.85603 12.6089 3.77491 10.7165L2.27629 10.7807ZM5.55963 21.3111C6.78925 21.5379 8.85701 21.75 12 21.75V20.25C8.91602 20.25 6.94465 20.0413 5.83173 19.836L5.55963 21.3111ZM20.2251 10.7165C20.144 12.6089 19.8513 16.07 19.1242 18.8701L20.576 19.2471C21.3424 16.296 21.6409 12.7125 21.7237 10.7807L20.2251 10.7165ZM18.1683 19.836C17.0553 20.0413 15.084 20.25 12 20.25V21.75C15.143 21.75 17.2107 21.5379 18.4404 21.3111L18.1683 19.836ZM4 10.5H20V9H4V10.5ZM19.1242 18.8701C18.986 19.4022 18.6218 19.7523 18.1683 19.836L18.4404 21.3111C19.5517 21.1061 20.3142 20.2552 20.576 19.2471L19.1242 18.8701ZM21.7237 10.7807C21.7664 9.78447 20.9608 9 20 9V10.5C20.1438 10.5 20.2297 10.6092 20.2251 10.7165L21.7237 10.7807ZM3.42399 19.2471C3.68577 20.2552 4.44831 21.1061 5.55963 21.3111L5.83173 19.836C5.37815 19.7523 5.01403 19.4022 4.87583 18.8701L3.42399 19.2471ZM3.77491 10.7165C3.77032 10.6092 3.85623 10.5 4 10.5V9C3.0392 9 2.23359 9.78447 2.27629 10.7807L3.77491 10.7165Z" fill="#7D818E"/>
 										<path d="M6 9.75C6 10.1642 6.33579 10.5 6.75 10.5C7.16421 10.5 7.5 10.1642 7.5 9.75H6ZM16.5 9.75C16.5 10.1642 16.8358 10.5 17.25 10.5C17.6642 10.5 18 10.1642 18 9.75H16.5ZM7.5 9.75V8H6V9.75H7.5ZM11.75 3.75H12.25V2.25H11.75V3.75ZM16.5 8V9.75H18V8H16.5ZM12.25 3.75C14.5972 3.75 16.5 5.65279 16.5 8H18C18 4.82436 15.4256 2.25 12.25 2.25V3.75ZM7.5 8C7.5 5.65279 9.40279 3.75 11.75 3.75V2.25C8.57436 2.25 6 4.82436 6 8H7.5Z" fill="#7D818E"/>
 										<path class="stroke-c" d="M9 14.25V16.5M15 14.25V16.5" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 									</svg>																				
-								</div>
-								<div class="sticky-bottom__nav-text">Кошик</div>
+								</span>
+								<span class="sticky-bottom__nav-text">Кошик</span>
 							</button>
 						</li>
 
 						<li class="sticky-bottom__nav-item">
 							<button class="sticky-bottom__nav-btn">
-								<div class="sticky-bottom__nav-icon">
+								<span class="sticky-bottom__nav-icon">
 									<svg width="24" height="24" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path class="icon-bg" d="M9.99998 3.58704C5.6516 -1.66734 1.06041 2.06612 1 6.09071C1 12.0822 8.2793 17 9.99998 17C11.7207 17 19 12.0822 19 6.09071C18.9396 2.06612 14.3484 -1.66734 9.99998 3.58704Z" fill="#F2F6F7"/>
 										<path d="M1 6.09071L0.25 6.07945V6.09071H1ZM9.99998 3.58704L9.42219 4.06521C9.56467 4.23738 9.77651 4.33704 9.99998 4.33704C10.2235 4.33704 10.4353 4.23738 10.5778 4.06521L9.99998 3.58704ZM19 6.09071H19.7501L19.7499 6.07945L19 6.09071ZM1.74992 6.10196C1.77636 4.34039 2.80175 2.68479 4.20482 2.04091C4.89023 1.72637 5.68269 1.64218 6.54398 1.91143C7.41449 2.18355 8.40208 2.83256 9.42219 4.06521L10.5778 3.10887C9.4237 1.71433 8.20674 0.859628 6.99153 0.479749C5.76711 0.096991 4.59267 0.212514 3.57919 0.677612C1.58446 1.59301 0.284052 3.81644 0.250084 6.07945L1.74992 6.10196ZM9.99998 16.25C9.93037 16.25 9.73579 16.2165 9.39891 16.0811C9.08065 15.9532 8.69109 15.7573 8.2537 15.4949C7.37949 14.9703 6.3541 14.2039 5.37754 13.2544C3.40233 11.3341 1.75 8.78951 1.75 6.09071H0.25C0.25 9.3834 2.23732 12.2935 4.33193 14.3299C5.39027 15.3589 6.50735 16.1963 7.48194 16.7811C7.96896 17.0733 8.43039 17.3084 8.83957 17.4729C9.23013 17.6299 9.63943 17.75 9.99998 17.75V16.25ZM19.7499 6.07945C19.7159 3.81644 18.4155 1.59301 16.4208 0.677611C15.4073 0.212514 14.2329 0.0969911 13.0084 0.479749C11.7932 0.859628 10.5763 1.71433 9.42218 3.10887L10.5778 4.06521C11.5979 2.83256 12.5855 2.18355 13.456 1.91143C14.3173 1.64218 15.1098 1.72637 15.7952 2.04091C17.1982 2.68479 18.2236 4.34039 18.2501 6.10196L19.7499 6.07945ZM9.99998 17.75C10.3605 17.75 10.7698 17.6299 11.1604 17.4729C11.5696 17.3084 12.031 17.0733 12.518 16.7811C13.4926 16.1963 14.6097 15.3589 15.6681 14.3299C17.7627 12.2935 19.75 9.3834 19.75 6.09071H18.25C18.25 8.78951 16.5977 11.3341 14.6224 13.2544C13.6459 14.2039 12.6205 14.9703 11.7463 15.4949C11.3089 15.7573 10.9193 15.9532 10.6011 16.0811C10.2642 16.2165 10.0696 16.25 9.99998 16.25V17.75Z" fill="#7D818E"/>
 									</svg>																													
-								</div>
-								<div class="sticky-bottom__nav-text">Вибране</div>
+								</span>
+								<span class="sticky-bottom__nav-text">Вибране</span>
 							</button>
 						</li>
 
 						<li class="sticky-bottom__nav-item">
 							<button class="sticky-bottom__nav-btn">
-								<div class="sticky-bottom__nav-icon">
+								<span class="sticky-bottom__nav-icon">
 									<svg width="24" height="24" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path class="icon-bg stroke-c" d="M9 10C11.4853 10 13.5 7.98528 13.5 5.5C13.5 3.01472 11.4853 1 9 1C6.51472 1 4.5 3.01472 4.5 5.5C4.5 7.98528 6.51472 10 9 10Z" fill="#F2F6F7" stroke="#7D818E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										<path class="icon-bg stroke-c" d="M16.2321 15.6905C17.9786 16.8053 16.8832 18.9996 14.7831 18.9996H3.2177C1.11756 18.9996 0.0222175 16.8053 1.76869 15.6905C3.8381 14.3697 6.32515 13.5996 9.00039 13.5996C11.6756 13.5996 14.1627 14.3697 16.2321 15.6905Z" fill="#F2F6F7" stroke="#7D818E" stroke-width="1.5"/>
-									</svg>																																						
-								</div>
-								<div class="sticky-bottom__nav-text">Кабінет</div>
+									</svg>
+								</span>
+								<span class="sticky-bottom__nav-text">Кабінет</span>
 							</button>
 						</li>
 
@@ -390,7 +424,7 @@
 						<div class="mobile-menu__top-wrapper">
 							<div class="mobile-menu__time">Пн-Сб: 8:00–20:00 Нд: 9:00–20:00</div>
 							<button class="mobile-menu__close-btn" data-close-menu>
-								<img src="./img/icons/cross-3.svg" alt="close icon">	
+								<img src="./img/icons/cross-3.svg" alt="close icon" loading="lazy">	
 							</button>
 						</div>
 					</div>
@@ -447,10 +481,10 @@
 									<li class="mobile-menu__contact-bottom">
 										<div class="mobile-menu__contact-title">Напишіть нам:</div>
 										<ul>
-											<li><a href="#"><img src="./img/icons/contact/whatsApp.svg" alt="WhatsApp"></a></li>
-											<li><a href="#"><img src="./img/icons/contact/telegram.svg" alt="Telegram"></a></li>
-											<li><a href="#"><img src="./img/icons/contact/fb.svg" alt="Facebook"></a></li>
-											<li><a href="#"><img src="./img/icons/contact/instagram.svg" alt="Instagram"></a></li>
+											<li><a href="#"><img src="./img/icons/contact/whatsApp.svg" alt="WhatsApp" loading="lazy"></a></li>
+											<li><a href="#"><img src="./img/icons/contact/telegram.svg" alt="Telegram" loading="lazy"></a></li>
+											<li><a href="#"><img src="./img/icons/contact/fb.svg" alt="Facebook" loading="lazy"></a></li>
+											<li><a href="#"><img src="./img/icons/contact/instagram.svg" alt="Instagram" loading="lazy"></a></li>
 										</ul>
 									</li>
 								</ul>
@@ -467,7 +501,7 @@
 							<div class="mobile-catalog__top-inner">
 								<div class="mobile-catalog__top-text">Доставка квітів у Києві</div>
 								<button class="mobile-catalog__close-btn" data-close-catalog>
-									<img src="./img/icons/cross-3.svg" alt="close icon">
+									<img src="./img/icons/cross-3.svg" alt="close icon" loading="lazy">
 								</button>
 							</div>
 							<div class="mobile-catalog__top-search">
@@ -671,19 +705,19 @@
 						<div class="banner-slider swiper">
 							<div class="banner-slider__wrapper swiper-wrapper">
 								<div class="banner-slider__slide swiper-slide">
-									<img class="banner-slider__slide-bg" src="./img/banner/bg-1.jpg" alt="bg">
+									<img class="banner-slider__slide-bg" src="./img/banner/bg-1.jpg" alt="bg" loading="lazy">
 									<div class="banner-slider__slide-text">
 										<h3 class="banner-slider__slide-title">Безкоштовна доставка від 3000 грн</h3>
 										<span class="banner-slider__slide-promotext">Промокод:</span>
 										<div class="banner-slider__slide-promocode" data-copy="wrapper">
 											<p data-copy="text">ROSESHOP</p>
-											<button data-copy="btn"><img src="./img/icons/copy.svg" alt="btn"></button>
+											<button data-copy="btn"><img src="./img/icons/copy.svg" alt="btn" loading="lazy"></button>
 										</div>
 									</div>
 								</div>
 								<div class="banner-slider__slide swiper-slide">
 									<a href="#">
-										<img class="banner-slider__slide-bg" src="./img/banner/bg-2.jpg" alt="bg">
+										<img class="banner-slider__slide-bg" src="./img/banner/bg-2.jpg" alt="bg" loading="lazy">
 										<div class="banner-slider__slide-text">
 											<h3 class="banner-slider__slide-title">Досвідчені флористи</h3>
 											<div class="banner-slider__slide-descr">Майстри своєї справи!<br>Висловлять Ваші почуття у квітах</div>
@@ -692,7 +726,7 @@
 								</div>
 								<div class="banner-slider__slide swiper-slide">
 									<a href="#">
-										<img class="banner-slider__slide-bg" src="./img/banner/bg-3.jpg" alt="bg">
+										<img class="banner-slider__slide-bg" src="./img/banner/bg-3.jpg" alt="bg" loading="lazy">
 										<div class="banner-slider__slide-text">
 											<h3 class="banner-slider__slide-title">Дивовижні букети</h3>
 											<div class="banner-slider__slide-descr">Подаруйте Вашим коханим настрій!</div>
@@ -726,10 +760,10 @@
 													<div class="card-img__slider swiper">
 														<div class="card-img__wrapper swiper-wrapper">
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/1(1).jpg" alt="image">
+																<img src="./img/products/1(1).jpg" alt="image" loading="lazy">
 															</div>
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/1(2).jpg" alt="image">
+																<img src="./img/products/1(2).jpg" alt="image" loading="lazy">
 															</div>
 														</div>
 														<div class="card-img__pagination swiper-pagination"></div>
@@ -764,13 +798,13 @@
 													<div class="card-img__slider swiper">
 														<div class="card-img__wrapper swiper-wrapper">
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/6(1).jpg" alt="image">
+																<img src="./img/products/6(1).jpg" alt="image" loading="lazy">
 															</div>
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/6(2).jpg" alt="image">
+																<img src="./img/products/6(2).jpg" alt="image" loading="lazy">
 															</div>
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/6(3).jpg" alt="image">
+																<img src="./img/products/6(3).jpg" alt="image" loading="lazy">
 															</div>
 														</div>
 														<div class="card-img__pagination swiper-pagination"></div>
@@ -808,16 +842,16 @@
 													<div class="card-img__slider swiper">
 														<div class="card-img__wrapper swiper-wrapper">
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/7(1).jpg" alt="image">
+																<img src="./img/products/7(1).jpg" alt="image" loading="lazy">
 															</div>
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/8(1).jpg" alt="image">
+																<img src="./img/products/8(1).jpg" alt="image" loading="lazy">
 															</div>
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/9(1).jpg" alt="image">
+																<img src="./img/products/9(1).jpg" alt="image" loading="lazy">
 															</div>
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/3(1).jpg" alt="image">
+																<img src="./img/products/3(1).jpg" alt="image" loading="lazy">
 															</div>
 														</div>
 														<div class="card-img__pagination swiper-pagination"></div>
@@ -852,7 +886,7 @@
 													<div class="card-img__slider swiper">
 														<div class="card-img__wrapper swiper-wrapper">
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/9(1).jpg" alt="image">
+																<img src="./img/products/9(1).jpg" alt="image" loading="lazy">
 															</div>
 														</div>
 														<div class="card-img__pagination swiper-pagination"></div>
@@ -887,19 +921,19 @@
 													<div class="card-img__slider swiper">
 														<div class="card-img__wrapper swiper-wrapper">
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/2(1).jpg" alt="image">
+																<img src="./img/products/2(1).jpg" alt="image" loading="lazy">
 															</div>
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/1(1).jpg" alt="image">
+																<img src="./img/products/1(1).jpg" alt="image" loading="lazy">
 															</div>
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/7(1).jpg" alt="image">
+																<img src="./img/products/7(1).jpg" alt="image" loading="lazy">
 															</div>
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/1(2).jpg" alt="image">
+																<img src="./img/products/1(2).jpg" alt="image" loading="lazy">
 															</div>
 															<div class="card-img__slide swiper-slide">
-																<img src="./img/products/9(1).jpg" alt="image">
+																<img src="./img/products/9(1).jpg" alt="image" loading="lazy">
 															</div>
 														</div>
 														<div class="card-img__pagination swiper-pagination"></div>
@@ -937,7 +971,7 @@
 				<ul class="benefits-list">
 					<li class="benefits-list__item">
 						<div class="benefits-list__item-img">
-							<img src="./img/icons/benefits/delivery.svg" alt="delivery icon">
+							<img src="./img/icons/benefits/delivery.svg" alt="delivery icon" loading="lazy">
 						</div>
 						<div class="benefits-list__item-text">
 							Експрес-доставка<br>
@@ -946,7 +980,7 @@
 					</li>
 					<li class="benefits-list__item">
 						<div class="benefits-list__item-img">
-							<img src="./img/icons/benefits/sale.svg" alt="sale icon">
+							<img src="./img/icons/benefits/sale.svg" alt="sale icon" loading="lazy">
 						</div>
 						<div class="benefits-list__item-text">
 							Низькі ціни
@@ -954,7 +988,7 @@
 					</li>
 					<li class="benefits-list__item">
 						<div class="benefits-list__item-img">
-							<img src="./img/icons/benefits/reward.svg" alt="reward icon">
+							<img src="./img/icons/benefits/reward.svg" alt="reward icon" loading="lazy">
 						</div>
 						<div class="benefits-list__item-text">
 							Щодня надходження <br>
@@ -963,7 +997,7 @@
 					</li>
 					<li class="benefits-list__item">
 						<div class="benefits-list__item-img">
-							<img src="./img/icons/benefits/bouquet.svg" alt="bouquet icon">
+							<img src="./img/icons/benefits/bouquet.svg" alt="bouquet icon" loading="lazy">
 						</div>
 						<div class="benefits-list__item-text">
 							Досвідчені флористи
@@ -971,7 +1005,7 @@
 					</li>
 					<li class="benefits-list__item">
 						<div class="benefits-list__item-img">
-							<img src="./img/icons/benefits/check.svg" alt="check icon">
+							<img src="./img/icons/benefits/check.svg" alt="check icon" loading="lazy">
 						</div>
 						<div class="benefits-list__item-text">
 							Працюємо <br>
@@ -1013,10 +1047,10 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/1(1).jpg" alt="image">
+														<img src="./img/products/1(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/1(2).jpg" alt="image">
+														<img src="./img/products/1(2).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1051,13 +1085,13 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/6(1).jpg" alt="image">
+														<img src="./img/products/6(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/6(2).jpg" alt="image">
+														<img src="./img/products/6(2).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/6(3).jpg" alt="image">
+														<img src="./img/products/6(3).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1095,7 +1129,7 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/2(1).jpg" alt="image">
+														<img src="./img/products/2(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1130,16 +1164,16 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/7(1).jpg" alt="image">
+														<img src="./img/products/7(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/8(1).jpg" alt="image">
+														<img src="./img/products/8(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/9(1).jpg" alt="image">
+														<img src="./img/products/9(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/3(1).jpg" alt="image">
+														<img src="./img/products/3(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1174,10 +1208,10 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/4(1).jpg" alt="image">
+														<img src="./img/products/4(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/5(1).jpg" alt="image">
+														<img src="./img/products/5(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1215,7 +1249,7 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/9(1).jpg" alt="image">
+														<img src="./img/products/9(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1250,19 +1284,19 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/2(1).jpg" alt="image">
+														<img src="./img/products/2(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/1(1).jpg" alt="image">
+														<img src="./img/products/1(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/7(1).jpg" alt="image">
+														<img src="./img/products/7(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/1(2).jpg" alt="image">
+														<img src="./img/products/1(2).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/9(1).jpg" alt="image">
+														<img src="./img/products/9(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1297,7 +1331,7 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/2(1).jpg" alt="image">
+														<img src="./img/products/2(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1354,7 +1388,7 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/2(1).jpg" alt="image">
+														<img src="./img/products/2(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1389,16 +1423,16 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/7(1).jpg" alt="image">
+														<img src="./img/products/7(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/8(1).jpg" alt="image">
+														<img src="./img/products/8(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
 														<img src="./img/products/9(1).jpg" alt="image">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/3(1).jpg" alt="image">
+														<img src="./img/products/3(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1433,10 +1467,10 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/1(1).jpg" alt="image">
+														<img src="./img/products/1(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/1(2).jpg" alt="image">
+														<img src="./img/products/1(2).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1471,13 +1505,13 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/6(1).jpg" alt="image">
+														<img src="./img/products/6(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/6(2).jpg" alt="image">
+														<img src="./img/products/6(2).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/6(3).jpg" alt="image">
+														<img src="./img/products/6(3).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1515,7 +1549,7 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/9(1).jpg" alt="image">
+														<img src="./img/products/9(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1550,19 +1584,19 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/2(1).jpg" alt="image">
+														<img src="./img/products/2(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/1(1).jpg" alt="image">
+														<img src="./img/products/1(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/7(1).jpg" alt="image">
+														<img src="./img/products/7(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/1(2).jpg" alt="image">
+														<img src="./img/products/1(2).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/9(1).jpg" alt="image">
+														<img src="./img/products/9(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1619,10 +1653,10 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/4(1).jpg" alt="image">
+														<img src="./img/products/4(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/5(1).jpg" alt="image">
+														<img src="./img/products/5(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1660,7 +1694,7 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/9(1).jpg" alt="image">
+														<img src="./img/products/9(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1695,19 +1729,19 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/2(1).jpg" alt="image">
+														<img src="./img/products/2(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/1(1).jpg" alt="image">
+														<img src="./img/products/1(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/7(1).jpg" alt="image">
+														<img src="./img/products/7(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/1(2).jpg" alt="image">
+														<img src="./img/products/1(2).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/9(1).jpg" alt="image">
+														<img src="./img/products/9(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1742,10 +1776,10 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/1(1).jpg" alt="image">
+														<img src="./img/products/1(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/1(2).jpg" alt="image">
+														<img src="./img/products/1(2).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1780,13 +1814,13 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/6(1).jpg" alt="image">
+														<img src="./img/products/6(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/6(2).jpg" alt="image">
+														<img src="./img/products/6(2).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/6(3).jpg" alt="image">
+														<img src="./img/products/6(3).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1824,7 +1858,7 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/2(1).jpg" alt="image">
+														<img src="./img/products/2(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1859,16 +1893,16 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/7(1).jpg" alt="image">
+														<img src="./img/products/7(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/8(1).jpg" alt="image">
+														<img src="./img/products/8(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/9(1).jpg" alt="image">
+														<img src="./img/products/9(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/3(1).jpg" alt="image">
+														<img src="./img/products/3(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1903,10 +1937,10 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/4(1).jpg" alt="image">
+														<img src="./img/products/4(1).jpg" alt="image" loading="lazy">
 													</div>
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/5(1).jpg" alt="image">
+														<img src="./img/products/5(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1944,7 +1978,7 @@
 											<div class="card-img__slider swiper">
 												<div class="card-img__wrapper swiper-wrapper">
 													<div class="card-img__slide swiper-slide">
-														<img src="./img/products/9(1).jpg" alt="image">
+														<img src="./img/products/9(1).jpg" alt="image" loading="lazy">
 													</div>
 												</div>
 												<div class="card-img__pagination swiper-pagination"></div>
@@ -1981,7 +2015,7 @@
 					<li class="sections-list__item-wrapper">
 						<a class="sections-list__item" href="#">
 							<div class="sections-list__item-img">
-								<img src="./img/sections/1.jpg" alt="Квіти поштучно">
+								<img src="./img/sections/1.jpg" alt="Квіти поштучно" loading="lazy">
 							</div>
 							<div class="sections-list__item-descr">
 								<h3 class="sections-list__item-title">Квіти поштучно</h3>
@@ -2000,7 +2034,7 @@
 					<li class="sections-list__item-wrapper">
 						<a class="sections-list__item" href="#">
 							<div class="sections-list__item-img">
-								<img src="./img/sections/2.jpg" alt="Букети з троянд">
+								<img src="./img/sections/2.jpg" alt="Букети з троянд" loading="lazy">
 							</div>
 							<div class="sections-list__item-descr">
 								<h3 class="sections-list__item-title">Букети з троянд</h3>
@@ -2019,7 +2053,7 @@
 					<li class="sections-list__item-wrapper">
 						<a class="sections-list__item" href="#">
 							<div class="sections-list__item-img">
-								<img src="./img/sections/3.jpg" alt="Каталог букетів">
+								<img src="./img/sections/3.jpg" alt="Каталог букетів" loading="lazy">
 							</div>
 							<div class="sections-list__item-descr">
 								<h3 class="sections-list__item-title">Каталог букетів</h3>
@@ -2038,7 +2072,7 @@
 					<li class="sections-list__item-wrapper">
 						<a class="sections-list__item" href="#">
 							<div class="sections-list__item-img">
-								<img src="./img/sections/4.jpg" alt="Композиції із квітів">
+								<img src="./img/sections/4.jpg" alt="Композиції із квітів" loading="lazy">
 							</div>
 							<div class="sections-list__item-descr">
 								<h3 class="sections-list__item-title">Композиції із квітів</h3>
@@ -2060,57 +2094,57 @@
 		<!-- ========== Gallery ========== -->
 		<section class="gallery margin">
 			<div class="container">
-				<div class="gallery-title title">Галерея</div>
+				<h2 class="gallery-title title">Галерея</h2>
 			</div>
 			<div class="container-sl">
 				<div class="gallery-slider swiper">
 					<div class="gallery-slider__wrapper swiper-wrapper" id="mainpage-gallery">
 						<a class="gallery-slider__slide swiper-slide" href="./img/gallery/1.jpg">
-							<img class="gallery-slider__slide-img" src="./img/gallery/1.jpg" alt="Дівчина з квітами">
+							<img class="gallery-slider__slide-img" src="./img/gallery/1.jpg" alt="Дівчина з квітами" loading="lazy">
 						</a>
 
 						<a class="gallery-slider__slide swiper-slide" href="./img/gallery/2.jpg">
-							<img class="gallery-slider__slide-img" src="./img/gallery/2.jpg" alt="Дівчина з квітами">
+							<img class="gallery-slider__slide-img" src="./img/gallery/2.jpg" alt="Дівчина з квітами" loading="lazy">
 						</a>
 
 						<a class="gallery-slider__slide swiper-slide" href="./img/gallery/3.jpg">
-							<img class="gallery-slider__slide-img" src="./img/gallery/3.jpg" alt="Дівчина з квітами">
+							<img class="gallery-slider__slide-img" src="./img/gallery/3.jpg" alt="Дівчина з квітами" loading="lazy">
 						</a>
 
 						<a class="gallery-slider__slide swiper-slide" href="./img/gallery/4.jpg">
-							<img class="gallery-slider__slide-img" src="./img/gallery/4.jpg" alt="Дівчина з квітами">
+							<img class="gallery-slider__slide-img" src="./img/gallery/4.jpg" alt="Дівчина з квітами" loading="lazy">
 						</a>
 
 						<a class="gallery-slider__slide swiper-slide" href="./img/gallery/5.jpg">
-							<img class="gallery-slider__slide-img" src="./img/gallery/5.jpg" alt="Дівчина з квітами">
+							<img class="gallery-slider__slide-img" src="./img/gallery/5.jpg" alt="Дівчина з квітами" loading="lazy">
 						</a>
 
 						<a class="gallery-slider__slide swiper-slide" href="./img/gallery/6.jpg">
-							<img class="gallery-slider__slide-img" src="./img/gallery/6.jpg" alt="Дівчина з квітами">
+							<img class="gallery-slider__slide-img" src="./img/gallery/6.jpg" alt="Дівчина з квітами" loading="lazy">
 						</a>
 
 						<a class="gallery-slider__slide swiper-slide" href="./img/gallery/7.jpg">
-							<img class="gallery-slider__slide-img" src="./img/gallery/7.jpg" alt="Дівчина з квітами">
+							<img class="gallery-slider__slide-img" src="./img/gallery/7.jpg" alt="Дівчина з квітами" loading="lazy">
 						</a>
 
 						<a class="gallery-slider__slide swiper-slide" href="./img/gallery/8.jpg">
-							<img class="gallery-slider__slide-img" src="./img/gallery/8.jpg" alt="Дівчина з квітами">
+							<img class="gallery-slider__slide-img" src="./img/gallery/8.jpg" alt="Дівчина з квітами" loading="lazy">
 						</a>
 
 						<a class="gallery-slider__slide swiper-slide" href="./img/gallery/9.jpg">
-							<img class="gallery-slider__slide-img" src="./img/gallery/9.jpg" alt="Дівчина з квітами">
+							<img class="gallery-slider__slide-img" src="./img/gallery/9.jpg" alt="Дівчина з квітами" loading="lazy">
 						</a>
 
 						<a class="gallery-slider__slide swiper-slide" href="./img/gallery/10.jpg">
-							<img class="gallery-slider__slide-img" src="./img/gallery/10.jpg" alt="Дівчина з квітами">
+							<img class="gallery-slider__slide-img" src="./img/gallery/10.jpg" alt="Дівчина з квітами" loading="lazy">
 						</a>
 
 						<a class="gallery-slider__slide swiper-slide" href="./img/gallery/11.jpg">
-							<img class="gallery-slider__slide-img" src="./img/gallery/11.jpg" alt="Дівчина з квітами">
+							<img class="gallery-slider__slide-img" src="./img/gallery/11.jpg" alt="Дівчина з квітами" loading="lazy">
 						</a>
 
 						<a class="gallery-slider__slide swiper-slide" href="./img/gallery/12.jpg">
-							<img class="gallery-slider__slide-img" src="./img/gallery/12.jpg" alt="Дівчина з квітами">
+							<img class="gallery-slider__slide-img" src="./img/gallery/12.jpg" alt="Дівчина з квітами" loading="lazy">
 						</a>
 					</div>
 					<div class="gallery-slider__btn-next swiper-button-next"></div>
@@ -2173,7 +2207,7 @@
 							</div>
 
 							<div class="reviews-slider__slide-img review-item__img">
-								<img src="./img/reviews/people/1.jpg" alt="review icon">
+								<img src="./img/reviews/people/1.jpg" alt="review icon" loading="lazy">
 							</div>
 						</div>
 
@@ -2218,7 +2252,7 @@
 							</div>
 
 							<div class="reviews-slider__slide-img review-item__img">
-								<img src="./img/reviews/people/2.jpg" alt="review icon">
+								<img src="./img/reviews/people/2.jpg" alt="review icon" loading="lazy">
 							</div>
 						</div>
 
@@ -2263,7 +2297,7 @@
 							</div>
 
 							<div class="reviews-slider__slide-img review-item__img">
-								<img src="./img/reviews/people/3.jpg" alt="review icon">
+								<img src="./img/reviews/people/3.jpg" alt="review icon" loading="lazy">
 							</div>
 						</div>
 
@@ -2308,7 +2342,7 @@
 							</div>
 
 							<div class="reviews-slider__slide-img review-item__img">
-								<img src="./img/reviews/people/4.jpg" alt="review icon">
+								<img src="./img/reviews/people/4.jpg" alt="review icon" loading="lazy">
 							</div>
 						</div>
 
@@ -2353,7 +2387,7 @@
 							</div>
 
 							<div class="reviews-slider__slide-img review-item__img">
-								<img src="./img/reviews/people/5.jpg" alt="review icon">
+								<img src="./img/reviews/people/5.jpg" alt="review icon" loading="lazy">
 							</div>
 						</div>
 
@@ -2388,7 +2422,7 @@
 					<article class="blog-card">
 						<div class="blog-card__img">
 							<a href="#">
-								<img src="./img/blog/1.jpg" alt="З чим поєднуються тюльпани">
+								<img src="./img/blog/1.jpg" alt="З чим поєднуються тюльпани" loading="lazy">
 							</a>
 						</div>
 						<div class="blog-card__content">
@@ -2407,7 +2441,7 @@
 					<article class="blog-card">
 						<div class="blog-card__img">
 							<a href="#">
-								<img src="./img/blog/2.jpg" alt="Які квіти дарують чоловікам">
+								<img src="./img/blog/2.jpg" alt="Які квіти дарують чоловікам" loading="lazy">
 							</a>
 						</div>
 						<div class="blog-card__content">
@@ -2426,7 +2460,7 @@
 					<article class="blog-card">
 						<div class="blog-card__img">
 							<a href="#">
-								<img src="./img/blog/3.jpg" alt="Привід, щоб дарувати білі троянди">
+								<img src="./img/blog/3.jpg" alt="Привід, щоб дарувати білі троянди" loading="lazy">
 							</a>
 						</div>
 						<div class="blog-card__content">
@@ -2485,7 +2519,7 @@
 					</div>
 					<div class="excellence-imgWrapper">
 						<div class="excellence-img">
-							<img src="./img/flowers.svg" alt="decoration flowers">
+							<img src="./img/flowers.svg" alt="decoration flowers" loading="lazy">
 						</div>
 					</div>
 				</div>
@@ -2494,7 +2528,7 @@
 
 		<!-- ========== Map ========== -->
 		<div class="map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.3301296588047!2d30.447857398328775!3d50.453576896402836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdd4132914e9%3A0x38cc392375ff9ba!2z0KbQstC10YLQvtGH0L3Ri9C5INGB0YPQv9C10YDQvNCw0YDQutC10YIgRmxvcmEgZGUgTHV4ZQ!5e0!3m2!1sru!2sua!4v1666690185707!5m2!1sru!2sua" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.3301296588047!2d30.447857398328775!3d50.453576896402836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdd4132914e9%3A0x38cc392375ff9ba!2z0KbQstC10YLQvtGH0L3Ri9C5INGB0YPQv9C10YDQvNCw0YDQutC10YIgRmxvcmEgZGUgTHV4ZQ!5e0!3m2!1sru!2sua!4v1666690185707!5m2!1sru!2sua" height="500" style="border:0; width:100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			<div class="container">
 				<div class="map-info">
 					<div class="map-info__top">
@@ -2732,19 +2766,19 @@
 				<div class="footer-bottom__pay">
 					<ul class="footer-bottom__pay-list">
 						<li class="footer-bottom__pay-item">
-							<img src="./img/icons/pay/cash.svg" alt="cash">
+							<img src="./img/icons/pay/cash.svg" alt="cash" loading="lazy">
 						</li>
 						<li class="footer-bottom__pay-item">
-							<img src="./img/icons/pay/visa.svg" alt="visa">
+							<img src="./img/icons/pay/visa.svg" alt="visa" loading="lazy">
 						</li>
 						<li class="footer-bottom__pay-item">
-							<img src="./img/icons/pay/mastercard.svg" alt="mastercard">
+							<img src="./img/icons/pay/mastercard.svg" alt="mastercard" loading="lazy">
 						</li>
 						<li class="footer-bottom__pay-item">
-							<img src="./img/icons/pay/maestro.svg" alt="maestro">
+							<img src="./img/icons/pay/maestro.svg" alt="maestro" loading="lazy">
 						</li>
 						<li class="footer-bottom__pay-item">
-							<img src="./img/icons/pay/paypal.svg" alt="paypal">
+							<img src="./img/icons/pay/paypal.svg" alt="paypal" loading="lazy">
 						</li>
 					</ul>
 				</div>
@@ -2753,17 +2787,17 @@
 					<ul class="footer-bottom__social-list">
 						<li class="footer-bottom__social-item">
 							<a class="footer-bottom__social-link" href="#">
-								<img src="./img/icons/social/fb.svg" alt="fb">
+								<img src="./img/icons/social/fb.svg" alt="fb" loading="lazy">
 							</a>
 						</li>
 						<li class="footer-bottom__social-item">
 							<a class="footer-bottom__social-link" href="#">
-								<img src="./img/icons/social/instagram.svg" alt="instagram">
+								<img src="./img/icons/social/instagram.svg" alt="instagram" loading="lazy">
 							</a>
 						</li>
 						<li class="footer-bottom__social-item">
 							<a class="footer-bottom__social-link" href="#">
-								<img src="./img/icons/social/youTube.svg" alt="youTube">
+								<img src="./img/icons/social/youTube.svg" alt="youTube" loading="lazy">
 							</a>
 						</li>
 					</ul>
@@ -2794,7 +2828,7 @@
 						<div class="cart-item__inner">
 							<div class="cart-item__img">
 								<a href="#">
-									<img src="./img/products/1(1).jpg" alt="product img">
+									<img src="./img/products/1(1).jpg" alt="product img" loading="lazy">
 								</a>
 							</div>
 							<div class="cart-item__content">
@@ -2831,7 +2865,7 @@
 						<div class="cart-item__inner">
 							<div class="cart-item__img">
 								<a href="#">
-									<img src="./img/products/2(1).jpg" alt="product img">
+									<img src="./img/products/2(1).jpg" alt="product img" loading="lazy">
 								</a>
 							</div>
 							<div class="cart-item__content">
@@ -2868,7 +2902,7 @@
 						<div class="cart-item__inner">
 							<div class="cart-item__img">
 								<a href="#">
-									<img src="./img/products/7(1).jpg" alt="product img">
+									<img src="./img/products/7(1).jpg" alt="product img" loading="lazy">
 								</a>
 							</div>
 							<div class="cart-item__content">
@@ -2917,299 +2951,25 @@
 		</div>
 	</div>
 
+	<a href="#top" class="to-top">
+		<img src="./img/icons/to-top.svg" alt="top" loading="lazy">
+	</a>
 	
-
-
+	<div id="top"></div>
+	
 
 
 	<!-- ========== Scripts ========== -->
 	<!-- Swiper -->
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script async src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<!-- Lightgallery -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/lightgallery.min.js" integrity="sha512-pG+XpUdyBtp28FzjpaIaj72KYvZ87ZbmB3iytDK5+WFVyun8r5LJ2x1/Jy/KHdtzUXA0CUVhEnG+Isy1jVJAbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-oG7u2dCYcRZMqByim5wriswqGpgny7a8e6vhcQnGxtFVDQbbFZ9Oi/ShsVF+uN6FEGoyjhi9TotQn7gxAzfA6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/plugins/zoom/lg-zoom.min.js" integrity="sha512-Lr6V5jv24JHC1+HU2k4n38smhlr2bBx2pdyM/GrYo/pnpzQ/Th2/LnCxyEesD8+jDnPlK1c6dKiI0uNnOSlyTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script async src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/lightgallery.min.js" integrity="sha512-pG+XpUdyBtp28FzjpaIaj72KYvZ87ZbmB3iytDK5+WFVyun8r5LJ2x1/Jy/KHdtzUXA0CUVhEnG+Isy1jVJAbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script async src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-oG7u2dCYcRZMqByim5wriswqGpgny7a8e6vhcQnGxtFVDQbbFZ9Oi/ShsVF+uN6FEGoyjhi9TotQn7gxAzfA6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script async src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/plugins/zoom/lg-zoom.min.js" integrity="sha512-Lr6V5jv24JHC1+HU2k4n38smhlr2bBx2pdyM/GrYo/pnpzQ/Th2/LnCxyEesD8+jDnPlK1c6dKiI0uNnOSlyTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<!-- Script.js -->
-	<script src="js/script.js"></script>
+	<script async src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
-<!--  
-
-<article class="card card--slider" data-id="1"> 
-	<button class="card-btn--like">
-		<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
-			<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
-		</svg>							
-	</button>
-	<a class="card-btn--label" href="#"></a>
-	<div class="card-img">
-		<a href="#">
-			<div class="card-img__slider swiper">
-				<div class="card-img__wrapper swiper-wrapper">
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/1(1).jpg" alt="image">
-					</div>
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/1(2).jpg" alt="image">
-					</div>
-				</div>
-				<div class="card-img__pagination swiper-pagination"></div>
-			</div>
-		</a>
-	</div>
-	<div class="card-description">
-		<div class="card-top">
-			<h3 class="card-title"><a href="#">Букет 25 троянд Ніжний мікс</a></h3>
-			<div class="card-size">Висота: 60 см, Ширина: 35 см</div>
-		</div>
-
-		<div class="card-bottom">
-			<div class="card-price">1 599 грн</div>
-			<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
-		</div>
-	</div>
-</article>
-
-<article class="card card--slider" data-card="sale-20" data-id="2"> 
-	<button class="card-btn--like active">
-		<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
-			<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
-		</svg>							
-	</button>
-	<a class="card-btn--label" href="#"></a>
-	<div class="card-img">
-		<a href="#">
-			<div class="card-img__slider swiper">
-				<div class="card-img__wrapper swiper-wrapper">
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/6(1).jpg" alt="image">
-					</div>
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/6(2).jpg" alt="image">
-					</div>
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/6(3).jpg" alt="image">
-					</div>
-				</div>
-				<div class="card-img__pagination swiper-pagination"></div>
-			</div>
-		</a>
-	</div>
-	<div class="card-description">
-		<div class="card-top">
-			<h3 class="card-title"><a href="#">Букет троянд Ред наомі 60 см</a></h3>
-			<div class="card-size">Висота: 60 см, Ширина: 35 см</div>
-		</div>
-
-		<div class="card-bottom">
-			<div class="card-price">
-				<div class="card-price--new">2 499 грн</div>
-				<div class="card-price--old">2 999 грн</div>
-			</div>
-			<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
-		</div>
-	</div>
-</article>
-
-<article class="card card--slider" data-card="hot" data-id="3"> 
-	<button class="card-btn--like">
-		<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
-			<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
-		</svg>							
-	</button>
-	<a class="card-btn--label" href="#"></a>
-	<div class="card-img">
-		<a href="#">
-			<div class="card-img__slider swiper">
-				<div class="card-img__wrapper swiper-wrapper">
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/2(1).jpg" alt="image">
-					</div>
-				</div>
-				<div class="card-img__pagination swiper-pagination"></div>
-			</div>
-		</a>
-	</div>
-	<div class="card-description">
-		<div class="card-top">
-			<h3 class="card-title"><a href="#">Букет 5 піоноподібних троянд Місті баблс</a></h3>
-			<div class="card-size">Висота: 60 см, Ширина: 35 см</div>
-		</div>
-
-		<div class="card-bottom">
-			<div class="card-price">799 грн</div>
-			<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
-		</div>
-	</div>
-</article>
-
-<article class="card card--slider" data-card="new" data-id="4"> 
-	<button class="card-btn--like">
-		<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
-			<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
-		</svg>							
-	</button>
-	<a class="card-btn--label" href="#"></a>
-	<div class="card-img">
-		<a href="#">
-			<div class="card-img__slider swiper">
-				<div class="card-img__wrapper swiper-wrapper">
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/7(1).jpg" alt="image">
-					</div>
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/8(1).jpg" alt="image">
-					</div>
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/9(1).jpg" alt="image">
-					</div>
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/3(1).jpg" alt="image">
-					</div>
-				</div>
-				<div class="card-img__pagination swiper-pagination"></div>
-			</div>
-		</a>
-	</div>
-	<div class="card-description">
-		<div class="card-top">
-			<h3 class="card-title"><a href="#">Букет троянд мікс 40 см</a></h3>
-			<div class="card-size">Висота: 60 см, Ширина: 40 см</div>
-		</div>
-
-		<div class="card-bottom">
-			<div class="card-price">1 299 грн</div>
-			<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
-		</div>
-	</div>
-</article>
-
-<article class="card card--slider" data-card="sale-35" data-id="5"> 
-	<button class="card-btn--like active">
-		<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
-			<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
-		</svg>							
-	</button>
-	<a class="card-btn--label" href="#"></a>
-	<div class="card-img">
-		<a href="#">
-			<div class="card-img__slider swiper">
-				<div class="card-img__wrapper swiper-wrapper">
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/4(1).jpg" alt="image">
-					</div>
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/5(1).jpg" alt="image">
-					</div>
-				</div>
-				<div class="card-img__pagination swiper-pagination"></div>
-			</div>
-		</a>
-	</div>
-	<div class="card-description">
-		<div class="card-top">
-			<h3 class="card-title"><a href="#">Троянда "Мондіаль" 60см 25шт з евкаліптом</a></h3>
-			<div class="card-size">Ширина: 60 см, Висота: 70 см</div>
-		</div>
-
-		<div class="card-bottom">
-			<div class="card-price">
-				<div class="card-price--new">3 999 грн</div>
-				<div class="card-price--old">4 599 грн</div>
-			</div>
-			<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
-		</div>
-	</div>
-</article>
-
-<article class="card card--slider" data-id="6"> 
-	<button class="card-btn--like">
-		<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
-			<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
-		</svg>							
-	</button>
-	<a class="card-btn--label" href="#"></a>
-	<div class="card-img">
-		<a href="#">
-			<div class="card-img__slider swiper">
-				<div class="card-img__wrapper swiper-wrapper">
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/9(1).jpg" alt="image">
-					</div>
-				</div>
-				<div class="card-img__pagination swiper-pagination"></div>
-			</div>
-		</a>
-	</div>
-	<div class="card-description">
-		<div class="card-top">
-			<h3 class="card-title"><a href="#">Троянда "Мондіаль" 60см 25шт з евкаліптом</a></h3>
-			<div class="card-size">Висота: 70 см, Ширина: 45 см</div>
-		</div>
-
-		<div class="card-bottom">
-			<div class="card-price">2 699 грн</div>
-			<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
-		</div>
-	</div>
-</article>
-
-<article class="card card--slider" data-card="hot" data-id="7"> 
-	<button class="card-btn--like">
-		<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path class="path-bg" d="M8.99999 3.48405C5.37633 -0.894597 1.55034 2.21662 1.5 5.57044C1.5 10.5634 7.56608 14.6615 8.99999 14.6615C10.4339 14.6615 16.5 10.5634 16.5 5.57044C16.4497 2.21662 12.6236 -0.894597 8.99999 3.48405Z" fill="white"/>
-			<path class="path-line" d="M1.5 5.57044L0.75 5.55919V5.57044H1.5ZM8.99999 3.48405L8.42219 3.96222C8.56467 4.13439 8.77651 4.23405 8.99999 4.23405C9.22347 4.23405 9.4353 4.13439 9.57779 3.96222L8.99999 3.48405ZM16.5 5.57044L17.2501 5.57044L17.2499 5.55919L16.5 5.57044ZM2.24992 5.5817C2.27132 4.15551 3.1029 2.82316 4.22282 2.30922C4.76666 2.05965 5.39521 1.99211 6.08269 2.20702C6.77939 2.4248 7.58326 2.9485 8.42219 3.96222L9.57779 3.00588C8.60489 1.83027 7.57164 1.10088 6.53024 0.775337C5.47962 0.446912 4.46909 0.545793 3.59719 0.945921C1.88561 1.73138 0.779018 3.63156 0.750084 5.55919L2.24992 5.5817ZM8.99999 13.9115C8.96622 13.9115 8.82196 13.8908 8.54571 13.7798C8.28807 13.6762 7.96942 13.5163 7.60907 13.3001C6.88892 12.8679 6.04207 12.2351 5.23509 11.4506C3.59902 9.85996 2.25 7.76995 2.25 5.57044H0.75C0.75 8.36384 2.43402 10.8194 4.18947 12.5261C5.07824 13.3902 6.01678 14.0939 6.8373 14.5863C7.24729 14.8323 7.6378 15.0315 7.98636 15.1716C8.3163 15.3042 8.67528 15.4115 8.99999 15.4115V13.9115ZM17.2499 5.55919C17.221 3.63156 16.1144 1.73138 14.4028 0.94592C13.5309 0.545793 12.5204 0.446913 11.4697 0.775337C10.4283 1.10088 9.39509 1.83027 8.42219 3.00588L9.57779 3.96222C10.4167 2.94851 11.2206 2.42481 11.9173 2.20702C12.6048 1.99211 13.2333 2.05965 13.7772 2.30922C14.8971 2.82316 15.7287 4.15551 15.7501 5.5817L17.2499 5.55919ZM8.99999 15.4115C9.32469 15.4115 9.68367 15.3042 10.0136 15.1716C10.3622 15.0315 10.7527 14.8323 11.1627 14.5863C11.9832 14.094 12.9217 13.3902 13.8105 12.5261C15.566 10.8194 17.25 8.36384 17.25 5.57044H15.75C15.75 7.76995 14.401 9.85996 12.7649 11.4506C11.9579 12.2351 11.1111 12.8679 10.3909 13.3001C10.0306 13.5163 9.71191 13.6762 9.45427 13.7798C9.17801 13.8908 9.03376 13.9115 8.99999 13.9115V15.4115Z" fill="#353949"/>
-		</svg>							
-	</button>
-	<a class="card-btn--label" href="#"></a>
-	<div class="card-img">
-		<a href="#">
-			<div class="card-img__slider swiper">
-				<div class="card-img__wrapper swiper-wrapper">
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/2(1).jpg" alt="image">
-					</div>
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/1(1).jpg" alt="image">
-					</div>
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/7(1).jpg" alt="image">
-					</div>
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/1(2).jpg" alt="image">
-					</div>
-					<div class="card-img__slide swiper-slide">
-						<img src="./img/products/9(1).jpg" alt="image">
-					</div>
-				</div>
-				<div class="card-img__pagination swiper-pagination"></div>
-			</div>
-		</a>
-	</div>
-	<div class="card-description">
-		<div class="card-top">
-			<h3 class="card-title"><a href="#">Троянда "Експлорер" 80 см 101 шт</a></h3>
-			<div class="card-size">Ширина: 60 см Висота: 80 см</div>
-		</div>
-
-		<div class="card-bottom">
-			<div class="card-price">5 099 грн</div>
-			<button class="btn btn-full card-btn--basket"><span>В кошик</span></button>
-		</div>
-	</div>
-</article> 
--->
-
 
 
 

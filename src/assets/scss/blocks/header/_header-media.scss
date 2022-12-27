@@ -291,7 +291,8 @@
 
 @media screen and (max-width: 375px) { 
   .header {
-    position: initial;
+    position: relative;
+    top: 0;
   }
   .header-extra__text {
     max-width: 230px;

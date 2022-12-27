@@ -1,4 +1,6 @@
+import preloader from './modules/preloader.js';
 import copyText from './modules/copyText.js';
+import toTop from './modules/toTop.js';
 import cutString from './modules/cutString.js';
 import shadow from './modules/shadow.js';
 import openModal from './modules/openModal.js';
@@ -9,12 +11,21 @@ import rangeSlider from './modules/rangeSlider.js';
 import counter from './modules/counter.js';
 import calcScroll from "./modules/calcScroll.js";
 
+
+// script for preloader
+window.addEventListener('load', preloader);
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   
   //counter
   counter();
 
-
+  try {
+    toTop();
+  } catch (error) {}
+  
   /* ========== Header ========== */
   // Working with extra-block in header
   const header = document.querySelector('.header--extra');
@@ -312,6 +323,22 @@ document.addEventListener("DOMContentLoaded", () => {
         clickable: false,
       },
       allowTouchMove: false,
+      breakpoints: {
+        319: {
+          pagination: {
+            el: ".card-img__pagination",
+            clickable: true,
+          },
+          allowTouchMove: true
+        },
+        901: {
+          pagination: {
+            el: ".card-img__pagination",
+            clickable: false,
+          },
+          allowTouchMove: false
+        }
+      }
     });
     
     // Slider not autoplay after creation
@@ -379,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
           spaceBetween: 20,
           freeMode: true,
         },
-        340: {
+        300: {
           slidesPerView: "auto",
           spaceBetween: 20,
           freeMode: true,

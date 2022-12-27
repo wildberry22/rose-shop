@@ -1,0 +1,74 @@
+/* 1440 / 1280 / 1230 / 1080 / 1024 / 900 / 768 / 680 / 568 / 480 / 375 / 320 */
+
+@media screen and (max-width: 1230px) {
+  .modal.modal--reviews .modal-wrapper {
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+    max-height: initial;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .modal--reviews .review-item {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 900px)  {
+  .modal.modal--reviews .modal-wrapper {
+    padding: 40px 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal--reviews .review-item {
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .modal.modal--reviews .modal-wrapper {
+    width: calc(100vw - 30px);
+    height: calc(100vh - 30px);
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .modal-wrapper {
+    max-width: initial;
+    width: calc(100vw - 20px);
+    padding: 30px 20px;
+  }
+
+  .modal.modal--buy1click .modal-call__list {
+    gap: 8px;
+  }
+  .modal.modal--buy1click .modal__text {
+    margin-bottom: 15px;
+  }
+
+  .modal.modal--reviews .modal__title {
+    font-size: $fz-3;
+  }
+  .modal.modal--reviews .modal-wrapper {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .modal.modal--reviews .modal-wrapper {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 25px 15px;
+  }
+  .modal.modal--reviews .modal__title {
+    font-size: $fz-4;
+    margin-bottom: 15px;
+  }
+  .modal--reviews .review-item {
+    padding: 15px;
+  }
+}
